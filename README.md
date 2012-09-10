@@ -15,9 +15,14 @@ sudo /usr/bin/gem install nokogiri
 And then, type the commands in terminal:
 
 ```
+git clone https://github.com/masuidrive/mobiruby-ios.git
+cd mobiruby-ios
 sh setup.sh
-open MobiRubyDebug.xcodeproj
+open mobiruby-ios.xcodeproj
 ```
+
+If you use XCode beta version, you should modify ``bin/build-config.sh`` or set up xcode-select correctly.
+
 
 It's tested only Mountain Lion and XCode 4.4.1.
 
