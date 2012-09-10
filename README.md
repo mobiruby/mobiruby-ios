@@ -15,7 +15,7 @@ sudo /usr/bin/gem install nokogiri
 And then, type the commands in terminal:
 
 ```
-git clone https://github.com/masuidrive/mobiruby-ios.git
+git clone https://github.com/mobiruby/mobiruby-ios.git
 cd mobiruby-ios
 sh setup.sh
 open mobiruby-ios.xcodeproj
