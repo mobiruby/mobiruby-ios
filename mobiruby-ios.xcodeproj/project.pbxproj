@@ -1,0 +1,268 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5921A3A315FDB2E8007FECF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5921A3A215FDB2E8007FECF1 /* UIKit.framework */; };
+		5921A3A515FDB2E8007FECF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5921A3A415FDB2E8007FECF1 /* Foundation.framework */; };
+		5921A3A715FDB2E8007FECF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5921A3A615FDB2E8007FECF1 /* CoreGraphics.framework */; };
+		5921A3AD15FDB2E8007FECF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5921A3AB15FDB2E8007FECF1 /* InfoPlist.strings */; };
+		5921A3AF15FDB2E8007FECF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5921A3AE15FDB2E8007FECF1 /* main.m */; };
+		5921A3B315FDB2E8007FECF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5921A3B215FDB2E8007FECF1 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5921A39E15FDB2E8007FECF1 /* mobiruby-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobiruby-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5921A3A215FDB2E8007FECF1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5921A3A415FDB2E8007FECF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5921A3A615FDB2E8007FECF1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5921A3AA15FDB2E8007FECF1 /* mobiruby-ios-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mobiruby-ios-Info.plist"; sourceTree = "<group>"; };
+		5921A3AC15FDB2E8007FECF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5921A3AE15FDB2E8007FECF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5921A3B015FDB2E8007FECF1 /* mobiruby-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mobiruby-ios-Prefix.pch"; sourceTree = "<group>"; };
+		5921A3B115FDB2E8007FECF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5921A3B215FDB2E8007FECF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5921A39B15FDB2E8007FECF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5921A3A315FDB2E8007FECF1 /* UIKit.framework in Frameworks */,
+				5921A3A515FDB2E8007FECF1 /* Foundation.framework in Frameworks */,
+				5921A3A715FDB2E8007FECF1 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5921A39315FDB2E8007FECF1 = {
+			isa = PBXGroup;
+			children = (
+				5921A3A815FDB2E8007FECF1 /* mobiruby-ios */,
+				5921A3A115FDB2E8007FECF1 /* Frameworks */,
+				5921A39F15FDB2E8007FECF1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5921A39F15FDB2E8007FECF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5921A39E15FDB2E8007FECF1 /* mobiruby-ios.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5921A3A115FDB2E8007FECF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5921A3A215FDB2E8007FECF1 /* UIKit.framework */,
+				5921A3A415FDB2E8007FECF1 /* Foundation.framework */,
+				5921A3A615FDB2E8007FECF1 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5921A3A815FDB2E8007FECF1 /* mobiruby-ios */ = {
+			isa = PBXGroup;
+			children = (
+				5921A3B115FDB2E8007FECF1 /* AppDelegate.h */,
+				5921A3B215FDB2E8007FECF1 /* AppDelegate.m */,
+				5921A3A915FDB2E8007FECF1 /* Supporting Files */,
+			);
+			path = "mobiruby-ios";
+			sourceTree = "<group>";
+		};
+		5921A3A915FDB2E8007FECF1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5921A3AA15FDB2E8007FECF1 /* mobiruby-ios-Info.plist */,
+				5921A3AB15FDB2E8007FECF1 /* InfoPlist.strings */,
+				5921A3AE15FDB2E8007FECF1 /* main.m */,
+				5921A3B015FDB2E8007FECF1 /* mobiruby-ios-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5921A39D15FDB2E8007FECF1 /* mobiruby-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5921A3B615FDB2E8007FECF1 /* Build configuration list for PBXNativeTarget "mobiruby-ios" */;
+			buildPhases = (
+				5921A39A15FDB2E8007FECF1 /* Sources */,
+				5921A39B15FDB2E8007FECF1 /* Frameworks */,
+				5921A39C15FDB2E8007FECF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mobiruby-ios";
+			productName = "mobiruby-ios";
+			productReference = 5921A39E15FDB2E8007FECF1 /* mobiruby-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5921A39515FDB2E8007FECF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "MobiRuby Developers";
+			};
+			buildConfigurationList = 5921A39815FDB2E8007FECF1 /* Build configuration list for PBXProject "mobiruby-ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5921A39315FDB2E8007FECF1;
+			productRefGroup = 5921A39F15FDB2E8007FECF1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5921A39D15FDB2E8007FECF1 /* mobiruby-ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5921A39C15FDB2E8007FECF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5921A3AD15FDB2E8007FECF1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5921A39A15FDB2E8007FECF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5921A3AF15FDB2E8007FECF1 /* main.m in Sources */,
+				5921A3B315FDB2E8007FECF1 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5921A3AB15FDB2E8007FECF1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5921A3AC15FDB2E8007FECF1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5921A3B415FDB2E8007FECF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5921A3B515FDB2E8007FECF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5921A3B715FDB2E8007FECF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mobiruby-ios/mobiruby-ios-Prefix.pch";
+				INFOPLIST_FILE = "mobiruby-ios/mobiruby-ios-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5921A3B815FDB2E8007FECF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mobiruby-ios/mobiruby-ios-Prefix.pch";
+				INFOPLIST_FILE = "mobiruby-ios/mobiruby-ios-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5921A39815FDB2E8007FECF1 /* Build configuration list for PBXProject "mobiruby-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5921A3B415FDB2E8007FECF1 /* Debug */,
+				5921A3B515FDB2E8007FECF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5921A3B615FDB2E8007FECF1 /* Build configuration list for PBXNativeTarget "mobiruby-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5921A3B715FDB2E8007FECF1 /* Debug */,
+				5921A3B815FDB2E8007FECF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5921A39515FDB2E8007FECF1 /* Project object */;
+}
