@@ -30,7 +30,8 @@ It's tested only Mountain Lion and XCode 4.4.1.
 ## Current show stoppers
 
 * Probably, don't work 'require' correctly
-When required 'samegame_app' in 'app.rb' and played game sometimes, game screen is black out.
+
+When required 'samegame_app' in 'app.rb' and played game sometimes, The game screen is black out.
 If write all source code in 'app.rb', The game is good.
 
 
