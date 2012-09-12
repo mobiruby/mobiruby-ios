@@ -26,7 +26,6 @@ struct mrb_state_ud {
 
 - (void)dealloc
 {
-    [_window release];
     [super dealloc];
 }
 
