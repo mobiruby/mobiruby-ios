@@ -14,6 +14,13 @@ CFLAGS = ARGV[3] || ENV["OTHER_CFLAGS"] +
 
 $structs, $consts, $enums = {}, {}, {}
 
+def normalize(value)
+  if /^[-+]?[.\d]+E[-+]\d+$/i.match(value)
+    value = "%f" % value.to_f
+  end
+  value
+end
+
 def parse_bridgesupport(xml)
   doc = Nokogiri::XML(xml)
 
@@ -29,7 +36,7 @@ def parse_bridgesupport(xml)
   end
 
   doc.xpath('//enum').each do |e|
-    $enums[e['name']] = '    {.name="%s", .value=%s}' % [e['name'], e['value']]
+    $enums[e['name']] = '    {.name="%s", .value=%s}' % [e['name'], normalize(e['value'])]
   end
 
   # Todo: should support opaque
