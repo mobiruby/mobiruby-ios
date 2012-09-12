@@ -220,12 +220,14 @@ end
 
 Cocoa::UIApplication._sharedApplication[:statusBarHidden] = 0
 
+# globa variants used for escaping GC issue.
+# I'll fix soon
 screen_rect = Cocoa::UIScreen._mainScreen._bounds
-window = Cocoa::UIWindow._alloc._initWithFrame screen_rect
-viewController = Cocoa::MyViewController._alloc._init
+$window = Cocoa::UIWindow._alloc._initWithFrame screen_rect
+$viewController = Cocoa::MyViewController._alloc._init
 
-navi = Cocoa::UINavigationController._alloc._initWithNibName nil, :bundle, nil
-navi._pushViewController viewController, :animated, C::SInt8(0)
-window._addSubview navi._view
+$navi = Cocoa::UINavigationController._alloc._initWithNibName nil, :bundle, nil
+$navi._pushViewController $viewController, :animated, C::SInt8(0)
+$window._addSubview $navi._view
 
-window._makeKeyAndVisible
+$window._makeKeyAndVisible

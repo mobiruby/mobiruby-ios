@@ -23,16 +23,9 @@ open mobiruby-ios.xcodeproj
 
 If you use XCode beta version, you should modify ``bin/build-config.sh`` or set up xcode-select correctly.
 
-
 It's tested only Mountain Lion and XCode 4.4.1.
 
-
-## Current show stoppers
-
-* Probably, don't work 'require' correctly
-
-When required 'samegame_app' in 'app.rb' and played game sometimes, The game screen is black out.
-If write all source code in 'app.rb', The game is good.
+``app.rb`` is MobiRuby starting point. Let's change and hack it.
 
 
 ## Contributing
