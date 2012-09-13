@@ -14,13 +14,6 @@ CFLAGS = ARGV[3] || ENV["OTHER_CFLAGS"] +
 
 $structs, $consts, $enums = {}, {}, {}
 
-def normalize(value)
-  if /^[-+]?[.\d]+E[-+]\d+$/i.match(value)
-    value = "%f" % value.to_f
-  end
-  value
-end
-
 def parse_bridgesupport(xml)
   doc = Nokogiri::XML(xml)
 
@@ -36,7 +29,7 @@ def parse_bridgesupport(xml)
   end
 
   doc.xpath('//enum').each do |e|
-    $enums[e['name']] = '    {.name="%s", .value=%s}' % [e['name'], normalize(e['value'])]
+    $enums[e['name']] = '    {.name="%s", .value=%s}' % [e['name'], e['value']]
   end
 
   # Todo: should support opaque
@@ -47,7 +40,7 @@ frameworks = pr.groups.where(:name => 'Frameworks').children #.map{|a| File.join
 
 imports = []
 frameworks.each do |fw|
-  xml = open("|/usr/bin/gen_bridge_metadata -f \"#{File.join(SDKROOT, fw.path)}\" -c \"#{CFLAGS.gsub('"', "\\\"")}\"").read
+  xml = open("|/usr/bin/gen_bridge_metadata --no-64-bit -f \"#{File.join(SDKROOT, fw.path)}\" -c \"#{CFLAGS.gsub('"', "\\\"")}\"").read
   imports += Dir.glob(File.join(SDKROOT, fw.path, 'Headers', '*.h')).map do |header|
     header.gsub(File.join(SDKROOT, fw.path, 'Headers'), fw.name.gsub('.framework', ''))
   end
