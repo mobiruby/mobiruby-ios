@@ -1,4 +1,4 @@
 require 'mobiruby'
 
-#require 'hello'
-require 'samegame_app'
+require 'hello'
+# require 'samegame_app'
