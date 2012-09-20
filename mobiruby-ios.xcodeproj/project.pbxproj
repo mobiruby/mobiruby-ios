@@ -12,7 +12,6 @@
 		5921A3A715FDB2E8007FECF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5921A3A615FDB2E8007FECF1 /* CoreGraphics.framework */; };
 		5921A3AD15FDB2E8007FECF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5921A3AB15FDB2E8007FECF1 /* InfoPlist.strings */; };
 		5921A3AF15FDB2E8007FECF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5921A3AE15FDB2E8007FECF1 /* main.m */; };
-		5921A3B315FDB2E8007FECF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5921A3B215FDB2E8007FECF1 /* AppDelegate.m */; };
 		59ACFB2015FDB53D004BE69E /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACF98915FDB53D004BE69E /* libffi.a */; };
 		59ACFB2715FDB53D004BE69E /* init_mobiruby_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACF99515FDB53D004BE69E /* init_mobiruby_common.c */; };
 		59ACFB2915FDB53D004BE69E /* mruby_require.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACF99715FDB53D004BE69E /* mruby_require.c */; };
@@ -130,8 +129,6 @@
 		5921A3AC15FDB2E8007FECF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5921A3AE15FDB2E8007FECF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5921A3B015FDB2E8007FECF1 /* mobiruby-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mobiruby-ios-Prefix.pch"; sourceTree = "<group>"; };
-		5921A3B115FDB2E8007FECF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5921A3B215FDB2E8007FECF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		59ACF97E15FDB53D004BE69E /* ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi.h; sourceTree = "<group>"; };
 		59ACF98115FDB53D004BE69E /* ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi.h; sourceTree = "<group>"; };
 		59ACF98215FDB53D004BE69E /* ffitarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget.h; sourceTree = "<group>"; };
@@ -331,8 +328,6 @@
 				59E87EC215FF93BC00E2F09F /* Resources */,
 				59ACFC7115FDBAB9004BE69E /* app.rb */,
 				59ACFC7A15FDBAD9004BE69E /* mobiruby.rb */,
-				5921A3B115FDB2E8007FECF1 /* AppDelegate.h */,
-				5921A3B215FDB2E8007FECF1 /* AppDelegate.m */,
 				5921A3A915FDB2E8007FECF1 /* Supporting Files */,
 			);
 			path = "mobiruby-ios";
@@ -818,7 +813,6 @@
 				59ACFC6315FDB928004BE69E /* cocoa.rb in Sources */,
 				59ACFC8215FDBB49004BE69E /* mobiruby.rb in Sources */,
 				5921A3AF15FDB2E8007FECF1 /* main.m in Sources */,
-				5921A3B315FDB2E8007FECF1 /* AppDelegate.m in Sources */,
 				59ACFB2715FDB53D004BE69E /* init_mobiruby_common.c in Sources */,
 				59ACFB2915FDB53D004BE69E /* mruby_require.c in Sources */,
 				59ACFB5A15FDB53D004BE69E /* mrblib.c in Sources */,
