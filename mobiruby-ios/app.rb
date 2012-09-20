@@ -30,4 +30,3 @@ class Cocoa::AppDelegate < Cocoa::UIResponder
 
 
 end
-

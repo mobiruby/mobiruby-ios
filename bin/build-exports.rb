@@ -12,7 +12,7 @@ CFLAGS = ARGV[3] || ENV["OTHER_CFLAGS"] +
   " -isysroot #{SDKROOT}"
 
 
-$structs, $consts, $enums = {}, {}, {}
+$structs, $consts, $enum_values, $enum_names = {}, {}, [], []
 
 def parse_bridgesupport(xml)
   doc = Nokogiri::XML(xml)
@@ -29,7 +29,11 @@ def parse_bridgesupport(xml)
   end
 
   doc.xpath('//enum').each do |e|
-    $enums[e['name']] = '    {.name="%s", .value=%s}' % [e['name'], e['value']]
+    func = 'mrb_fixnum_value'
+    func = 'mrb_float_value' if /[e\.]+/.match(e['value'])
+
+    $enum_names << '    {.name="%s"}' % [e['name']]
+    $enum_values << '    enums_table[%d].value = %s(%s);' % [$enum_values.count, func, e['value']]
   end
 
   # Todo: should support opaque
@@ -40,7 +44,7 @@ frameworks = pr.groups.where(:name => 'Frameworks').children #.map{|a| File.join
 
 imports = []
 frameworks.each do |fw|
-  xml = open("|/usr/bin/gen_bridge_metadata -f \"#{File.join(SDKROOT, fw.path)}\" -c \"#{CFLAGS.gsub('"', "\\\"")}\"").read
+  xml = open("|/usr/bin/gen_bridge_metadata --no-64-bit -f \"#{File.join(SDKROOT, fw.path)}\" -c \"#{CFLAGS.gsub('"', "\\\"")}\"").read
   imports += Dir.glob(File.join(SDKROOT, fw.path, 'Headers', '*.h')).map do |header|
     header.gsub(File.join(SDKROOT, fw.path, 'Headers'), fw.name.gsub('.framework', ''))
   end
@@ -64,6 +68,7 @@ open(OUTPUT_FILE, 'w').puts <<__STR__
  Generated from BridgeSupport.
 */
 #include "cocoa.h"
+#include "mruby/value.h"
 #{imports.map{|i| "#import \"#{i}\""}.join("\n")}
 
 static struct BridgeSupportStructTable structs_table[] = {
@@ -77,13 +82,14 @@ static struct BridgeSupportConstTable consts_table[] = {
 };
 
 static struct BridgeSupportEnumTable enums_table[] = {
-#{$enums.values.join(",\n")},
-    {.name=NULL, .value=0}
+#{$enum_names.join(",\n")},
+    {.name=NULL}
 };
 
 void
 init_cocoa_bridgesupport(mrb_state *mrb)
 {
+#{$enum_values.join("\n")}
     load_cocoa_bridgesupport(mrb, structs_table, consts_table, enums_table);
 }
 
