@@ -4,7 +4,6 @@ require 'ext'
 bgm = AudioPlayer.new("bgm_00", "aif")
 bgm.loops = -1
 bgm.volume = 0.25
-bgm.play
 
 soundPath = Cocoa::NSBundle._mainBundle._pathForResource _S("tap_se_00"), :ofType, _S("wav")
 soundURL = Cocoa::NSURL._fileURLWithPath soundPath
@@ -16,7 +15,7 @@ class Cocoa::StageView < Cocoa::UIView
     
     COLORS = ['red', 'green', 'yellow', 'blue']
     ICON_SIZE = 22
-    STAGE_SIZE = {:width => 14, :height => 18}
+    STAGE_SIZE = {:width => 14, :height => 16}
     
     def self.size
         {:width => STAGE_SIZE[:width] * ICON_SIZE, :height => STAGE_SIZE[:height] * ICON_SIZE}
@@ -161,11 +160,16 @@ class Cocoa::StageView < Cocoa::UIView
 end
 
 
-class Cocoa::MyViewController < Cocoa::UIViewController
+class Cocoa::SameGameViewController < Cocoa::UIViewController
     
     define C::Void, :loadView do
-        screen_rect = Cocoa::UIScreen._mainScreen._bounds
-        self[:view] = @view = Cocoa::UIView._alloc._initWithFrame screen_rect
+        _super :_loadView
+
+        screen_rect = self[:view]._bounds
+        navi_height = self[:navigationController][:navigationBar]._bounds[:size][:height]
+        screen_height = self[:view]._bounds[:size][:height] - navi_height
+
+        self[:view] = @view = Cocoa::UIView._alloc._initWithFrame CGRectMake(0, 0, screen_rect[:size][:width], screen_height)
         
         stage_size = Cocoa::StageView::size
         corner = (screen_rect[:size][:width] - stage_size[:width]) / 2
@@ -174,11 +178,11 @@ class Cocoa::MyViewController < Cocoa::UIViewController
         @view._addSubview @stage_view
         
         @reset_button = Cocoa::UIButton._buttonWithType(Cocoa::Const::UIButtonTypeRoudedRect)
-        @reset_button._setFrame CGRectMake(220, 422, 100, 32)
-        @reset_button._setTitle _S("Reset"), :forState, Cocoa::Const::UIControlStateNormal
+        @reset_button._setFrame CGRectMake(220, screen_height - 32, 100, 32)
+        @reset_button._setTitle "Reset", :forState, Cocoa::Const::UIControlStateNormal
         @reset_button._titleLabel._setTextColor Cocoa::UIColor._whiteColor
         
-        greenButtonImage = Cocoa::UIImage._imageNamed _S("greenButton.png")
+        greenButtonImage = Cocoa::UIImage._imageNamed "greenButton.png"
         stretchableGreenButton = greenButtonImage._stretchableImageWithLeftCapWidth 12, :topCapHeight, 12
         @reset_button._setBackgroundImage stretchableGreenButton, :forState, Cocoa::Const::UIControlStateNormal
         @reset_button._setTitleColor Cocoa::UIColor._whiteColor, :forState, Cocoa::Const::UIControlStateNormal
@@ -186,28 +190,24 @@ class Cocoa::MyViewController < Cocoa::UIViewController
         @view._addSubview @reset_button
         
         @score_label = Cocoa::UILabel._alloc._init
-        @score_label._setFrame CGRectMake(10, 427, 300, 22)
+        @score_label._setFrame CGRectMake(10, screen_height - 22 - 5, 300, 22)
         @score_label._setTextColor Cocoa::UIColor._whiteColor
         @score_label._setBackgroundColor Cocoa::UIColor._clearColor
-        @score_label[:text] = _S("Score: 0")
+        @score_label[:text] = "Score: 0"
         @view._addSubview @score_label
         
         @stage_view.updated_score do |score|
-            @score_label[:text] = _S("Score: #{score}")
+            @score_label[:text] = "Score: #{score}"
         end
 
         @stage_view.gameover do |is_cleared|
             if is_cleared
                 @stage_view.score += 1000
-                @score_label[:text] = _S("Score: #{@stage_view.score}")
+                @score_label[:text] = "Score: #{@stage_view.score}"
             end
         end
 
         @stage_view.reset
-    end
-
-    define C::Void, :viewWillAppear, C::SInt8 do
-        self._navigationController._navigationBar._setHidden(-1)
     end
 
     define C::Void, :reset do
@@ -217,17 +217,9 @@ class Cocoa::MyViewController < Cocoa::UIViewController
     end
 end
 
-
-Cocoa::UIApplication._sharedApplication[:statusBarHidden] = 0
-
-# globa variants used for escaping GC issue.
-# I'll fix soon
-screen_rect = Cocoa::UIScreen._mainScreen._bounds
-$window = Cocoa::UIWindow._alloc._initWithFrame screen_rect
-$viewController = Cocoa::MyViewController._alloc._init
-
-$navi = Cocoa::UINavigationController._alloc._initWithNibName nil, :bundle, nil
-$navi._pushViewController $viewController, :animated, C::SInt8(0)
-$window._addSubview $navi._view
-
-$window._makeKeyAndVisible
+# bgm.play
+def show_samegame(navi)
+    viewController = Cocoa::SameGameViewController._alloc._init
+    viewController[:title] = "SameGame"
+    navi._pushViewController viewController, :animated, C::SInt8(1)
+end

@@ -12,6 +12,8 @@
 		5921A3A715FDB2E8007FECF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5921A3A615FDB2E8007FECF1 /* CoreGraphics.framework */; };
 		5921A3AD15FDB2E8007FECF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5921A3AB15FDB2E8007FECF1 /* InfoPlist.strings */; };
 		5921A3AF15FDB2E8007FECF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5921A3AE15FDB2E8007FECF1 /* main.m */; };
+		598B63F0160B60BF0051D443 /* tableview_menu.rb in Resources */ = {isa = PBXBuildFile; fileRef = 598B63EF160B60BF0051D443 /* tableview_menu.rb */; };
+		598B63F1160B60CB0051D443 /* tableview_menu.rb in Sources */ = {isa = PBXBuildFile; fileRef = 598B63EF160B60BF0051D443 /* tableview_menu.rb */; };
 		59ACFB2015FDB53D004BE69E /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACF98915FDB53D004BE69E /* libffi.a */; };
 		59ACFB2715FDB53D004BE69E /* init_mobiruby_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACF99515FDB53D004BE69E /* init_mobiruby_common.c */; };
 		59ACFB2915FDB53D004BE69E /* mruby_require.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACF99715FDB53D004BE69E /* mruby_require.c */; };
@@ -79,12 +81,12 @@
 		59ACFC6D15FDBA22004BE69E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACFC6C15FDBA22004BE69E /* QuartzCore.framework */; };
 		59ACFC7015FDBA84004BE69E /* export_headers.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC6F15FDBA84004BE69E /* export_headers.m */; };
 		59ACFC7215FDBAB9004BE69E /* app.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59ACFC7115FDBAB9004BE69E /* app.rb */; };
-		59ACFC7515FDBAC8004BE69E /* samegame_app.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59ACFC7315FDBAC8004BE69E /* samegame_app.rb */; };
+		59ACFC7515FDBAC8004BE69E /* sameapp.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59ACFC7315FDBAC8004BE69E /* sameapp.rb */; };
 		59ACFC7615FDBAC8004BE69E /* samegame.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59ACFC7415FDBAC8004BE69E /* samegame.rb */; };
 		59ACFC7815FDBAD1004BE69E /* hello.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59ACFC7715FDBAD1004BE69E /* hello.rb */; };
 		59ACFC7B15FDBAD9004BE69E /* ext.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59ACFC7915FDBAD9004BE69E /* ext.rb */; };
 		59ACFC7C15FDBAD9004BE69E /* mobiruby.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59ACFC7A15FDBAD9004BE69E /* mobiruby.rb */; };
-		59ACFC7D15FDBAE5004BE69E /* samegame_app.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7315FDBAC8004BE69E /* samegame_app.rb */; };
+		59ACFC7D15FDBAE5004BE69E /* sameapp.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7315FDBAC8004BE69E /* sameapp.rb */; };
 		59ACFC7E15FDBAE6004BE69E /* samegame.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7415FDBAC8004BE69E /* samegame.rb */; };
 		59ACFC7F15FDBAEC004BE69E /* ext.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7915FDBAD9004BE69E /* ext.rb */; };
 		59ACFC8015FDBAEF004BE69E /* hello.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7715FDBAD1004BE69E /* hello.rb */; };
@@ -104,6 +106,7 @@
 		59E87EDC15FF9B1500E2F09F /* square-red-24-ns.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E87ECE15FF9B1500E2F09F /* square-red-24-ns.png */; };
 		59E87EDD15FF9B1500E2F09F /* square-yellow-24-ns.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E87ECF15FF9B1500E2F09F /* square-yellow-24-ns.png */; };
 		59E87EDE15FF9B1500E2F09F /* tap_se_00.wav in Resources */ = {isa = PBXBuildFile; fileRef = 59E87ED015FF9B1500E2F09F /* tap_se_00.wav */; };
+		59FE8101160BEAB6002B24D8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FE8100160BEAB6002B24D8 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -129,6 +132,7 @@
 		5921A3AC15FDB2E8007FECF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5921A3AE15FDB2E8007FECF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5921A3B015FDB2E8007FECF1 /* mobiruby-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mobiruby-ios-Prefix.pch"; sourceTree = "<group>"; };
+		598B63EF160B60BF0051D443 /* tableview_menu.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = tableview_menu.rb; sourceTree = "<group>"; };
 		59ACF97E15FDB53D004BE69E /* ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi.h; sourceTree = "<group>"; };
 		59ACF98115FDB53D004BE69E /* ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi.h; sourceTree = "<group>"; };
 		59ACF98215FDB53D004BE69E /* ffitarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget.h; sourceTree = "<group>"; };
@@ -250,7 +254,7 @@
 		59ACFC6C15FDBA22004BE69E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		59ACFC6F15FDBA84004BE69E /* export_headers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = export_headers.m; sourceTree = SOURCE_ROOT; };
 		59ACFC7115FDBAB9004BE69E /* app.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = app.rb; sourceTree = "<group>"; };
-		59ACFC7315FDBAC8004BE69E /* samegame_app.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = samegame_app.rb; sourceTree = "<group>"; };
+		59ACFC7315FDBAC8004BE69E /* sameapp.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = sameapp.rb; sourceTree = "<group>"; };
 		59ACFC7415FDBAC8004BE69E /* samegame.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = samegame.rb; sourceTree = "<group>"; };
 		59ACFC7715FDBAD1004BE69E /* hello.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = hello.rb; sourceTree = "<group>"; };
 		59ACFC7915FDBAD9004BE69E /* ext.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ext.rb; sourceTree = "<group>"; };
@@ -269,6 +273,7 @@
 		59E87ECE15FF9B1500E2F09F /* square-red-24-ns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square-red-24-ns.png"; sourceTree = "<group>"; };
 		59E87ECF15FF9B1500E2F09F /* square-yellow-24-ns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square-yellow-24-ns.png"; sourceTree = "<group>"; };
 		59E87ED015FF9B1500E2F09F /* tap_se_00.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tap_se_00.wav; sourceTree = "<group>"; };
+		59FE8100160BEAB6002B24D8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,11 +328,12 @@
 		5921A3A815FDB2E8007FECF1 /* mobiruby-ios */ = {
 			isa = PBXGroup;
 			children = (
+				59E87EC215FF93BC00E2F09F /* Resources */,
 				59ACFC6715FDB98C004BE69E /* samegame */,
 				59ACFC6615FDB980004BE69E /* hello */,
-				59E87EC215FF93BC00E2F09F /* Resources */,
 				59ACFC7115FDBAB9004BE69E /* app.rb */,
 				59ACFC7A15FDBAD9004BE69E /* mobiruby.rb */,
+				598B63EF160B60BF0051D443 /* tableview_menu.rb */,
 				5921A3A915FDB2E8007FECF1 /* Supporting Files */,
 			);
 			path = "mobiruby-ios";
@@ -671,7 +677,7 @@
 		59ACFC6715FDB98C004BE69E /* samegame */ = {
 			isa = PBXGroup;
 			children = (
-				59ACFC7315FDBAC8004BE69E /* samegame_app.rb */,
+				59ACFC7315FDBAC8004BE69E /* sameapp.rb */,
 				59ACFC7415FDBAC8004BE69E /* samegame.rb */,
 				59ACFC7915FDBAD9004BE69E /* ext.rb */,
 			);
@@ -681,6 +687,7 @@
 		59E87EC215FF93BC00E2F09F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				59FE8100160BEAB6002B24D8 /* Default-568h@2x.png */,
 				59E87EC315FF9B1500E2F09F /* Default.png */,
 				59E87EC415FF9B1500E2F09F /* Default@2x.png */,
 				59E87EC515FF9B1500E2F09F /* icon.png */,
@@ -757,7 +764,7 @@
 				59ACFC3215FDB53D004BE69E /* cfunc_rb.rb in Resources */,
 				59ACFC4615FDB53D004BE69E /* cocoa.rb in Resources */,
 				59ACFC7215FDBAB9004BE69E /* app.rb in Resources */,
-				59ACFC7515FDBAC8004BE69E /* samegame_app.rb in Resources */,
+				59ACFC7515FDBAC8004BE69E /* sameapp.rb in Resources */,
 				59ACFC7615FDBAC8004BE69E /* samegame.rb in Resources */,
 				59ACFC7815FDBAD1004BE69E /* hello.rb in Resources */,
 				59ACFC7B15FDBAD9004BE69E /* ext.rb in Resources */,
@@ -776,6 +783,8 @@
 				59E87EDC15FF9B1500E2F09F /* square-red-24-ns.png in Resources */,
 				59E87EDD15FF9B1500E2F09F /* square-yellow-24-ns.png in Resources */,
 				59E87EDE15FF9B1500E2F09F /* tap_se_00.wav in Resources */,
+				598B63F0160B60BF0051D443 /* tableview_menu.rb in Resources */,
+				59FE8101160BEAB6002B24D8 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,12 +813,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				598B63F1160B60CB0051D443 /* tableview_menu.rb in Sources */,
 				59ACFC8115FDBAF1004BE69E /* app.rb in Sources */,
 				59ACFC6415FDB92F004BE69E /* cfunc_rb.rb in Sources */,
 				59ACFC8015FDBAEF004BE69E /* hello.rb in Sources */,
 				59ACFC7F15FDBAEC004BE69E /* ext.rb in Sources */,
+				59ACFC7D15FDBAE5004BE69E /* sameapp.rb in Sources */,
 				59ACFC7E15FDBAE6004BE69E /* samegame.rb in Sources */,
-				59ACFC7D15FDBAE5004BE69E /* samegame_app.rb in Sources */,
 				59ACFC6315FDB928004BE69E /* cocoa.rb in Sources */,
 				59ACFC8215FDBB49004BE69E /* mobiruby.rb in Sources */,
 				5921A3AF15FDB2E8007FECF1 /* main.m in Sources */,

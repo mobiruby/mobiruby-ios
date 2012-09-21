@@ -1,9 +1,16 @@
 require 'mobiruby'
+require 'tableview_menu'
+require 'hello'
+require 'sameapp'
 
 class Cocoa::AppDelegate < Cocoa::UIResponder
     define C::Int, :application, Cocoa::Object, :didFinishLaunchingWithOptions, Cocoa::Object do |application, launchOptions|
-        require 'hello'
-        # require 'samegame_app'
+        screen_rect = Cocoa::UIScreen._mainScreen._bounds
+        @window = Cocoa::UIWindow._alloc._initWithFrame screen_rect
+        @navi = Cocoa::UINavigationController._alloc._initWithNibName nil, :bundle, nil
+        @window._addSubview @navi._view
+        @window._makeKeyAndVisible
+        show_tableview_menu(@navi)
     end
     
     define C::Void, :applicationWillResignActive, Cocoa::Object do |application|
@@ -27,6 +34,4 @@ class Cocoa::AppDelegate < Cocoa::UIResponder
     define C::Void, :applicationWillTerminate, Cocoa::Object do |application|
         # Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     end
-
-
 end
