@@ -3,7 +3,10 @@ class Cocoa::TopMenu < Cocoa::NSObject
 
     define Cocoa::Object, :tableView, Cocoa::Object, :cellForRowAtIndexPath, Cocoa::Object do |tableView, indexPath|
         @cellIdent ||= _S("Cell")
-        cell = Cocoa::UITableViewCell._alloc._initWithStyle Cocoa::Const::UITableViewCellStyleDefault, :reuseIdentifier, @cellIdent
+        cell = tableView._dequeueReusableCellWithIdentifier @cellIdent
+        unless cell
+            cell = Cocoa::UITableViewCell._alloc._initWithStyle Cocoa::Const::UITableViewCellStyleDefault, :reuseIdentifier, @cellIdent
+        end
         cell[:textLabel][:text] = @data[indexPath[:row].to_i][:title]
         cell
     end
@@ -16,7 +19,6 @@ class Cocoa::TopMenu < Cocoa::NSObject
         row = indexPath[:row].to_i
         send(@data[indexPath[:row].to_i][:func], @navi)
     end
-
 end
 
 def show_tableview_menu(navi)
