@@ -1,4 +1,4 @@
-class Cocoa::TopMenu < Cocoa::NSObject
+class Cocoa::TopMenuViewController < Cocoa::UITableViewController
     attr_accessor :data, :navi
 
     define Cocoa::Object, :tableView, Cocoa::Object, :cellForRowAtIndexPath, Cocoa::Object do |tableView, indexPath|
@@ -17,21 +17,18 @@ class Cocoa::TopMenu < Cocoa::NSObject
 
     define C::Void, :tableView, Cocoa::Object, :didSelectRowAtIndexPath, Cocoa::Object do |tableView, indexPath|
         row = indexPath[:row].to_i
-        send(@data[indexPath[:row].to_i][:func], @navi)
+        send(@data[indexPath[:row].to_i][:func], self._navigationController)
     end
 end
 
 def show_tableview_menu(navi)
-    viewController = Cocoa::UITableViewController._alloc._initWithStyle Cocoa::Const::UITableViewStylePlain 
+    viewController = Cocoa::TopMenuViewController._alloc._initWithStyle Cocoa::Const::UITableViewStylePlain 
     viewController[:title] = "MobiRuby"
-
-    topMenu = Cocoa::TopMenu._alloc._init
-    topMenu.navi = navi
-    topMenu.data = [
+    viewController.data = [
         {:title => 'SameGame', :func => 'show_samegame'},
         {:title => 'Hello world', :func => 'show_hello'},
     ]
-    viewController[:tableView][:dataSource] = topMenu
-    viewController[:tableView][:delegate] = topMenu
+    viewController[:tableView][:dataSource] = viewController
+    viewController[:tableView][:delegate] = viewController
     navi._pushViewController viewController, :animated, C::SInt8(0)
 end
