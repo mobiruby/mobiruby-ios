@@ -28,20 +28,20 @@ build_target () {
     ../configure --host=${triple} && make
     popd
 }
-build_target armv6 arm-apple-darwin10 armv6-ios "${PLATFORM_IOS}" "${PLATFORM_IOS}/Developer/SDKs/iPhoneOS${SDK_IOS_VERSION}.sdk/"
 build_target armv7 arm-apple-darwin10 armv7-ios "${PLATFORM_IOS}" "${PLATFORM_IOS}/Developer/SDKs/iPhoneOS${SDK_IOS_VERSION}.sdk/"
+build_target armv7s arm-apple-darwin10 armv7s-ios "${PLATFORM_IOS}" "${PLATFORM_IOS}/Developer/SDKs/iPhoneOS${SDK_IOS_VERSION}.sdk/"
 build_target i386 i386-apple-darwin10 i386-ios-sim "${PLATFORM_IOS_SIM}" "${PLATFORM_IOS_SIM}/Developer/SDKs/iPhoneSimulator${SDK_IOS_VERSION}.sdk/"
 
 
 # Create universal output directories
 mkdir -p "${OUTPUT_DIR}"
 mkdir -p "${OUTPUT_DIR}/include"
-mkdir -p "${OUTPUT_DIR}/include/armv6"
+mkdir -p "${OUTPUT_DIR}/include/armv7s"
 mkdir -p "${OUTPUT_DIR}/include/armv7"
 mkdir -p "${OUTPUT_DIR}/include/i386"
 
 # Create the universal binary
-lipo -create armv6-ios/.libs/libffi.a armv7-ios/.libs/libffi.a i386-ios-sim/.libs/libffi.a -output "${OUTPUT_DIR}/libffi.a"
+lipo -create armv7s-ios/.libs/libffi.a armv7-ios/.libs/libffi.a i386-ios-sim/.libs/libffi.a -output "${OUTPUT_DIR}/libffi.a"
 
 # Copy in the headers
 copy_headers () {
@@ -53,7 +53,7 @@ copy_headers () {
     cp "${src}/include/ffitarget.h" "${dest}"
 }
 
-copy_headers armv6-ios "${OUTPUT_DIR}/include/armv6"
+copy_headers armv7s-ios "${OUTPUT_DIR}/include/armv7s"
 copy_headers armv7-ios "${OUTPUT_DIR}/include/armv7"
 copy_headers i386-ios-sim "${OUTPUT_DIR}/include/i386"
 
@@ -62,8 +62,8 @@ copy_headers i386-ios-sim "${OUTPUT_DIR}/include/i386"
 cat << EOF
 #ifdef __arm__
   #include <arm/arch.h>
-  #ifdef _ARM_ARCH_6
-    #include "include/armv6/ffi.h"
+  #ifdef _ARM_ARCH_7S
+    #include "include/armv7s/ffi.h"
   #elif _ARM_ARCH_7
     #include "include/armv7/ffi.h"
   #endif
