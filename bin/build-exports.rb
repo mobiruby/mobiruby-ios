@@ -44,7 +44,9 @@ frameworks = pr.groups.where(:name => 'Frameworks').children #.map{|a| File.join
 
 imports = []
 frameworks.each do |fw|
-  xml = open("|/usr/bin/gen_bridge_metadata --no-64-bit -f \"#{File.join(SDKROOT, fw.path)}\" -c \"#{CFLAGS.gsub('"', "\\\"")}\"").read
+  command = "/usr/bin/gen_bridge_metadata --no-64-bit -f \"#{File.join(SDKROOT, fw.path)}\" -c \"#{CFLAGS.gsub('"', "\\\"")} -framework #{fw.name.gsub('.framework', '')}\""
+
+  xml = open("|#{command}").read
   imports += Dir.glob(File.join(SDKROOT, fw.path, 'Headers', '*.h')).map do |header|
     header.gsub(File.join(SDKROOT, fw.path, 'Headers'), fw.name.gsub('.framework', ''))
   end
