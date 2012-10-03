@@ -92,6 +92,7 @@
 		59ACFC8015FDBAEF004BE69E /* hello.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7715FDBAD1004BE69E /* hello.rb */; };
 		59ACFC8115FDBAF1004BE69E /* app.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7115FDBAB9004BE69E /* app.rb */; };
 		59ACFC8215FDBB49004BE69E /* mobiruby.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7A15FDBAD9004BE69E /* mobiruby.rb */; };
+		59E2AEDF161C776000631B1F /* cocoa_thread.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E2AEDD161C776000631B1F /* cocoa_thread.m */; };
 		59E87ED115FF9B1500E2F09F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E87EC315FF9B1500E2F09F /* Default.png */; };
 		59E87ED215FF9B1500E2F09F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E87EC415FF9B1500E2F09F /* Default@2x.png */; };
 		59E87ED315FF9B1500E2F09F /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E87EC515FF9B1500E2F09F /* icon.png */; };
@@ -259,6 +260,8 @@
 		59ACFC7715FDBAD1004BE69E /* hello.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = hello.rb; sourceTree = "<group>"; };
 		59ACFC7915FDBAD9004BE69E /* ext.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ext.rb; sourceTree = "<group>"; };
 		59ACFC7A15FDBAD9004BE69E /* mobiruby.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = mobiruby.rb; sourceTree = "<group>"; };
+		59E2AEDD161C776000631B1F /* cocoa_thread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoa_thread.m; sourceTree = "<group>"; };
+		59E2AEDE161C776000631B1F /* cocoa_thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cocoa_thread.h; sourceTree = "<group>"; };
 		59E87EC315FF9B1500E2F09F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		59E87EC415FF9B1500E2F09F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		59E87EC515FF9B1500E2F09F /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -640,6 +643,8 @@
 		59ACFAFF15FDB53D004BE69E /* src */ = {
 			isa = PBXGroup;
 			children = (
+				59E2AEDD161C776000631B1F /* cocoa_thread.m */,
+				59E2AEDE161C776000631B1F /* cocoa_thread.h */,
 				59ACFB0015FDB53D004BE69E /* cocoa_block.h */,
 				59ACFB0115FDB53D004BE69E /* cocoa_block.m */,
 				59ACFB0215FDB53D004BE69E /* cocoa_bridgesupport.h */,
@@ -880,6 +885,7 @@
 				59ACFC4215FDB53D004BE69E /* cocoa_type.m in Sources */,
 				59ACFC4315FDB53D004BE69E /* init_cocoa.m in Sources */,
 				59ACFC7015FDBA84004BE69E /* export_headers.m in Sources */,
+				59E2AEDF161C776000631B1F /* cocoa_thread.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
