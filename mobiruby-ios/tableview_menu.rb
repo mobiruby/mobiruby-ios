@@ -1,5 +1,6 @@
 class Cocoa::TopMenuViewController < Cocoa::UITableViewController
     attr_accessor :data, :navi
+    protocol :UITableViewDelegate, :UITableViewDataSource
 
     define Cocoa::Object, :tableView, Cocoa::Object, :cellForRowAtIndexPath, Cocoa::Object do |tableView, indexPath|
         @cellIdent ||= _S("Cell")
