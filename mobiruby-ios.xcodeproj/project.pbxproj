@@ -12,7 +12,6 @@
 		5921A3A715FDB2E8007FECF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5921A3A615FDB2E8007FECF1 /* CoreGraphics.framework */; };
 		5921A3AD15FDB2E8007FECF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5921A3AB15FDB2E8007FECF1 /* InfoPlist.strings */; };
 		5921A3AF15FDB2E8007FECF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5921A3AE15FDB2E8007FECF1 /* main.m */; };
-		598B63F0160B60BF0051D443 /* tableview_menu.rb in Resources */ = {isa = PBXBuildFile; fileRef = 598B63EF160B60BF0051D443 /* tableview_menu.rb */; };
 		598B63F1160B60CB0051D443 /* tableview_menu.rb in Sources */ = {isa = PBXBuildFile; fileRef = 598B63EF160B60BF0051D443 /* tableview_menu.rb */; };
 		59ACFB2015FDB53D004BE69E /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACF98915FDB53D004BE69E /* libffi.a */; };
 		59ACFB2715FDB53D004BE69E /* init_mobiruby_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACF99515FDB53D004BE69E /* init_mobiruby_common.c */; };
@@ -28,7 +27,6 @@
 		59ACFB7C15FDB53D004BE69E /* enum.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA0F15FDB53D004BE69E /* enum.c */; };
 		59ACFB7F15FDB53D004BE69E /* error.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA1215FDB53D004BE69E /* error.c */; };
 		59ACFB8215FDB53D004BE69E /* etc.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA1615FDB53D004BE69E /* etc.c */; };
-		59ACFB8515FDB53D004BE69E /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 59ACFA1A15FDB53D004BE69E /* .gitkeep */; };
 		59ACFB8615FDB53D004BE69E /* gc.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA1B15FDB53D004BE69E /* gc.c */; };
 		59ACFB8915FDB53D004BE69E /* hash.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA1E15FDB53D004BE69E /* hash.c */; };
 		59ACFB8C15FDB53D004BE69E /* init.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA2115FDB53D004BE69E /* init.c */; };
@@ -65,7 +63,6 @@
 		59ACFC2C15FDB53D004BE69E /* cfunc_struct.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFAE715FDB53D004BE69E /* cfunc_struct.c */; };
 		59ACFC2E15FDB53D004BE69E /* cfunc_type.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFAE915FDB53D004BE69E /* cfunc_type.c */; };
 		59ACFC2F15FDB53D004BE69E /* cfunc_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFAEA15FDB53D004BE69E /* cfunc_utils.c */; };
-		59ACFC3215FDB53D004BE69E /* cfunc_rb.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59ACFAEE15FDB53D004BE69E /* cfunc_rb.rb */; };
 		59ACFC3D15FDB53D004BE69E /* cocoa_block.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFB0115FDB53D004BE69E /* cocoa_block.m */; };
 		59ACFC3E15FDB53D004BE69E /* cocoa_bridgesupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFB0315FDB53D004BE69E /* cocoa_bridgesupport.m */; };
 		59ACFC3F15FDB53D004BE69E /* cocoa_obj_hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFB0515FDB53D004BE69E /* cocoa_obj_hook.m */; };
@@ -73,19 +70,12 @@
 		59ACFC4115FDB53D004BE69E /* cocoa_st.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFB0815FDB53D004BE69E /* cocoa_st.c */; };
 		59ACFC4215FDB53D004BE69E /* cocoa_type.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFB0B15FDB53D004BE69E /* cocoa_type.m */; };
 		59ACFC4315FDB53D004BE69E /* init_cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFB0C15FDB53D004BE69E /* init_cocoa.m */; };
-		59ACFC4615FDB53D004BE69E /* cocoa.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59ACFB1015FDB53D004BE69E /* cocoa.rb */; };
 		59ACFC6315FDB928004BE69E /* cocoa.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFB1015FDB53D004BE69E /* cocoa.rb */; };
 		59ACFC6415FDB92F004BE69E /* cfunc_rb.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFAEE15FDB53D004BE69E /* cfunc_rb.rb */; };
 		59ACFC6915FDBA11004BE69E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACFC6815FDBA11004BE69E /* SystemConfiguration.framework */; };
 		59ACFC6B15FDBA15004BE69E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACFC6A15FDBA15004BE69E /* AVFoundation.framework */; };
 		59ACFC6D15FDBA22004BE69E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACFC6C15FDBA22004BE69E /* QuartzCore.framework */; };
 		59ACFC7015FDBA84004BE69E /* export_headers.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC6F15FDBA84004BE69E /* export_headers.m */; };
-		59ACFC7215FDBAB9004BE69E /* app.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59ACFC7115FDBAB9004BE69E /* app.rb */; };
-		59ACFC7515FDBAC8004BE69E /* sameapp.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59ACFC7315FDBAC8004BE69E /* sameapp.rb */; };
-		59ACFC7615FDBAC8004BE69E /* samegame.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59ACFC7415FDBAC8004BE69E /* samegame.rb */; };
-		59ACFC7815FDBAD1004BE69E /* hello.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59ACFC7715FDBAD1004BE69E /* hello.rb */; };
-		59ACFC7B15FDBAD9004BE69E /* ext.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59ACFC7915FDBAD9004BE69E /* ext.rb */; };
-		59ACFC7C15FDBAD9004BE69E /* mobiruby.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59ACFC7A15FDBAD9004BE69E /* mobiruby.rb */; };
 		59ACFC7D15FDBAE5004BE69E /* sameapp.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7315FDBAC8004BE69E /* sameapp.rb */; };
 		59ACFC7E15FDBAE6004BE69E /* samegame.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7415FDBAC8004BE69E /* samegame.rb */; };
 		59ACFC7F15FDBAEC004BE69E /* ext.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7915FDBAD9004BE69E /* ext.rb */; };
@@ -760,15 +750,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5921A3AD15FDB2E8007FECF1 /* InfoPlist.strings in Resources */,
-				59ACFB8515FDB53D004BE69E /* .gitkeep in Resources */,
-				59ACFC3215FDB53D004BE69E /* cfunc_rb.rb in Resources */,
-				59ACFC4615FDB53D004BE69E /* cocoa.rb in Resources */,
-				59ACFC7215FDBAB9004BE69E /* app.rb in Resources */,
-				59ACFC7515FDBAC8004BE69E /* sameapp.rb in Resources */,
-				59ACFC7615FDBAC8004BE69E /* samegame.rb in Resources */,
-				59ACFC7815FDBAD1004BE69E /* hello.rb in Resources */,
-				59ACFC7B15FDBAD9004BE69E /* ext.rb in Resources */,
-				59ACFC7C15FDBAD9004BE69E /* mobiruby.rb in Resources */,
 				59E87ED115FF9B1500E2F09F /* Default.png in Resources */,
 				59E87ED215FF9B1500E2F09F /* Default@2x.png in Resources */,
 				59E87ED315FF9B1500E2F09F /* icon.png in Resources */,
@@ -783,7 +764,6 @@
 				59E87EDC15FF9B1500E2F09F /* square-red-24-ns.png in Resources */,
 				59E87EDD15FF9B1500E2F09F /* square-yellow-24-ns.png in Resources */,
 				59E87EDE15FF9B1500E2F09F /* tap_se_00.wav in Resources */,
-				598B63F0160B60BF0051D443 /* tableview_menu.rb in Resources */,
 				59FE8101160BEAB6002B24D8 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -949,6 +929,8 @@
 		5921A3B715FDB2E8007FECF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DEAD_CODE_STRIPPING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mobiruby-ios/mobiruby-ios-Prefix.pch";
 				INFOPLIST_FILE = "mobiruby-ios/mobiruby-ios-Info.plist";
@@ -968,6 +950,7 @@
 					"-DUSE_MRBC_DATA",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -975,6 +958,8 @@
 		5921A3B815FDB2E8007FECF1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DEAD_CODE_STRIPPING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mobiruby-ios/mobiruby-ios-Prefix.pch";
 				INFOPLIST_FILE = "mobiruby-ios/mobiruby-ios-Info.plist";
@@ -994,6 +979,7 @@
 					"-DUSE_MRBC_DATA",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

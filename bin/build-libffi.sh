@@ -64,7 +64,7 @@ cat << EOF
   #include <arm/arch.h>
   #ifdef _ARM_ARCH_7S
     #include "include/armv7s/ffi.h"
-  #elif _ARM_ARCH_7
+  #elif defined(_ARM_ARCH_7)
     #include "include/armv7/ffi.h"
   #endif
 #elif defined(__i386__)
