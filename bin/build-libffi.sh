@@ -7,6 +7,7 @@ mkdir -p tmp
 cd tmp
 git clone https://github.com/atgreen/libffi.git
 cd libffi
+git checkout d330f19292da8f39a78a9e2b0ba08df8094e3bc5
 sed -i -e "s/align 0/align 4/g" src/arm/sysv.S
 
 build_target () {
@@ -25,6 +26,7 @@ build_target () {
     -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 \
     -gdwarf-2  \
     -miphoneos-version-min=${MIN_IOS_VERSION}"
+    autoreconf
     ../configure --host=${triple} && make
     popd
 }
