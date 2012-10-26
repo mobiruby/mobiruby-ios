@@ -70,7 +70,8 @@ class Cocoa::StageView < Cocoa::UIView
     end
 
     define C::Void, :touchesBegan, Cocoa::Object, :withEvent, Cocoa::Object do |touches, event|
-        (@touchesBeganLock ||= Mutex.new).block do
+        @touchesBeganLock ||= Mutex.new
+        @touchesBeganLock.block do
             x, y = calcPosition(touches)
             checked = @stage.check(x, y)
             
@@ -88,7 +89,8 @@ class Cocoa::StageView < Cocoa::UIView
     end
 
     define C::Void, :touchesCancelled, Cocoa::Object, :withEvent, Cocoa::Object do |touches, event|
-        (@touchesCancelledLock ||= Mutex.new).block do
+        @touchesCancelledLock ||= Mutex.new
+        @touchesCancelledLock.block do
             @cursor = nil
             @stage.each do |item, x, y|
                 item[:view]._setAlpha(1.0) if item[:view]
@@ -97,7 +99,8 @@ class Cocoa::StageView < Cocoa::UIView
     end
 
     define C::Void, :touchesMoved, Cocoa::Object, :withEvent, Cocoa::Object do |touches, event|
-        (@touchesMovedLock ||= Mutex.new).block do
+        @touchesMovedLock ||= Mutex.new
+        @touchesMovedLock.block do
             if @cursor
                 cur_x, cur_y = @cursor
                 x, y = calcPosition(touches)
@@ -112,7 +115,8 @@ class Cocoa::StageView < Cocoa::UIView
     end
 
     define C::Void, :touchesEnded, Cocoa::Object, :withEvent, Cocoa::Object do |touches, event|
-        (@touchesEndedLock ||= Mutex.new).block do
+        @touchesEndedLock ||= Mutex.new
+        @touchesEndedLock.block do
             if @cursor
                 x, y = @cursor
                 
@@ -211,7 +215,8 @@ class Cocoa::SameGameViewController < Cocoa::UIViewController
     end
 
     define C::Void, :reset do
-        (@resetLock ||= Mutex.new).block do
+        @resetLock ||= Mutex.new
+        @resetLock.block do
             @stage_view.reset
         end
     end

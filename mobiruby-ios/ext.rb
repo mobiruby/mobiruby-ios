@@ -31,7 +31,6 @@ class Mutex
         block.call
         @lock = false
     end
-
 end
 
 def CGRectMake(x,y,w,h)

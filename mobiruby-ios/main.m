@@ -24,20 +24,25 @@ struct mrb_state_ud {
     struct cocoa_state cocoa_state;
 };
 
+static
+void mrb_state_init(mrb_state *mrb)
+{
+    mrb->ud = malloc(sizeof(struct mrb_state_ud));
+    init_cfunc_module(mrb, mrb_state_init);
+    init_cocoa_module(mrb);
+    
+    init_cocoa_bridgesupport(mrb);
+    init_mobiruby_common_module(mrb);
+}
+
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
-        mrb_state *mrb = mrb_open();
-        mrb->ud = malloc(sizeof(struct mrb_state_ud));
-        
         cfunc_state_offset = cfunc_offsetof(struct mrb_state_ud, cfunc_state);
-        init_cfunc_module(mrb);
-        
         cocoa_state_offset = cocoa_offsetof(struct mrb_state_ud, cocoa_state);
-        init_cocoa_module(mrb);
-        
-        init_cocoa_bridgesupport(mrb);
-        init_mobiruby_common_module(mrb);
+
+        mrb_state *mrb = mrb_open();
+        mrb_state_init(mrb);
         
         int n = mrb_read_irep(mrb, mruby_data_app);
         if (n >= 0) {
