@@ -20,18 +20,6 @@ class AudioPlayer
     end
 end
 
-class Mutex
-    def initialize(&block)
-        @lock = false
-    end
-
-    def block(&block)
-        return false if @lock
-        @lock = true
-        block.call
-        @lock = false
-    end
-end
 
 def CGRectMake(x,y,w,h)
     rect = Cocoa::Struct::CGRect.new

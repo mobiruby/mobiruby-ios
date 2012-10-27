@@ -70,94 +70,82 @@ class Cocoa::StageView < Cocoa::UIView
     end
 
     define C::Void, :touchesBegan, Cocoa::Object, :withEvent, Cocoa::Object do |touches, event|
-        @touchesBeganLock ||= Mutex.new
-        @touchesBeganLock.block do
-            x, y = calcPosition(touches)
-            checked = @stage.check(x, y)
-            
-            if checked.size > 1
-                @cursor = [x, y]
-                @stage.each do |item, x, y|
-                    if item[:view]
-                        item[:view]._setAlpha(checked.include?([x, y]) ? 0.4 : 1.0)
-                    end
+        x, y = calcPosition(touches)
+        checked = @stage.check(x, y)
+        
+        if checked.size > 1
+            @cursor = [x, y]
+            @stage.each do |item, x, y|
+                if item[:view]
+                    item[:view]._setAlpha(checked.include?([x, y]) ? 0.4 : 1.0)
                 end
-                else
-                @cursor = nil
             end
+            else
+            @cursor = nil
         end
     end
 
     define C::Void, :touchesCancelled, Cocoa::Object, :withEvent, Cocoa::Object do |touches, event|
-        @touchesCancelledLock ||= Mutex.new
-        @touchesCancelledLock.block do
-            @cursor = nil
-            @stage.each do |item, x, y|
-                item[:view]._setAlpha(1.0) if item[:view]
-            end
+        @cursor = nil
+        @stage.each do |item, x, y|
+            item[:view]._setAlpha(1.0) if item[:view]
         end
     end
 
     define C::Void, :touchesMoved, Cocoa::Object, :withEvent, Cocoa::Object do |touches, event|
-        @touchesMovedLock ||= Mutex.new
-        @touchesMovedLock.block do
-            if @cursor
-                cur_x, cur_y = @cursor
-                x, y = calcPosition(touches)
-                if (cur_x - x).abs > 5 || (cur_y - y).abs > 5
-                    @cursor = nil
-                    @stage.each do |item, x, y|
-                        item[:view]._setAlpha(1.0) if item[:view]
-                    end
+        if @cursor
+            cur_x, cur_y = @cursor
+            x, y = calcPosition(touches)
+            if (cur_x - x).abs > 5 || (cur_y - y).abs > 5
+                @cursor = nil
+                @stage.each do |item, x, y|
+                    item[:view]._setAlpha(1.0) if item[:view]
                 end
             end
         end
     end
 
     define C::Void, :touchesEnded, Cocoa::Object, :withEvent, Cocoa::Object do |touches, event|
-        @touchesEndedLock ||= Mutex.new
-        @touchesEndedLock.block do
-            if @cursor
-                x, y = @cursor
+        if @cursor
+            x, y = @cursor
+            
+            removed = @stage.remove(x, y) do |item, x, y|
+                item[:view]._removeFromSuperview if item[:view]
+                item[:view] = item[:color] = nil
+            end
+            
+            @stage.fall do |item, x, y, steps|
+                context = C::call(C::Pointer, "UIGraphicsGetCurrentContext")
+                Cocoa::UIView._beginAnimations nil, :context, context
+                Cocoa::UIView._setAnimationDuration C::Double(0.05*steps)
+                Cocoa::UIView._setAnimationCurve Cocoa::Const::UIViewAnimationCurveEaseIn
+                item[:view]._setFrame itemFrame(x, y - steps)
+                Cocoa::UIView._commitAnimations
+            end
+            
+            @stage.compact do |x, steps|
+                context = C::call(C::Pointer, "UIGraphicsGetCurrentContext")
+                Cocoa::UIView._beginAnimations nil, :context, context
+                Cocoa::UIView._setAnimationDuration C::Double(0.1*steps)
+                Cocoa::UIView._setAnimationCurve Cocoa::Const::UIViewAnimationCurveLinear
                 
-                removed = @stage.remove(x, y) do |item, x, y|
-                    item[:view]._removeFromSuperview if item[:view]
-                    item[:view] = item[:color] = nil
-                end
-                
-                @stage.fall do |item, x, y, steps|
-                    context = C::call(C::Pointer, "UIGraphicsGetCurrentContext")
-                    Cocoa::UIView._beginAnimations nil, :context, context
-                    Cocoa::UIView._setAnimationDuration C::Double(0.05*steps)
-                    Cocoa::UIView._setAnimationCurve Cocoa::Const::UIViewAnimationCurveEaseIn
-                    item[:view]._setFrame itemFrame(x, y - steps)
-                    Cocoa::UIView._commitAnimations
-                end
-                
-                @stage.compact do |x, steps|
-                    context = C::call(C::Pointer, "UIGraphicsGetCurrentContext")
-                    Cocoa::UIView._beginAnimations nil, :context, context
-                    Cocoa::UIView._setAnimationDuration C::Double(0.1*steps)
-                    Cocoa::UIView._setAnimationCurve Cocoa::Const::UIViewAnimationCurveLinear
-                    
-                    @stage.height.times do |y|
-                        item = @stage[x, y]
-                        if item && item[:view]
-                            item[:view]._setFrame itemFrame(x - steps, y)
-                        end
+                @stage.height.times do |y|
+                    item = @stage[x, y]
+                    if item && item[:view]
+                        item[:view]._setFrame itemFrame(x - steps, y)
                     end
-                    
-                    Cocoa::UIView._commitAnimations
                 end
                 
-                @score += (removed.size - 2) ** 2
-                @updated_score_block.call(@score) if @updated_score_block
-                
-                if @stage.is_cleared?
-                    @gameover_block.call(true)
-                    elsif @stage.is_gameover?
-                    @gameover_block.call(false)
-                end
+                Cocoa::UIView._commitAnimations
+            end
+            
+            @score += (removed.size - 2) ** 2
+            @updated_score_block.call(@score) if @updated_score_block
+            
+            if @stage.is_cleared?
+                @gameover_block.call(true)
+                elsif @stage.is_gameover?
+                @gameover_block.call(false)
             end
         end
     end
@@ -215,10 +203,7 @@ class Cocoa::SameGameViewController < Cocoa::UIViewController
     end
 
     define C::Void, :reset do
-        @resetLock ||= Mutex.new
-        @resetLock.block do
-            @stage_view.reset
-        end
+        @stage_view.reset
     end
 end
 
