@@ -11,6 +11,3 @@ sed -i -e "s/define MRB_INT_MAX INT_MAX/define MRB_INT_MAX INT64_MAX/g" modules/
 
 sh ./bin/build-libffi.sh
 sh ./bin/build-mrbc.sh
-
-echo "Installing RubyGems. please input your password"
-GEM_HOME= GEM_PATH= sudo /usr/bin/gem install xcodeproj nokogiri --no-rdoc --no-ri
