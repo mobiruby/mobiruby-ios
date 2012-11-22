@@ -1,3 +1,7 @@
+require 'hello'
+require 'sameapp'
+require 'globalip'
+
 class Cocoa::TopMenuViewController < Cocoa::UITableViewController
     attr_accessor :data, :navi
     protocol :UITableViewDelegate, :UITableViewDataSource
@@ -28,6 +32,7 @@ def show_tableview_menu(navi)
     viewController.data = [
         {:title => 'SameGame', :func => 'show_samegame'},
         {:title => 'Hello world', :func => 'show_hello'},
+        {:title => 'Global IP', :func => 'show_globalip'},
     ]
     viewController[:tableView][:dataSource] = viewController
     viewController[:tableView][:delegate] = viewController
