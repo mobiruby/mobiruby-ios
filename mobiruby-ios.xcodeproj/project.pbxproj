@@ -97,6 +97,12 @@
 		59ACFC8015FDBAEF004BE69E /* hello.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7715FDBAD1004BE69E /* hello.rb */; };
 		59ACFC8115FDBAF1004BE69E /* app.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7115FDBAB9004BE69E /* app.rb */; };
 		59ACFC8215FDBB49004BE69E /* mobiruby.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7A15FDBAD9004BE69E /* mobiruby.rb */; };
+		59DE063316625B7800C47EAE /* block.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59DE063016625B7800C47EAE /* block.rb */; };
+		59DE063416625B7800C47EAE /* object.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59DE063116625B7800C47EAE /* object.rb */; };
+		59DE063516625B7800C47EAE /* protocol.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59DE063216625B7800C47EAE /* protocol.rb */; };
+		59DE063716625B8000C47EAE /* block.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59DE063016625B7800C47EAE /* block.rb */; };
+		59DE063816625B8300C47EAE /* object.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59DE063116625B7800C47EAE /* object.rb */; };
+		59DE063916625B8800C47EAE /* protocol.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59DE063216625B7800C47EAE /* protocol.rb */; };
 		59E87ED115FF9B1500E2F09F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E87EC315FF9B1500E2F09F /* Default.png */; };
 		59E87ED215FF9B1500E2F09F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E87EC415FF9B1500E2F09F /* Default@2x.png */; };
 		59E87ED315FF9B1500E2F09F /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E87EC515FF9B1500E2F09F /* icon.png */; };
@@ -291,6 +297,9 @@
 		59ACFC7715FDBAD1004BE69E /* hello.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = hello.rb; sourceTree = "<group>"; };
 		59ACFC7915FDBAD9004BE69E /* ext.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ext.rb; sourceTree = "<group>"; };
 		59ACFC7A15FDBAD9004BE69E /* mobiruby.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = mobiruby.rb; sourceTree = "<group>"; };
+		59DE063016625B7800C47EAE /* block.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = block.rb; sourceTree = "<group>"; };
+		59DE063116625B7800C47EAE /* object.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = object.rb; sourceTree = "<group>"; };
+		59DE063216625B7800C47EAE /* protocol.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = protocol.rb; sourceTree = "<group>"; };
 		59E87EC315FF9B1500E2F09F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		59E87EC415FF9B1500E2F09F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		59E87EC515FF9B1500E2F09F /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -755,6 +764,9 @@
 		59ACFB0E15FDB53D004BE69E /* mrb */ = {
 			isa = PBXGroup;
 			children = (
+				59DE063016625B7800C47EAE /* block.rb */,
+				59DE063116625B7800C47EAE /* object.rb */,
+				59DE063216625B7800C47EAE /* protocol.rb */,
 				59ACFB1015FDB53D004BE69E /* cocoa.rb */,
 			);
 			path = mrb;
@@ -871,6 +883,9 @@
 				59FE8101160BEAB6002B24D8 /* Default-568h@2x.png in Resources */,
 				5900879B165E91D100F45C24 /* globalip.rb in Resources */,
 				590087A7165E972800F45C24 /* SVProgressHUD.bundle in Resources */,
+				59DE063316625B7800C47EAE /* block.rb in Resources */,
+				59DE063416625B7800C47EAE /* object.rb in Resources */,
+				59DE063516625B7800C47EAE /* protocol.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -908,6 +923,9 @@
 				59ACFC7D15FDBAE5004BE69E /* sameapp.rb in Sources */,
 				59ACFC7E15FDBAE6004BE69E /* samegame.rb in Sources */,
 				59ACFC6315FDB928004BE69E /* cocoa.rb in Sources */,
+				59DE063716625B8000C47EAE /* block.rb in Sources */,
+				59DE063816625B8300C47EAE /* object.rb in Sources */,
+				59DE063916625B8800C47EAE /* protocol.rb in Sources */,
 				59ACFC8215FDBB49004BE69E /* mobiruby.rb in Sources */,
 				5921A3AF15FDB2E8007FECF1 /* main.m in Sources */,
 				59ACFB2715FDB53D004BE69E /* init_mobiruby_common.c in Sources */,

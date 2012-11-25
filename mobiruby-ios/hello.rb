@@ -1,4 +1,3 @@
-
 class Cocoa::HelloAlertView < Cocoa::UIAlertView
     define C::Void, :alertView, C::Pointer, :clickedButtonAtIndex, C::SInt32 do |me, index|
         if index.to_i == 1
