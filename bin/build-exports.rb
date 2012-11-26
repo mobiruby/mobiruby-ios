@@ -1,8 +1,10 @@
 #!/usr/bin/env ruby
 
 require 'rubygems'
-require 'xcodeproj'
 require 'nokogiri'
+
+gem 'xcodeproj', '0.3.5'
+require 'xcodeproj'
 
 OUTPUT_FILE = ARGV[0]
 PROJECT_FILE_PATH = ARGV[1] || ENV['PROJECT_FILE_PATH']

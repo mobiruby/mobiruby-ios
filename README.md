@@ -8,7 +8,7 @@ Notice: It's for mruby and iOS hackers
 At first time, you might need to install the below gems:
 
 ```
-sudo /usr/bin/gem install xcodeproj
+sudo /usr/bin/gem install xcodeproj -v=0.3.5
 sudo /usr/bin/gem install nokogiri
 ```
 

@@ -819,7 +819,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5921A3B615FDB2E8007FECF1 /* Build configuration list for PBXNativeTarget "mobiruby-ios" */;
 			buildPhases = (
-				59ACFC6E15FDBA41004BE69E /* Generate export_headers.c */,
+				59ACFC6E15FDBA41004BE69E /* Generate export_headers.m */,
 				5921A39A15FDB2E8007FECF1 /* Sources */,
 				5921A39B15FDB2E8007FECF1 /* Frameworks */,
 				5921A39C15FDB2E8007FECF1 /* Resources */,
@@ -892,14 +892,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		59ACFC6E15FDBA41004BE69E /* Generate export_headers.c */ = {
+		59ACFC6E15FDBA41004BE69E /* Generate export_headers.m */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Generate export_headers.c";
+			name = "Generate export_headers.m";
 			outputPaths = (
 				"$(PROJECT_DIR)/export_headers.m",
 			);
