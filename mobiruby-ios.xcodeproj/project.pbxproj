@@ -97,6 +97,13 @@
 		59ACFC8015FDBAEF004BE69E /* hello.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7715FDBAD1004BE69E /* hello.rb */; };
 		59ACFC8115FDBAF1004BE69E /* app.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7115FDBAB9004BE69E /* app.rb */; };
 		59ACFC8215FDBB49004BE69E /* mobiruby.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7A15FDBAD9004BE69E /* mobiruby.rb */; };
+		59AEF3771663B64D005D4843 /* object_ivar.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59AEF3741663B64D005D4843 /* object_ivar.rb */; };
+		59AEF3781663B64D005D4843 /* object_method.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59AEF3751663B64D005D4843 /* object_method.rb */; };
+		59AEF3791663B64D005D4843 /* object_property.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59AEF3761663B64D005D4843 /* object_property.rb */; };
+		59AEF37D1663B658005D4843 /* cocoa_protocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AEF37C1663B658005D4843 /* cocoa_protocol.m */; };
+		59AEF37E1663B681005D4843 /* object_ivar.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59AEF3741663B64D005D4843 /* object_ivar.rb */; };
+		59AEF37F1663B683005D4843 /* object_method.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59AEF3751663B64D005D4843 /* object_method.rb */; };
+		59AEF3801663B686005D4843 /* object_property.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59AEF3761663B64D005D4843 /* object_property.rb */; };
 		59DE063316625B7800C47EAE /* block.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59DE063016625B7800C47EAE /* block.rb */; };
 		59DE063416625B7800C47EAE /* object.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59DE063116625B7800C47EAE /* object.rb */; };
 		59DE063516625B7800C47EAE /* protocol.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59DE063216625B7800C47EAE /* protocol.rb */; };
@@ -297,6 +304,11 @@
 		59ACFC7715FDBAD1004BE69E /* hello.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = hello.rb; sourceTree = "<group>"; };
 		59ACFC7915FDBAD9004BE69E /* ext.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ext.rb; sourceTree = "<group>"; };
 		59ACFC7A15FDBAD9004BE69E /* mobiruby.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = mobiruby.rb; sourceTree = "<group>"; };
+		59AEF3741663B64D005D4843 /* object_ivar.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = object_ivar.rb; sourceTree = "<group>"; };
+		59AEF3751663B64D005D4843 /* object_method.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = object_method.rb; sourceTree = "<group>"; };
+		59AEF3761663B64D005D4843 /* object_property.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = object_property.rb; sourceTree = "<group>"; };
+		59AEF37B1663B658005D4843 /* cocoa_protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cocoa_protocol.h; sourceTree = "<group>"; };
+		59AEF37C1663B658005D4843 /* cocoa_protocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoa_protocol.m; sourceTree = "<group>"; };
 		59DE063016625B7800C47EAE /* block.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = block.rb; sourceTree = "<group>"; };
 		59DE063116625B7800C47EAE /* object.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = object.rb; sourceTree = "<group>"; };
 		59DE063216625B7800C47EAE /* protocol.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = protocol.rb; sourceTree = "<group>"; };
@@ -743,6 +755,8 @@
 		59ACFAFF15FDB53D004BE69E /* src */ = {
 			isa = PBXGroup;
 			children = (
+				59AEF37B1663B658005D4843 /* cocoa_protocol.h */,
+				59AEF37C1663B658005D4843 /* cocoa_protocol.m */,
 				59ACFB0015FDB53D004BE69E /* cocoa_block.h */,
 				59ACFB0115FDB53D004BE69E /* cocoa_block.m */,
 				59ACFB0215FDB53D004BE69E /* cocoa_bridgesupport.h */,
@@ -764,8 +778,11 @@
 		59ACFB0E15FDB53D004BE69E /* mrb */ = {
 			isa = PBXGroup;
 			children = (
-				59DE063016625B7800C47EAE /* block.rb */,
 				59DE063116625B7800C47EAE /* object.rb */,
+				59AEF3741663B64D005D4843 /* object_ivar.rb */,
+				59AEF3751663B64D005D4843 /* object_method.rb */,
+				59AEF3761663B64D005D4843 /* object_property.rb */,
+				59DE063016625B7800C47EAE /* block.rb */,
 				59DE063216625B7800C47EAE /* protocol.rb */,
 				59ACFB1015FDB53D004BE69E /* cocoa.rb */,
 			);
@@ -886,6 +903,9 @@
 				59DE063316625B7800C47EAE /* block.rb in Resources */,
 				59DE063416625B7800C47EAE /* object.rb in Resources */,
 				59DE063516625B7800C47EAE /* protocol.rb in Resources */,
+				59AEF3771663B64D005D4843 /* object_ivar.rb in Resources */,
+				59AEF3781663B64D005D4843 /* object_method.rb in Resources */,
+				59AEF3791663B64D005D4843 /* object_property.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -920,11 +940,15 @@
 				59ACFC6415FDB92F004BE69E /* cfunc_rb.rb in Sources */,
 				59ACFC8015FDBAEF004BE69E /* hello.rb in Sources */,
 				59ACFC7F15FDBAEC004BE69E /* ext.rb in Sources */,
+				59AEF37D1663B658005D4843 /* cocoa_protocol.m in Sources */,
 				59ACFC7D15FDBAE5004BE69E /* sameapp.rb in Sources */,
 				59ACFC7E15FDBAE6004BE69E /* samegame.rb in Sources */,
 				59ACFC6315FDB928004BE69E /* cocoa.rb in Sources */,
 				59DE063716625B8000C47EAE /* block.rb in Sources */,
 				59DE063816625B8300C47EAE /* object.rb in Sources */,
+				59AEF37E1663B681005D4843 /* object_ivar.rb in Sources */,
+				59AEF37F1663B683005D4843 /* object_method.rb in Sources */,
+				59AEF3801663B686005D4843 /* object_property.rb in Sources */,
 				59DE063916625B8800C47EAE /* protocol.rb in Sources */,
 				59ACFC8215FDBB49004BE69E /* mobiruby.rb in Sources */,
 				5921A3AF15FDB2E8007FECF1 /* main.m in Sources */,
