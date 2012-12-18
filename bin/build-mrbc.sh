@@ -1,6 +1,6 @@
 #!/bin/sh
 
 cd modules/mruby
-make clean
-make
+./minirake clean
+./minirake all
 cp bin/mrbc ../../bin/

@@ -7,6 +7,7 @@ class Cocoa::HelloAlertView < Cocoa::UIAlertView
         end
     end
 end
+Cocoa::HelloAlertView.register
 
 class Cocoa::HelloViewController < Cocoa::UIViewController
     define C::Void, :loadView do
@@ -24,6 +25,7 @@ class Cocoa::HelloViewController < Cocoa::UIViewController
         alert._show
     end
 end
+Cocoa::HelloViewController.register
 
 def show_hello(navi)
     viewController = Cocoa::HelloViewController._alloc._init

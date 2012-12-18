@@ -8,7 +8,7 @@ bgm.volume = 0.25
 soundPath = Cocoa::NSBundle._mainBundle._pathForResource _S("tap_se_00"), :ofType, _S("wav")
 soundURL = Cocoa::NSURL._fileURLWithPath soundPath
 $tap_se = C::Int(0)
-C::call C::Void, "AudioServicesCreateSystemSoundID", soundURL, $tap_se.to_pointer
+C::call C::Void, "AudioServicesCreateSystemSoundID", soundURL, $tap_se.addr
 
 class Cocoa::StageView < Cocoa::UIView
     attr_accessor :score
@@ -150,6 +150,7 @@ class Cocoa::StageView < Cocoa::UIView
         end
     end
 end
+Cocoa::StageView.register
 
 
 class Cocoa::SameGameViewController < Cocoa::UIViewController
@@ -206,6 +207,7 @@ class Cocoa::SameGameViewController < Cocoa::UIViewController
         @stage_view.reset
     end
 end
+Cocoa::SameGameViewController.register
 
 # bgm.play
 def show_samegame(navi)

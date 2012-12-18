@@ -137,7 +137,7 @@
 			outputFiles = (
 				"${DERIVED_SOURCES_DIR}/${INPUT_FILE_BASE}.c",
 			);
-			script = "${PROJECT_DIR}/bin/mrbc -B\"mruby_data_${INPUT_FILE_BASE}\" -o- \"${INPUT_FILE_DIR}/${INPUT_FILE_NAME}\" > \"${DERIVED_SOURCES_DIR}/${INPUT_FILE_BASE}.c\"\n";
+			script = "${PROJECT_DIR}/bin/mrbc -B\"mruby_`ruby -e \"s=['cfunc','cocoa'].find{|a| ENV['INPUT_FILE_DIR'].match(a)};print s+'_' if s\"`data_${INPUT_FILE_BASE}\" -o- \"${INPUT_FILE_DIR}/${INPUT_FILE_NAME}\" > \"${DERIVED_SOURCES_DIR}/${INPUT_FILE_BASE}.c\"\n";
 		};
 /* End PBXBuildRule section */
 

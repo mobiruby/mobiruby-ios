@@ -25,16 +25,15 @@ class Cocoa::TopMenuViewController < Cocoa::UITableViewController
         send(@data[indexPath[:row].to_i][:func], self._navigationController)
     end
 end
+Cocoa::TopMenuViewController.register
 
 def show_tableview_menu(navi)
-    viewController = Cocoa::TopMenuViewController._alloc._initWithStyle Cocoa::Const::UITableViewStylePlain 
+    viewController = Cocoa::TopMenuViewController._alloc._initWithStyle Cocoa::Const::UITableViewStylePlain
     viewController[:title] = "MobiRuby"
     viewController.data = [
         {:title => 'SameGame', :func => 'show_samegame'},
         {:title => 'Hello world', :func => 'show_hello'},
         {:title => 'Global IP', :func => 'show_globalip'},
     ]
-    viewController[:tableView][:dataSource] = viewController
-    viewController[:tableView][:delegate] = viewController
     navi._pushViewController viewController, :animated, C::SInt8(0)
 end
