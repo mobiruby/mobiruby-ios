@@ -6,6 +6,9 @@ if __FILE__ == $PROGRAM_NAME
   unless File.exists?('tmp/mruby')
     system 'git clone https://github.com/mruby/mruby.git tmp/mruby'
   end
+  unless File.exists?('tmp/mruby/build/libffi')
+    system 'sh ./bin/build-libffi.sh'
+  end
   exit system(%Q[cd tmp/mruby; MRUBY_CONFIG=#{File.expand_path __FILE__} rake #{ARGV.join(' ')}])
 end
 
@@ -19,7 +22,7 @@ MRuby::Build.new do |conf|
 end
 
 SDK_IOS_VERSION="6.0"
-MIN_IOS_VERSION="5.1"
+MIN_IOS_VERSION="5.0"
 PLATFORM_IOS=`xcode-select -print-path`.chomp+'/Platforms/iPhoneOS.platform/'
 PLATFORM_IOS_SIM=`xcode-select -print-path`.chomp+'/Platforms/iPhoneSimulator.platform/'
 IOS_SDK = "#{PLATFORM_IOS}/Developer/SDKs/iPhoneOS#{SDK_IOS_VERSION}.sdk/"
