@@ -1,14 +1,14 @@
 require 'samegame'
 require 'ext'
 
-bgm = AudioPlayer.new("bgm_00", "aif")
-bgm.loops = -1
-bgm.volume = 0.25
+#bgm = AudioPlayer.new("bgm_00", "aif")
+#bgm.loops = -1
+#bgm.volume = 0.25
 
-soundPath = Cocoa::NSBundle._mainBundle._pathForResource _S("tap_se_00"), :ofType, _S("wav")
-soundURL = Cocoa::NSURL._fileURLWithPath soundPath
-$tap_se = C::Int(0)
-C::call C::Void, "AudioServicesCreateSystemSoundID", soundURL, $tap_se.addr
+#soundPath = Cocoa::NSBundle._mainBundle._pathForResource _S("tap_se_00"), :ofType, _S("wav")
+#soundURL = Cocoa::NSURL._fileURLWithPath soundPath
+#$tap_se = C::Int(0)
+#C::call C::Void, "AudioServicesCreateSystemSoundID", soundURL, $tap_se.addr
 
 class Cocoa::StageView < Cocoa::UIView
     attr_accessor :score
@@ -115,7 +115,7 @@ class Cocoa::StageView < Cocoa::UIView
             end
             
             @stage.fall do |item, x, y, steps|
-                context = C::call(C::Pointer, "UIGraphicsGetCurrentContext")
+p                context = C::call(C::Pointer, "UIGraphicsGetCurrentContext")
                 Cocoa::UIView._beginAnimations nil, :context, context
                 Cocoa::UIView._setAnimationDuration C::Double(0.05*steps)
                 Cocoa::UIView._setAnimationCurve Cocoa::Const::UIViewAnimationCurveEaseIn

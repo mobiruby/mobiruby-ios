@@ -8,15 +8,15 @@ class AudioPlayer
     end
 
     def loops=(num)
-        @avap._setNumberOfLoops num
+        @avap._setNumberOfLoops num if @avap
     end
 
     def volume=(num)
-        @avap._setVolume num
+        @avap._setVolume num if @avap
     end
 
     def play
-        @avap._play
+        @avap._play if @avap
     end
 end
 

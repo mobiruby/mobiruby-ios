@@ -25,68 +25,9 @@
 		5921A3A715FDB2E8007FECF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5921A3A615FDB2E8007FECF1 /* CoreGraphics.framework */; };
 		5921A3AD15FDB2E8007FECF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5921A3AB15FDB2E8007FECF1 /* InfoPlist.strings */; };
 		5921A3AF15FDB2E8007FECF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5921A3AE15FDB2E8007FECF1 /* main.m */; };
-		595C187D163AD5E700ECC800 /* cfunc_rubyvm.c in Sources */ = {isa = PBXBuildFile; fileRef = 595C187B163AD5E700ECC800 /* cfunc_rubyvm.c */; };
-		595C187E163AD5E700ECC800 /* vector.c in Sources */ = {isa = PBXBuildFile; fileRef = 595C187C163AD5E700ECC800 /* vector.c */; };
+		5950970B16AF012100DB40C8 /* libmruby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5950970A16AF012100DB40C8 /* libmruby.a */; };
+		5950970D16AF012C00DB40C8 /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5950970C16AF012C00DB40C8 /* libffi.a */; };
 		598B63F1160B60CB0051D443 /* tableview_menu.rb in Sources */ = {isa = PBXBuildFile; fileRef = 598B63EF160B60BF0051D443 /* tableview_menu.rb */; };
-		59ACFB2015FDB53D004BE69E /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACF98915FDB53D004BE69E /* libffi.a */; };
-		59ACFB2715FDB53D004BE69E /* init_mobiruby_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACF99515FDB53D004BE69E /* init_mobiruby_common.c */; };
-		59ACFB2915FDB53D004BE69E /* mruby_require.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACF99715FDB53D004BE69E /* mruby_require.c */; };
-		59ACFB5A15FDB53D004BE69E /* mrblib.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACF9EB15FDB53D004BE69E /* mrblib.c */; };
-		59ACFB6615FDB53D004BE69E /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACF9F815FDB53D004BE69E /* array.c */; };
-		59ACFB6915FDB53D004BE69E /* cdump.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACF9FB15FDB53D004BE69E /* cdump.c */; };
-		59ACFB6C15FDB53D004BE69E /* class.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACF9FE15FDB53D004BE69E /* class.c */; };
-		59ACFB7015FDB53D004BE69E /* codegen.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA0215FDB53D004BE69E /* codegen.c */; };
-		59ACFB7315FDB53D004BE69E /* compar.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA0515FDB53D004BE69E /* compar.c */; };
-		59ACFB7615FDB53D004BE69E /* crc.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA0815FDB53D004BE69E /* crc.c */; };
-		59ACFB7915FDB53D004BE69E /* dump.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA0B15FDB53D004BE69E /* dump.c */; };
-		59ACFB7C15FDB53D004BE69E /* enum.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA0F15FDB53D004BE69E /* enum.c */; };
-		59ACFB7F15FDB53D004BE69E /* error.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA1215FDB53D004BE69E /* error.c */; };
-		59ACFB8215FDB53D004BE69E /* etc.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA1615FDB53D004BE69E /* etc.c */; };
-		59ACFB8615FDB53D004BE69E /* gc.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA1B15FDB53D004BE69E /* gc.c */; };
-		59ACFB8915FDB53D004BE69E /* hash.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA1E15FDB53D004BE69E /* hash.c */; };
-		59ACFB8C15FDB53D004BE69E /* init.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA2115FDB53D004BE69E /* init.c */; };
-		59ACFB8F15FDB53D004BE69E /* init_ext.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA2415FDB53D004BE69E /* init_ext.c */; };
-		59ACFB9215FDB53D004BE69E /* kernel.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA2715FDB53D004BE69E /* kernel.c */; };
-		59ACFB9715FDB53D004BE69E /* load.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA2C15FDB53D004BE69E /* load.c */; };
-		59ACFB9B15FDB53D004BE69E /* math.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA3015FDB53D004BE69E /* math.c */; };
-		59ACFB9E15FDB53D004BE69E /* numeric.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA3515FDB53D004BE69E /* numeric.c */; };
-		59ACFBA115FDB53D004BE69E /* object.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA3815FDB53D004BE69E /* object.c */; };
-		59ACFBA515FDB53D004BE69E /* pool.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA3E15FDB53D004BE69E /* pool.c */; };
-		59ACFBA815FDB53D004BE69E /* print.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA4115FDB53D004BE69E /* print.c */; };
-		59ACFBAB15FDB53D004BE69E /* proc.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA4415FDB53D004BE69E /* proc.c */; };
-		59ACFBAE15FDB53D004BE69E /* range.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA4715FDB53D004BE69E /* range.c */; };
-		59ACFBB115FDB53D004BE69E /* re.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA4A15FDB53D004BE69E /* re.c */; };
-		59ACFBB415FDB53D004BE69E /* regcomp.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA4E15FDB53D004BE69E /* regcomp.c */; };
-		59ACFBB715FDB53D004BE69E /* regenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA5115FDB53D004BE69E /* regenc.c */; };
-		59ACFBBA15FDB53D004BE69E /* regerror.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA5515FDB53D004BE69E /* regerror.c */; };
-		59ACFBBD15FDB53D004BE69E /* regexec.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA5915FDB53D004BE69E /* regexec.c */; };
-		59ACFBC015FDB53D004BE69E /* regparse.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA5D15FDB53D004BE69E /* regparse.c */; };
-		59ACFBC315FDB53D004BE69E /* sprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA6115FDB53D004BE69E /* sprintf.c */; };
-		59ACFBC615FDB53D004BE69E /* st.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA6415FDB53D004BE69E /* st.c */; };
-		59ACFBC915FDB53D004BE69E /* state.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA6815FDB53D004BE69E /* state.c */; };
-		59ACFBCC15FDB53D004BE69E /* string.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA6B15FDB53D004BE69E /* string.c */; };
-		59ACFBCF15FDB53D004BE69E /* struct.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA6E15FDB53D004BE69E /* struct.c */; };
-		59ACFBD215FDB53D004BE69E /* symbol.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA7115FDB53D004BE69E /* symbol.c */; };
-		59ACFBD515FDB53D004BE69E /* time.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA7415FDB53D004BE69E /* time.c */; };
-		59ACFBD815FDB53D004BE69E /* variable.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA7715FDB53D004BE69E /* variable.c */; };
-		59ACFBDB15FDB53D004BE69E /* vm.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA7A15FDB53D004BE69E /* vm.c */; };
-		59ACFBDE15FDB53D004BE69E /* y.tab.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFA7D15FDB53D004BE69E /* y.tab.c */; };
-		59ACFC2815FDB53D004BE69E /* cfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFAE315FDB53D004BE69E /* cfunc.c */; };
-		59ACFC2915FDB53D004BE69E /* cfunc_call.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFAE415FDB53D004BE69E /* cfunc_call.c */; };
-		59ACFC2A15FDB53D004BE69E /* cfunc_closure.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFAE515FDB53D004BE69E /* cfunc_closure.c */; };
-		59ACFC2B15FDB53D004BE69E /* cfunc_pointer.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFAE615FDB53D004BE69E /* cfunc_pointer.c */; };
-		59ACFC2C15FDB53D004BE69E /* cfunc_struct.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFAE715FDB53D004BE69E /* cfunc_struct.c */; };
-		59ACFC2E15FDB53D004BE69E /* cfunc_type.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFAE915FDB53D004BE69E /* cfunc_type.c */; };
-		59ACFC2F15FDB53D004BE69E /* cfunc_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFAEA15FDB53D004BE69E /* cfunc_utils.c */; };
-		59ACFC3D15FDB53D004BE69E /* cocoa_block.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFB0115FDB53D004BE69E /* cocoa_block.m */; };
-		59ACFC3E15FDB53D004BE69E /* cocoa_bridgesupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFB0315FDB53D004BE69E /* cocoa_bridgesupport.m */; };
-		59ACFC3F15FDB53D004BE69E /* cocoa_obj_hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFB0515FDB53D004BE69E /* cocoa_obj_hook.m */; };
-		59ACFC4015FDB53D004BE69E /* cocoa_object.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFB0715FDB53D004BE69E /* cocoa_object.m */; };
-		59ACFC4115FDB53D004BE69E /* cocoa_st.c in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFB0815FDB53D004BE69E /* cocoa_st.c */; };
-		59ACFC4215FDB53D004BE69E /* cocoa_type.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFB0B15FDB53D004BE69E /* cocoa_type.m */; };
-		59ACFC4315FDB53D004BE69E /* init_cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFB0C15FDB53D004BE69E /* init_cocoa.m */; };
-		59ACFC6315FDB928004BE69E /* cocoa.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFB1015FDB53D004BE69E /* cocoa.rb */; };
-		59ACFC6415FDB92F004BE69E /* cfunc_rb.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFAEE15FDB53D004BE69E /* cfunc_rb.rb */; };
 		59ACFC6915FDBA11004BE69E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACFC6815FDBA11004BE69E /* SystemConfiguration.framework */; };
 		59ACFC6B15FDBA15004BE69E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACFC6A15FDBA15004BE69E /* AVFoundation.framework */; };
 		59ACFC6D15FDBA22004BE69E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACFC6C15FDBA22004BE69E /* QuartzCore.framework */; };
@@ -97,19 +38,6 @@
 		59ACFC8015FDBAEF004BE69E /* hello.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7715FDBAD1004BE69E /* hello.rb */; };
 		59ACFC8115FDBAF1004BE69E /* app.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7115FDBAB9004BE69E /* app.rb */; };
 		59ACFC8215FDBB49004BE69E /* mobiruby.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7A15FDBAD9004BE69E /* mobiruby.rb */; };
-		59AEF3771663B64D005D4843 /* object_ivar.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59AEF3741663B64D005D4843 /* object_ivar.rb */; };
-		59AEF3781663B64D005D4843 /* object_method.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59AEF3751663B64D005D4843 /* object_method.rb */; };
-		59AEF3791663B64D005D4843 /* object_property.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59AEF3761663B64D005D4843 /* object_property.rb */; };
-		59AEF37D1663B658005D4843 /* cocoa_protocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AEF37C1663B658005D4843 /* cocoa_protocol.m */; };
-		59AEF37E1663B681005D4843 /* object_ivar.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59AEF3741663B64D005D4843 /* object_ivar.rb */; };
-		59AEF37F1663B683005D4843 /* object_method.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59AEF3751663B64D005D4843 /* object_method.rb */; };
-		59AEF3801663B686005D4843 /* object_property.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59AEF3761663B64D005D4843 /* object_property.rb */; };
-		59DE063316625B7800C47EAE /* block.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59DE063016625B7800C47EAE /* block.rb */; };
-		59DE063416625B7800C47EAE /* object.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59DE063116625B7800C47EAE /* object.rb */; };
-		59DE063516625B7800C47EAE /* protocol.rb in Resources */ = {isa = PBXBuildFile; fileRef = 59DE063216625B7800C47EAE /* protocol.rb */; };
-		59DE063716625B8000C47EAE /* block.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59DE063016625B7800C47EAE /* block.rb */; };
-		59DE063816625B8300C47EAE /* object.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59DE063116625B7800C47EAE /* object.rb */; };
-		59DE063916625B8800C47EAE /* protocol.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59DE063216625B7800C47EAE /* protocol.rb */; };
 		59E87ED115FF9B1500E2F09F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E87EC315FF9B1500E2F09F /* Default.png */; };
 		59E87ED215FF9B1500E2F09F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E87EC415FF9B1500E2F09F /* Default@2x.png */; };
 		59E87ED315FF9B1500E2F09F /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E87EC515FF9B1500E2F09F /* icon.png */; };
@@ -137,7 +65,7 @@
 			outputFiles = (
 				"${DERIVED_SOURCES_DIR}/${INPUT_FILE_BASE}.c",
 			);
-			script = "${PROJECT_DIR}/bin/mrbc -B\"mruby_`ruby -e \"s=['cfunc','cocoa'].find{|a| ENV['INPUT_FILE_DIR'].match(a)};print s+'_' if s\"`data_${INPUT_FILE_BASE}\" -o- \"${INPUT_FILE_DIR}/${INPUT_FILE_NAME}\" > \"${DERIVED_SOURCES_DIR}/${INPUT_FILE_BASE}.c\"\n";
+			script = "${PROJECT_DIR}/tmp/mruby/bin/mrbc -B\"mruby_`ruby -e \"s=['cfunc','cocoa'].find{|a| ENV['INPUT_FILE_DIR'].match(a)};print s+'_' if s\"`data_${INPUT_FILE_BASE}\" -o- \"${INPUT_FILE_DIR}/${INPUT_FILE_NAME}\" > \"${DERIVED_SOURCES_DIR}/${INPUT_FILE_BASE}.c\"\n";
 		};
 /* End PBXBuildRule section */
 
@@ -173,127 +101,9 @@
 		5921A3AC15FDB2E8007FECF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5921A3AE15FDB2E8007FECF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5921A3B015FDB2E8007FECF1 /* mobiruby-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mobiruby-ios-Prefix.pch"; sourceTree = "<group>"; };
-		595C187B163AD5E700ECC800 /* cfunc_rubyvm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cfunc_rubyvm.c; sourceTree = "<group>"; };
-		595C187C163AD5E700ECC800 /* vector.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vector.c; sourceTree = "<group>"; };
-		595C1880163AD5F100ECC800 /* cfunc_rubyvm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cfunc_rubyvm.h; sourceTree = "<group>"; };
-		595C1881163AD5F100ECC800 /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
+		5950970A16AF012100DB40C8 /* libmruby.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmruby.a; sourceTree = SOURCE_ROOT; };
+		5950970C16AF012C00DB40C8 /* libffi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libffi.a; path = tmp/mruby/build/libffi/libffi.a; sourceTree = SOURCE_ROOT; };
 		598B63EF160B60BF0051D443 /* tableview_menu.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = tableview_menu.rb; sourceTree = "<group>"; };
-		59ACF97E15FDB53D004BE69E /* ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi.h; sourceTree = "<group>"; };
-		59ACF98115FDB53D004BE69E /* ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi.h; sourceTree = "<group>"; };
-		59ACF98215FDB53D004BE69E /* ffitarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget.h; sourceTree = "<group>"; };
-		59ACF98415FDB53D004BE69E /* ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi.h; sourceTree = "<group>"; };
-		59ACF98515FDB53D004BE69E /* ffitarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget.h; sourceTree = "<group>"; };
-		59ACF98715FDB53D004BE69E /* ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi.h; sourceTree = "<group>"; };
-		59ACF98815FDB53D004BE69E /* ffitarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget.h; sourceTree = "<group>"; };
-		59ACF98915FDB53D004BE69E /* libffi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libffi.a; sourceTree = "<group>"; };
-		59ACF98D15FDB53D004BE69E /* mobiruby_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobiruby_common.h; sourceTree = "<group>"; };
-		59ACF99515FDB53D004BE69E /* init_mobiruby_common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = init_mobiruby_common.c; sourceTree = "<group>"; };
-		59ACF99715FDB53D004BE69E /* mruby_require.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mruby_require.c; sourceTree = "<group>"; };
-		59ACF99815FDB53D004BE69E /* mruby_require.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mruby_require.h; sourceTree = "<group>"; };
-		59ACF9C415FDB53D004BE69E /* mrbconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mrbconf.h; sourceTree = "<group>"; };
-		59ACF9C615FDB53D004BE69E /* array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = array.h; sourceTree = "<group>"; };
-		59ACF9C715FDB53D004BE69E /* cdump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cdump.h; sourceTree = "<group>"; };
-		59ACF9C815FDB53D004BE69E /* class.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = class.h; sourceTree = "<group>"; };
-		59ACF9C915FDB53D004BE69E /* compile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compile.h; sourceTree = "<group>"; };
-		59ACF9CA15FDB53D004BE69E /* data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = data.h; sourceTree = "<group>"; };
-		59ACF9CB15FDB53D004BE69E /* dump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dump.h; sourceTree = "<group>"; };
-		59ACF9CC15FDB53D004BE69E /* hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash.h; sourceTree = "<group>"; };
-		59ACF9CD15FDB53D004BE69E /* irep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = irep.h; sourceTree = "<group>"; };
-		59ACF9CE15FDB53D004BE69E /* khash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = khash.h; sourceTree = "<group>"; };
-		59ACF9CF15FDB53D004BE69E /* numeric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = numeric.h; sourceTree = "<group>"; };
-		59ACF9D015FDB53D004BE69E /* object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = object.h; sourceTree = "<group>"; };
-		59ACF9D115FDB53D004BE69E /* proc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = proc.h; sourceTree = "<group>"; };
-		59ACF9D215FDB53D004BE69E /* range.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = range.h; sourceTree = "<group>"; };
-		59ACF9D315FDB53D004BE69E /* string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = string.h; sourceTree = "<group>"; };
-		59ACF9D415FDB53D004BE69E /* struct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = struct.h; sourceTree = "<group>"; };
-		59ACF9D515FDB53D004BE69E /* value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = value.h; sourceTree = "<group>"; };
-		59ACF9D615FDB53D004BE69E /* variable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = variable.h; sourceTree = "<group>"; };
-		59ACF9D715FDB53D004BE69E /* mruby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mruby.h; sourceTree = "<group>"; };
-		59ACF9EB15FDB53D004BE69E /* mrblib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mrblib.c; sourceTree = "<group>"; };
-		59ACF9F815FDB53D004BE69E /* array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = array.c; sourceTree = "<group>"; };
-		59ACF9FB15FDB53D004BE69E /* cdump.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cdump.c; sourceTree = "<group>"; };
-		59ACF9FE15FDB53D004BE69E /* class.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = class.c; sourceTree = "<group>"; };
-		59ACFA0215FDB53D004BE69E /* codegen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = codegen.c; sourceTree = "<group>"; };
-		59ACFA0515FDB53D004BE69E /* compar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = compar.c; sourceTree = "<group>"; };
-		59ACFA0815FDB53D004BE69E /* crc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crc.c; sourceTree = "<group>"; };
-		59ACFA0B15FDB53D004BE69E /* dump.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dump.c; sourceTree = "<group>"; };
-		59ACFA0E15FDB53D004BE69E /* encoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = encoding.h; sourceTree = "<group>"; };
-		59ACFA0F15FDB53D004BE69E /* enum.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = enum.c; sourceTree = "<group>"; };
-		59ACFA1215FDB53D004BE69E /* error.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = error.c; sourceTree = "<group>"; };
-		59ACFA1415FDB53D004BE69E /* error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = error.h; sourceTree = "<group>"; };
-		59ACFA1615FDB53D004BE69E /* etc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = etc.c; sourceTree = "<group>"; };
-		59ACFA1A15FDB53D004BE69E /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		59ACFA1B15FDB53D004BE69E /* gc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gc.c; sourceTree = "<group>"; };
-		59ACFA1E15FDB53D004BE69E /* hash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hash.c; sourceTree = "<group>"; };
-		59ACFA2115FDB53D004BE69E /* init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = init.c; sourceTree = "<group>"; };
-		59ACFA2415FDB53D004BE69E /* init_ext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = init_ext.c; sourceTree = "<group>"; };
-		59ACFA2715FDB53D004BE69E /* kernel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = kernel.c; sourceTree = "<group>"; };
-		59ACFA2C15FDB53D004BE69E /* load.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = load.c; sourceTree = "<group>"; };
-		59ACFA3015FDB53D004BE69E /* math.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = math.c; sourceTree = "<group>"; };
-		59ACFA3315FDB53D004BE69E /* name2ctype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = name2ctype.h; sourceTree = "<group>"; };
-		59ACFA3415FDB53D004BE69E /* node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = node.h; sourceTree = "<group>"; };
-		59ACFA3515FDB53D004BE69E /* numeric.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = numeric.c; sourceTree = "<group>"; };
-		59ACFA3815FDB53D004BE69E /* object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = object.c; sourceTree = "<group>"; };
-		59ACFA3B15FDB53D004BE69E /* oniguruma.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oniguruma.h; sourceTree = "<group>"; };
-		59ACFA3C15FDB53D004BE69E /* opcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opcode.h; sourceTree = "<group>"; };
-		59ACFA3E15FDB53D004BE69E /* pool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pool.c; sourceTree = "<group>"; };
-		59ACFA4115FDB53D004BE69E /* print.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = print.c; sourceTree = "<group>"; };
-		59ACFA4415FDB53D004BE69E /* proc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = proc.c; sourceTree = "<group>"; };
-		59ACFA4715FDB53D004BE69E /* range.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = range.c; sourceTree = "<group>"; };
-		59ACFA4A15FDB53D004BE69E /* re.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = re.c; sourceTree = "<group>"; };
-		59ACFA4C15FDB53D004BE69E /* re.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = re.h; sourceTree = "<group>"; };
-		59ACFA4E15FDB53D004BE69E /* regcomp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = regcomp.c; sourceTree = "<group>"; };
-		59ACFA5115FDB53D004BE69E /* regenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = regenc.c; sourceTree = "<group>"; };
-		59ACFA5315FDB53D004BE69E /* regenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regenc.h; sourceTree = "<group>"; };
-		59ACFA5515FDB53D004BE69E /* regerror.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = regerror.c; sourceTree = "<group>"; };
-		59ACFA5815FDB53D004BE69E /* regex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regex.h; sourceTree = "<group>"; };
-		59ACFA5915FDB53D004BE69E /* regexec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = regexec.c; sourceTree = "<group>"; };
-		59ACFA5C15FDB53D004BE69E /* regint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regint.h; sourceTree = "<group>"; };
-		59ACFA5D15FDB53D004BE69E /* regparse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = regparse.c; sourceTree = "<group>"; };
-		59ACFA5F15FDB53D004BE69E /* regparse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regparse.h; sourceTree = "<group>"; };
-		59ACFA6115FDB53D004BE69E /* sprintf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sprintf.c; sourceTree = "<group>"; };
-		59ACFA6415FDB53D004BE69E /* st.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = st.c; sourceTree = "<group>"; };
-		59ACFA6615FDB53D004BE69E /* st.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = st.h; sourceTree = "<group>"; };
-		59ACFA6815FDB53D004BE69E /* state.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = state.c; sourceTree = "<group>"; };
-		59ACFA6B15FDB53D004BE69E /* string.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = string.c; sourceTree = "<group>"; };
-		59ACFA6E15FDB53D004BE69E /* struct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = struct.c; sourceTree = "<group>"; };
-		59ACFA7115FDB53D004BE69E /* symbol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = symbol.c; sourceTree = "<group>"; };
-		59ACFA7415FDB53D004BE69E /* time.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = time.c; sourceTree = "<group>"; };
-		59ACFA7715FDB53D004BE69E /* variable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = variable.c; sourceTree = "<group>"; };
-		59ACFA7A15FDB53D004BE69E /* vm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vm.c; sourceTree = "<group>"; };
-		59ACFA7D15FDB53D004BE69E /* y.tab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = y.tab.c; sourceTree = "<group>"; };
-		59ACFAD315FDB53D004BE69E /* cfunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cfunc.h; sourceTree = "<group>"; };
-		59ACFAD415FDB53D004BE69E /* cfunc_call.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cfunc_call.h; sourceTree = "<group>"; };
-		59ACFAD515FDB53D004BE69E /* cfunc_closure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cfunc_closure.h; sourceTree = "<group>"; };
-		59ACFAD615FDB53D004BE69E /* cfunc_pointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cfunc_pointer.h; sourceTree = "<group>"; };
-		59ACFAD715FDB53D004BE69E /* cfunc_struct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cfunc_struct.h; sourceTree = "<group>"; };
-		59ACFAD815FDB53D004BE69E /* cfunc_type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cfunc_type.h; sourceTree = "<group>"; };
-		59ACFAD915FDB53D004BE69E /* cfunc_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cfunc_utils.h; sourceTree = "<group>"; };
-		59ACFADB15FDB53D004BE69E /* ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi.h; sourceTree = "<group>"; };
-		59ACFADC15FDB53D004BE69E /* ffitarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffitarget.h; sourceTree = "<group>"; };
-		59ACFAE315FDB53D004BE69E /* cfunc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cfunc.c; sourceTree = "<group>"; };
-		59ACFAE415FDB53D004BE69E /* cfunc_call.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cfunc_call.c; sourceTree = "<group>"; };
-		59ACFAE515FDB53D004BE69E /* cfunc_closure.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cfunc_closure.c; sourceTree = "<group>"; };
-		59ACFAE615FDB53D004BE69E /* cfunc_pointer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cfunc_pointer.c; sourceTree = "<group>"; };
-		59ACFAE715FDB53D004BE69E /* cfunc_struct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cfunc_struct.c; sourceTree = "<group>"; };
-		59ACFAE915FDB53D004BE69E /* cfunc_type.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cfunc_type.c; sourceTree = "<group>"; };
-		59ACFAEA15FDB53D004BE69E /* cfunc_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cfunc_utils.c; sourceTree = "<group>"; };
-		59ACFAEE15FDB53D004BE69E /* cfunc_rb.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = cfunc_rb.rb; sourceTree = "<group>"; };
-		59ACFAFA15FDB53D004BE69E /* cocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cocoa.h; sourceTree = "<group>"; };
-		59ACFB0015FDB53D004BE69E /* cocoa_block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cocoa_block.h; sourceTree = "<group>"; };
-		59ACFB0115FDB53D004BE69E /* cocoa_block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoa_block.m; sourceTree = "<group>"; };
-		59ACFB0215FDB53D004BE69E /* cocoa_bridgesupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cocoa_bridgesupport.h; sourceTree = "<group>"; };
-		59ACFB0315FDB53D004BE69E /* cocoa_bridgesupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoa_bridgesupport.m; sourceTree = "<group>"; };
-		59ACFB0415FDB53D004BE69E /* cocoa_obj_hook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cocoa_obj_hook.h; sourceTree = "<group>"; };
-		59ACFB0515FDB53D004BE69E /* cocoa_obj_hook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoa_obj_hook.m; sourceTree = "<group>"; };
-		59ACFB0615FDB53D004BE69E /* cocoa_object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cocoa_object.h; sourceTree = "<group>"; };
-		59ACFB0715FDB53D004BE69E /* cocoa_object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoa_object.m; sourceTree = "<group>"; };
-		59ACFB0815FDB53D004BE69E /* cocoa_st.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cocoa_st.c; sourceTree = "<group>"; };
-		59ACFB0915FDB53D004BE69E /* cocoa_st.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cocoa_st.h; sourceTree = "<group>"; };
-		59ACFB0A15FDB53D004BE69E /* cocoa_type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cocoa_type.h; sourceTree = "<group>"; };
-		59ACFB0B15FDB53D004BE69E /* cocoa_type.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoa_type.m; sourceTree = "<group>"; };
-		59ACFB0C15FDB53D004BE69E /* init_cocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = init_cocoa.m; sourceTree = "<group>"; };
-		59ACFB1015FDB53D004BE69E /* cocoa.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = cocoa.rb; sourceTree = "<group>"; };
 		59ACFC6815FDBA11004BE69E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		59ACFC6A15FDBA15004BE69E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		59ACFC6C15FDBA22004BE69E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -304,14 +114,6 @@
 		59ACFC7715FDBAD1004BE69E /* hello.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = hello.rb; sourceTree = "<group>"; };
 		59ACFC7915FDBAD9004BE69E /* ext.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ext.rb; sourceTree = "<group>"; };
 		59ACFC7A15FDBAD9004BE69E /* mobiruby.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = mobiruby.rb; sourceTree = "<group>"; };
-		59AEF3741663B64D005D4843 /* object_ivar.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = object_ivar.rb; sourceTree = "<group>"; };
-		59AEF3751663B64D005D4843 /* object_method.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = object_method.rb; sourceTree = "<group>"; };
-		59AEF3761663B64D005D4843 /* object_property.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = object_property.rb; sourceTree = "<group>"; };
-		59AEF37B1663B658005D4843 /* cocoa_protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cocoa_protocol.h; sourceTree = "<group>"; };
-		59AEF37C1663B658005D4843 /* cocoa_protocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cocoa_protocol.m; sourceTree = "<group>"; };
-		59DE063016625B7800C47EAE /* block.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = block.rb; sourceTree = "<group>"; };
-		59DE063116625B7800C47EAE /* object.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = object.rb; sourceTree = "<group>"; };
-		59DE063216625B7800C47EAE /* protocol.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = protocol.rb; sourceTree = "<group>"; };
 		59E87EC315FF9B1500E2F09F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		59E87EC415FF9B1500E2F09F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		59E87EC515FF9B1500E2F09F /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -340,7 +142,8 @@
 				5921A3A315FDB2E8007FECF1 /* UIKit.framework in Frameworks */,
 				5921A3A515FDB2E8007FECF1 /* Foundation.framework in Frameworks */,
 				5921A3A715FDB2E8007FECF1 /* CoreGraphics.framework in Frameworks */,
-				59ACFB2015FDB53D004BE69E /* libffi.a in Frameworks */,
+				5950970B16AF012100DB40C8 /* libmruby.a in Frameworks */,
+				5950970D16AF012C00DB40C8 /* libffi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +211,6 @@
 			children = (
 				5921A3A815FDB2E8007FECF1 /* mobiruby-ios */,
 				5900877A165E910200F45C24 /* vendors */,
-				59ACF97C15FDB53D004BE69E /* modules */,
 				5921A3A115FDB2E8007FECF1 /* Frameworks */,
 				5921A39F15FDB2E8007FECF1 /* Products */,
 			);
@@ -453,6 +255,7 @@
 		5921A3A915FDB2E8007FECF1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				595096D416AEF56100DB40C8 /* core */,
 				59ACFC6F15FDBA84004BE69E /* export_headers.m */,
 				5921A3AA15FDB2E8007FECF1 /* mobiruby-ios-Info.plist */,
 				5921A3AB15FDB2E8007FECF1 /* InfoPlist.strings */,
@@ -462,331 +265,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		59ACF97C15FDB53D004BE69E /* modules */ = {
+		595096D416AEF56100DB40C8 /* core */ = {
 			isa = PBXGroup;
 			children = (
-				59ACF97D15FDB53D004BE69E /* libffi */,
-				59ACF98A15FDB53D004BE69E /* mobiruby-common */,
-				59ACF9A515FDB53D004BE69E /* mruby */,
-				59ACFACF15FDB53D004BE69E /* mruby-cfunc */,
-				59ACFAF715FDB53D004BE69E /* mruby-cocoa */,
+				5950970C16AF012C00DB40C8 /* libffi.a */,
+				5950970A16AF012100DB40C8 /* libmruby.a */,
 			);
-			path = modules;
-			sourceTree = "<group>";
-		};
-		59ACF97D15FDB53D004BE69E /* libffi */ = {
-			isa = PBXGroup;
-			children = (
-				59ACF97E15FDB53D004BE69E /* ffi.h */,
-				59ACF97F15FDB53D004BE69E /* include */,
-				59ACF98915FDB53D004BE69E /* libffi.a */,
-			);
-			path = libffi;
-			sourceTree = "<group>";
-		};
-		59ACF97F15FDB53D004BE69E /* include */ = {
-			isa = PBXGroup;
-			children = (
-				59ACF98015FDB53D004BE69E /* armv6 */,
-				59ACF98315FDB53D004BE69E /* armv7 */,
-				59ACF98615FDB53D004BE69E /* i386 */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		59ACF98015FDB53D004BE69E /* armv6 */ = {
-			isa = PBXGroup;
-			children = (
-				59ACF98115FDB53D004BE69E /* ffi.h */,
-				59ACF98215FDB53D004BE69E /* ffitarget.h */,
-			);
-			path = armv6;
-			sourceTree = "<group>";
-		};
-		59ACF98315FDB53D004BE69E /* armv7 */ = {
-			isa = PBXGroup;
-			children = (
-				59ACF98415FDB53D004BE69E /* ffi.h */,
-				59ACF98515FDB53D004BE69E /* ffitarget.h */,
-			);
-			path = armv7;
-			sourceTree = "<group>";
-		};
-		59ACF98615FDB53D004BE69E /* i386 */ = {
-			isa = PBXGroup;
-			children = (
-				59ACF98715FDB53D004BE69E /* ffi.h */,
-				59ACF98815FDB53D004BE69E /* ffitarget.h */,
-			);
-			path = i386;
-			sourceTree = "<group>";
-		};
-		59ACF98A15FDB53D004BE69E /* mobiruby-common */ = {
-			isa = PBXGroup;
-			children = (
-				59ACF98C15FDB53D004BE69E /* include */,
-				59ACF99415FDB53D004BE69E /* src */,
-			);
-			path = "mobiruby-common";
-			sourceTree = "<group>";
-		};
-		59ACF98C15FDB53D004BE69E /* include */ = {
-			isa = PBXGroup;
-			children = (
-				59ACF98D15FDB53D004BE69E /* mobiruby_common.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		59ACF99415FDB53D004BE69E /* src */ = {
-			isa = PBXGroup;
-			children = (
-				59ACF99515FDB53D004BE69E /* init_mobiruby_common.c */,
-				59ACF99715FDB53D004BE69E /* mruby_require.c */,
-				59ACF99815FDB53D004BE69E /* mruby_require.h */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		59ACF9A515FDB53D004BE69E /* mruby */ = {
-			isa = PBXGroup;
-			children = (
-				59ACF9C115FDB53D004BE69E /* ext */,
-				59ACF9C315FDB53D004BE69E /* include */,
-				59ACF9E015FDB53D004BE69E /* mrblib */,
-				59ACF9F715FDB53D004BE69E /* src */,
-			);
-			path = mruby;
-			sourceTree = "<group>";
-		};
-		59ACF9C115FDB53D004BE69E /* ext */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ext;
-			sourceTree = "<group>";
-		};
-		59ACF9C315FDB53D004BE69E /* include */ = {
-			isa = PBXGroup;
-			children = (
-				59ACF9C415FDB53D004BE69E /* mrbconf.h */,
-				59ACF9C515FDB53D004BE69E /* mruby */,
-				59ACF9D715FDB53D004BE69E /* mruby.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		59ACF9C515FDB53D004BE69E /* mruby */ = {
-			isa = PBXGroup;
-			children = (
-				59ACF9C615FDB53D004BE69E /* array.h */,
-				59ACF9C715FDB53D004BE69E /* cdump.h */,
-				59ACF9C815FDB53D004BE69E /* class.h */,
-				59ACF9C915FDB53D004BE69E /* compile.h */,
-				59ACF9CA15FDB53D004BE69E /* data.h */,
-				59ACF9CB15FDB53D004BE69E /* dump.h */,
-				59ACF9CC15FDB53D004BE69E /* hash.h */,
-				59ACF9CD15FDB53D004BE69E /* irep.h */,
-				59ACF9CE15FDB53D004BE69E /* khash.h */,
-				59ACF9CF15FDB53D004BE69E /* numeric.h */,
-				59ACF9D015FDB53D004BE69E /* object.h */,
-				59ACF9D115FDB53D004BE69E /* proc.h */,
-				59ACF9D215FDB53D004BE69E /* range.h */,
-				59ACF9D315FDB53D004BE69E /* string.h */,
-				59ACF9D415FDB53D004BE69E /* struct.h */,
-				59ACF9D515FDB53D004BE69E /* value.h */,
-				59ACF9D615FDB53D004BE69E /* variable.h */,
-			);
-			path = mruby;
-			sourceTree = "<group>";
-		};
-		59ACF9E015FDB53D004BE69E /* mrblib */ = {
-			isa = PBXGroup;
-			children = (
-				59ACF9EB15FDB53D004BE69E /* mrblib.c */,
-			);
-			path = mrblib;
-			sourceTree = "<group>";
-		};
-		59ACF9F715FDB53D004BE69E /* src */ = {
-			isa = PBXGroup;
-			children = (
-				59ACF9F815FDB53D004BE69E /* array.c */,
-				59ACF9FB15FDB53D004BE69E /* cdump.c */,
-				59ACF9FE15FDB53D004BE69E /* class.c */,
-				59ACFA0215FDB53D004BE69E /* codegen.c */,
-				59ACFA0515FDB53D004BE69E /* compar.c */,
-				59ACFA0815FDB53D004BE69E /* crc.c */,
-				59ACFA0B15FDB53D004BE69E /* dump.c */,
-				59ACFA0E15FDB53D004BE69E /* encoding.h */,
-				59ACFA0F15FDB53D004BE69E /* enum.c */,
-				59ACFA1215FDB53D004BE69E /* error.c */,
-				59ACFA1415FDB53D004BE69E /* error.h */,
-				59ACFA1615FDB53D004BE69E /* etc.c */,
-				59ACFA1915FDB53D004BE69E /* ext */,
-				59ACFA1B15FDB53D004BE69E /* gc.c */,
-				59ACFA1E15FDB53D004BE69E /* hash.c */,
-				59ACFA2115FDB53D004BE69E /* init.c */,
-				59ACFA2415FDB53D004BE69E /* init_ext.c */,
-				59ACFA2715FDB53D004BE69E /* kernel.c */,
-				59ACFA2C15FDB53D004BE69E /* load.c */,
-				59ACFA3015FDB53D004BE69E /* math.c */,
-				59ACFA3315FDB53D004BE69E /* name2ctype.h */,
-				59ACFA3415FDB53D004BE69E /* node.h */,
-				59ACFA3515FDB53D004BE69E /* numeric.c */,
-				59ACFA3815FDB53D004BE69E /* object.c */,
-				59ACFA3B15FDB53D004BE69E /* oniguruma.h */,
-				59ACFA3C15FDB53D004BE69E /* opcode.h */,
-				59ACFA3E15FDB53D004BE69E /* pool.c */,
-				59ACFA4115FDB53D004BE69E /* print.c */,
-				59ACFA4415FDB53D004BE69E /* proc.c */,
-				59ACFA4715FDB53D004BE69E /* range.c */,
-				59ACFA4A15FDB53D004BE69E /* re.c */,
-				59ACFA4C15FDB53D004BE69E /* re.h */,
-				59ACFA4E15FDB53D004BE69E /* regcomp.c */,
-				59ACFA5115FDB53D004BE69E /* regenc.c */,
-				59ACFA5315FDB53D004BE69E /* regenc.h */,
-				59ACFA5515FDB53D004BE69E /* regerror.c */,
-				59ACFA5815FDB53D004BE69E /* regex.h */,
-				59ACFA5915FDB53D004BE69E /* regexec.c */,
-				59ACFA5C15FDB53D004BE69E /* regint.h */,
-				59ACFA5D15FDB53D004BE69E /* regparse.c */,
-				59ACFA5F15FDB53D004BE69E /* regparse.h */,
-				59ACFA6115FDB53D004BE69E /* sprintf.c */,
-				59ACFA6415FDB53D004BE69E /* st.c */,
-				59ACFA6615FDB53D004BE69E /* st.h */,
-				59ACFA6815FDB53D004BE69E /* state.c */,
-				59ACFA6B15FDB53D004BE69E /* string.c */,
-				59ACFA6E15FDB53D004BE69E /* struct.c */,
-				59ACFA7115FDB53D004BE69E /* symbol.c */,
-				59ACFA7415FDB53D004BE69E /* time.c */,
-				59ACFA7715FDB53D004BE69E /* variable.c */,
-				59ACFA7A15FDB53D004BE69E /* vm.c */,
-				59ACFA7D15FDB53D004BE69E /* y.tab.c */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		59ACFA1915FDB53D004BE69E /* ext */ = {
-			isa = PBXGroup;
-			children = (
-				59ACFA1A15FDB53D004BE69E /* .gitkeep */,
-			);
-			path = ext;
-			sourceTree = "<group>";
-		};
-		59ACFACF15FDB53D004BE69E /* mruby-cfunc */ = {
-			isa = PBXGroup;
-			children = (
-				59ACFAD215FDB53D004BE69E /* include */,
-				59ACFAE215FDB53D004BE69E /* src */,
-			);
-			path = "mruby-cfunc";
-			sourceTree = "<group>";
-		};
-		59ACFAD215FDB53D004BE69E /* include */ = {
-			isa = PBXGroup;
-			children = (
-				595C1880163AD5F100ECC800 /* cfunc_rubyvm.h */,
-				595C1881163AD5F100ECC800 /* vector.h */,
-				59ACFAD315FDB53D004BE69E /* cfunc.h */,
-				59ACFAD415FDB53D004BE69E /* cfunc_call.h */,
-				59ACFAD515FDB53D004BE69E /* cfunc_closure.h */,
-				59ACFAD615FDB53D004BE69E /* cfunc_pointer.h */,
-				59ACFAD715FDB53D004BE69E /* cfunc_struct.h */,
-				59ACFAD815FDB53D004BE69E /* cfunc_type.h */,
-				59ACFAD915FDB53D004BE69E /* cfunc_utils.h */,
-				59ACFADA15FDB53D004BE69E /* ffi */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		59ACFADA15FDB53D004BE69E /* ffi */ = {
-			isa = PBXGroup;
-			children = (
-				59ACFADB15FDB53D004BE69E /* ffi.h */,
-				59ACFADC15FDB53D004BE69E /* ffitarget.h */,
-			);
-			path = ffi;
-			sourceTree = "<group>";
-		};
-		59ACFAE215FDB53D004BE69E /* src */ = {
-			isa = PBXGroup;
-			children = (
-				595C187C163AD5E700ECC800 /* vector.c */,
-				59ACFAE315FDB53D004BE69E /* cfunc.c */,
-				59ACFAE415FDB53D004BE69E /* cfunc_call.c */,
-				59ACFAE515FDB53D004BE69E /* cfunc_closure.c */,
-				59ACFAE615FDB53D004BE69E /* cfunc_pointer.c */,
-				595C187B163AD5E700ECC800 /* cfunc_rubyvm.c */,
-				59ACFAE715FDB53D004BE69E /* cfunc_struct.c */,
-				59ACFAE915FDB53D004BE69E /* cfunc_type.c */,
-				59ACFAEA15FDB53D004BE69E /* cfunc_utils.c */,
-				59ACFAEC15FDB53D004BE69E /* mrb */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		59ACFAEC15FDB53D004BE69E /* mrb */ = {
-			isa = PBXGroup;
-			children = (
-				59ACFAEE15FDB53D004BE69E /* cfunc_rb.rb */,
-			);
-			path = mrb;
-			sourceTree = "<group>";
-		};
-		59ACFAF715FDB53D004BE69E /* mruby-cocoa */ = {
-			isa = PBXGroup;
-			children = (
-				59ACFAF915FDB53D004BE69E /* include */,
-				59ACFAFF15FDB53D004BE69E /* src */,
-			);
-			path = "mruby-cocoa";
-			sourceTree = "<group>";
-		};
-		59ACFAF915FDB53D004BE69E /* include */ = {
-			isa = PBXGroup;
-			children = (
-				59ACFAFA15FDB53D004BE69E /* cocoa.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		59ACFAFF15FDB53D004BE69E /* src */ = {
-			isa = PBXGroup;
-			children = (
-				59AEF37B1663B658005D4843 /* cocoa_protocol.h */,
-				59AEF37C1663B658005D4843 /* cocoa_protocol.m */,
-				59ACFB0015FDB53D004BE69E /* cocoa_block.h */,
-				59ACFB0115FDB53D004BE69E /* cocoa_block.m */,
-				59ACFB0215FDB53D004BE69E /* cocoa_bridgesupport.h */,
-				59ACFB0315FDB53D004BE69E /* cocoa_bridgesupport.m */,
-				59ACFB0415FDB53D004BE69E /* cocoa_obj_hook.h */,
-				59ACFB0515FDB53D004BE69E /* cocoa_obj_hook.m */,
-				59ACFB0615FDB53D004BE69E /* cocoa_object.h */,
-				59ACFB0715FDB53D004BE69E /* cocoa_object.m */,
-				59ACFB0815FDB53D004BE69E /* cocoa_st.c */,
-				59ACFB0915FDB53D004BE69E /* cocoa_st.h */,
-				59ACFB0A15FDB53D004BE69E /* cocoa_type.h */,
-				59ACFB0B15FDB53D004BE69E /* cocoa_type.m */,
-				59ACFB0C15FDB53D004BE69E /* init_cocoa.m */,
-				59ACFB0E15FDB53D004BE69E /* mrb */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		59ACFB0E15FDB53D004BE69E /* mrb */ = {
-			isa = PBXGroup;
-			children = (
-				59DE063116625B7800C47EAE /* object.rb */,
-				59AEF3741663B64D005D4843 /* object_ivar.rb */,
-				59AEF3751663B64D005D4843 /* object_method.rb */,
-				59AEF3761663B64D005D4843 /* object_property.rb */,
-				59DE063016625B7800C47EAE /* block.rb */,
-				59DE063216625B7800C47EAE /* protocol.rb */,
-				59ACFB1015FDB53D004BE69E /* cocoa.rb */,
-			);
-			path = mrb;
+			name = core;
 			sourceTree = "<group>";
 		};
 		59ACFC6615FDB980004BE69E /* hello */ = {
@@ -900,12 +385,6 @@
 				59FE8101160BEAB6002B24D8 /* Default-568h@2x.png in Resources */,
 				5900879B165E91D100F45C24 /* globalip.rb in Resources */,
 				590087A7165E972800F45C24 /* SVProgressHUD.bundle in Resources */,
-				59DE063316625B7800C47EAE /* block.rb in Resources */,
-				59DE063416625B7800C47EAE /* object.rb in Resources */,
-				59DE063516625B7800C47EAE /* protocol.rb in Resources */,
-				59AEF3771663B64D005D4843 /* object_ivar.rb in Resources */,
-				59AEF3781663B64D005D4843 /* object_method.rb in Resources */,
-				59AEF3791663B64D005D4843 /* object_property.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -937,80 +416,13 @@
 				598B63F1160B60CB0051D443 /* tableview_menu.rb in Sources */,
 				59ACFC8115FDBAF1004BE69E /* app.rb in Sources */,
 				5900879C165E927500F45C24 /* globalip.rb in Sources */,
-				59ACFC6415FDB92F004BE69E /* cfunc_rb.rb in Sources */,
 				59ACFC8015FDBAEF004BE69E /* hello.rb in Sources */,
 				59ACFC7F15FDBAEC004BE69E /* ext.rb in Sources */,
-				59AEF37D1663B658005D4843 /* cocoa_protocol.m in Sources */,
 				59ACFC7D15FDBAE5004BE69E /* sameapp.rb in Sources */,
 				59ACFC7E15FDBAE6004BE69E /* samegame.rb in Sources */,
-				59ACFC6315FDB928004BE69E /* cocoa.rb in Sources */,
-				59DE063716625B8000C47EAE /* block.rb in Sources */,
-				59DE063816625B8300C47EAE /* object.rb in Sources */,
-				59AEF37E1663B681005D4843 /* object_ivar.rb in Sources */,
-				59AEF37F1663B683005D4843 /* object_method.rb in Sources */,
-				59AEF3801663B686005D4843 /* object_property.rb in Sources */,
-				59DE063916625B8800C47EAE /* protocol.rb in Sources */,
 				59ACFC8215FDBB49004BE69E /* mobiruby.rb in Sources */,
 				5921A3AF15FDB2E8007FECF1 /* main.m in Sources */,
-				59ACFB2715FDB53D004BE69E /* init_mobiruby_common.c in Sources */,
-				59ACFB2915FDB53D004BE69E /* mruby_require.c in Sources */,
-				59ACFB5A15FDB53D004BE69E /* mrblib.c in Sources */,
-				59ACFB6615FDB53D004BE69E /* array.c in Sources */,
-				59ACFB6915FDB53D004BE69E /* cdump.c in Sources */,
-				59ACFB6C15FDB53D004BE69E /* class.c in Sources */,
-				59ACFB7015FDB53D004BE69E /* codegen.c in Sources */,
-				59ACFB7315FDB53D004BE69E /* compar.c in Sources */,
-				59ACFB7615FDB53D004BE69E /* crc.c in Sources */,
-				59ACFB7915FDB53D004BE69E /* dump.c in Sources */,
-				59ACFB7C15FDB53D004BE69E /* enum.c in Sources */,
-				59ACFB7F15FDB53D004BE69E /* error.c in Sources */,
-				59ACFB8215FDB53D004BE69E /* etc.c in Sources */,
-				59ACFB8615FDB53D004BE69E /* gc.c in Sources */,
-				59ACFB8915FDB53D004BE69E /* hash.c in Sources */,
-				59ACFB8C15FDB53D004BE69E /* init.c in Sources */,
-				59ACFB8F15FDB53D004BE69E /* init_ext.c in Sources */,
-				59ACFB9215FDB53D004BE69E /* kernel.c in Sources */,
-				59ACFB9715FDB53D004BE69E /* load.c in Sources */,
-				59ACFB9B15FDB53D004BE69E /* math.c in Sources */,
-				59ACFB9E15FDB53D004BE69E /* numeric.c in Sources */,
-				59ACFBA115FDB53D004BE69E /* object.c in Sources */,
-				59ACFBA515FDB53D004BE69E /* pool.c in Sources */,
-				59ACFBA815FDB53D004BE69E /* print.c in Sources */,
-				59ACFBAB15FDB53D004BE69E /* proc.c in Sources */,
-				59ACFBAE15FDB53D004BE69E /* range.c in Sources */,
-				59ACFBB115FDB53D004BE69E /* re.c in Sources */,
-				59ACFBB415FDB53D004BE69E /* regcomp.c in Sources */,
-				59ACFBB715FDB53D004BE69E /* regenc.c in Sources */,
-				59ACFBBA15FDB53D004BE69E /* regerror.c in Sources */,
-				59ACFBBD15FDB53D004BE69E /* regexec.c in Sources */,
-				59ACFBC015FDB53D004BE69E /* regparse.c in Sources */,
-				59ACFBC315FDB53D004BE69E /* sprintf.c in Sources */,
-				59ACFBC615FDB53D004BE69E /* st.c in Sources */,
-				59ACFBC915FDB53D004BE69E /* state.c in Sources */,
-				59ACFBCC15FDB53D004BE69E /* string.c in Sources */,
-				59ACFBCF15FDB53D004BE69E /* struct.c in Sources */,
-				59ACFBD215FDB53D004BE69E /* symbol.c in Sources */,
-				59ACFBD515FDB53D004BE69E /* time.c in Sources */,
-				59ACFBD815FDB53D004BE69E /* variable.c in Sources */,
-				59ACFBDB15FDB53D004BE69E /* vm.c in Sources */,
-				59ACFBDE15FDB53D004BE69E /* y.tab.c in Sources */,
-				59ACFC2815FDB53D004BE69E /* cfunc.c in Sources */,
-				59ACFC2915FDB53D004BE69E /* cfunc_call.c in Sources */,
-				59ACFC2A15FDB53D004BE69E /* cfunc_closure.c in Sources */,
-				59ACFC2B15FDB53D004BE69E /* cfunc_pointer.c in Sources */,
-				59ACFC2C15FDB53D004BE69E /* cfunc_struct.c in Sources */,
-				59ACFC2E15FDB53D004BE69E /* cfunc_type.c in Sources */,
-				59ACFC2F15FDB53D004BE69E /* cfunc_utils.c in Sources */,
-				59ACFC3D15FDB53D004BE69E /* cocoa_block.m in Sources */,
-				59ACFC3E15FDB53D004BE69E /* cocoa_bridgesupport.m in Sources */,
-				59ACFC3F15FDB53D004BE69E /* cocoa_obj_hook.m in Sources */,
-				59ACFC4015FDB53D004BE69E /* cocoa_object.m in Sources */,
-				59ACFC4115FDB53D004BE69E /* cocoa_st.c in Sources */,
-				59ACFC4215FDB53D004BE69E /* cocoa_type.m in Sources */,
-				59ACFC4315FDB53D004BE69E /* init_cocoa.m in Sources */,
 				59ACFC7015FDBA84004BE69E /* export_headers.m in Sources */,
-				595C187D163AD5E700ECC800 /* cfunc_rubyvm.c in Sources */,
-				595C187E163AD5E700ECC800 /* vector.c in Sources */,
 				59008790165E911700F45C24 /* AFHTTPClient.m in Sources */,
 				59008791165E911700F45C24 /* AFHTTPRequestOperation.m in Sources */,
 				59008792165E911700F45C24 /* AFImageRequestOperation.m in Sources */,
@@ -1045,6 +457,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
@@ -1062,6 +475,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1074,6 +488,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DEAD_CODE_STRIPPING = NO;
@@ -1086,6 +501,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1102,19 +518,20 @@
 				INFOPLIST_FILE = "mobiruby-ios/mobiruby-ios-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/modules/libffi\"",
-					"\"$(SRCROOT)/modules/mruby/lib\"",
-					"\"$(SRCROOT)/modules/mruby-cfunc/src\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/tmp/mruby/build/libffi\"",
 				);
 				OTHER_CFLAGS = (
-					"-I$(PROJECT_DIR)/modules/mruby/include",
-					"-I$(PROJECT_DIR)/modules/libffi/include",
-					"-I$(PROJECT_DIR)/modules/mobiruby-common/include",
-					"-I$(PROJECT_DIR)/modules/mruby-cocoa/include",
-					"-I$(PROJECT_DIR)/modules/mruby-cfunc/include",
+					"-I$(PROJECT_DIR)/tmp/mruby/include",
+					"-I$(PROJECT_DIR)/tmp/mruby/build/libffi",
+					"-I$(PROJECT_DIR)/tmp/mruby/build/mrbgems/mobiruby-common/include",
+					"-I$(PROJECT_DIR)/tmp/mruby/build/mrbgems/mruby-cocoa/include",
+					"-I$(PROJECT_DIR)/tmp/mruby/build/mrbgems/mruby-cfunc/include",
 					"-DALLOC_PADDING=8",
 					"-DUSE_MRBC_DATA",
+					"-DMRB_INT64",
 				);
+				OTHER_LDFLAGS = "-ldl";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				WRAPPER_EXTENSION = app;
@@ -1132,20 +549,20 @@
 				INFOPLIST_FILE = "mobiruby-ios/mobiruby-ios-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/modules/libffi\"",
-					"\"$(SRCROOT)/modules/mruby/lib\"",
-					"\"$(SRCROOT)/modules/mruby-cfunc/src\"",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/tmp/mruby/build/libffi\"",
 				);
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
-					"-I$(PROJECT_DIR)/modules/mruby/include",
-					"-I$(PROJECT_DIR)/modules/libffi/include",
-					"-I$(PROJECT_DIR)/modules/mruby-cfunc/include",
-					"-I$(PROJECT_DIR)/modules/mruby-cocoa/include",
-					"-I$(PROJECT_DIR)/modules/mobiruby-common/include",
+					"-I$(PROJECT_DIR)/tmp/mruby/include",
+					"-I$(PROJECT_DIR)/tmp/mruby/build/libffi",
+					"-I$(PROJECT_DIR)/tmp/mruby/build/mrbgems/mobiruby-common/include",
+					"-I$(PROJECT_DIR)/tmp/mruby/build/mrbgems/mruby-cocoa/include",
+					"-I$(PROJECT_DIR)/tmp/mruby/build/mrbgems/mruby-cfunc/include",
 					"-DALLOC_PADDING=8",
 					"-DUSE_MRBC_DATA",
 				);
+				OTHER_LDFLAGS = "-ldl";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				WRAPPER_EXTENSION = app;

@@ -19,31 +19,27 @@ extern const char mruby_data_app[];
 
 void init_cocoa_bridgesupport(mrb_state *mrb);
 
-struct mrb_state_ud {
-    struct cfunc_state cfunc_state;
-    struct cocoa_state cocoa_state;
-};
-
 static
 void mrb_state_init(mrb_state *mrb)
 {
-    mrb->ud = malloc(sizeof(struct mrb_state_ud));
-    init_cfunc_module(mrb, mrb_state_init);
-    init_cocoa_module(mrb);
-    
     init_cocoa_bridgesupport(mrb);
-    init_mobiruby_common_module(mrb);
 }
 
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
-        cfunc_state_offset = cfunc_offsetof(struct mrb_state_ud, cfunc_state);
-        cocoa_state_offset = cocoa_offsetof(struct mrb_state_ud, cocoa_state);
-
+        NSLog(@"main>1");
         mrb_state *mrb = mrb_open();
+        NSLog(@"main>2");
         mrb_state_init(mrb);
+        NSLog(@"main>3");
         
+        mrb_load_irep(mrb, mruby_data_app);
+        if (mrb->exc) {
+            mrb_p(mrb, mrb_obj_value(mrb->exc));
+            exit(0);
+        }
+/*
         int n = mrb_read_irep(mrb, mruby_data_app);
         if (n >= 0) {
             mrb_irep *irep = mrb->irep[n];
@@ -53,12 +49,16 @@ int main(int argc, char *argv[])
         }
         else if (mrb->exc) {
             // fail to load.
+            NSLog(@"main>4");
             longjmp(*(jmp_buf*)mrb->jmp, 1);
         }
+*/
+        NSLog(@"main>5");
         
         if (mrb->exc) {
             mrb_p(mrb, mrb_obj_value(mrb->exc));
         }
+        NSLog(@"main>6");
         
         return UIApplicationMain(argc, argv, nil, @"AppDelegate");
     }
