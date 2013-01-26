@@ -2,6 +2,7 @@
 
 # Specific files #
 ##################
+vendors/libffi
 export_headers.m
 
 # Xcode #

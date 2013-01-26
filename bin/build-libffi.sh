@@ -1,7 +1,7 @@
 #!/bin/sh
 
 . ./bin/build-config.sh
-OUTPUT_DIR=`pwd`/mruby/build/libffi/
+OUTPUT_DIR=`pwd`/vendors/libffi/
 
 mkdir -p tmp
 cd tmp
@@ -65,14 +65,14 @@ cat << EOF
 #ifdef __arm__
   #include <arm/arch.h>
   #ifdef _ARM_ARCH_7S
-    #include "include/armv7s/ffi.h"
+    #include "armv7s/ffi.h"
   #elif defined(_ARM_ARCH_7)
-    #include "include/armv7/ffi.h"
+    #include "armv7/ffi.h"
   #endif
 #elif defined(__i386__)
-  #include "include/i386/ffi.h"
+  #include "i386/ffi.h"
 #endif
 EOF
-) > "${OUTPUT_DIR}/ffi.h"
+) > "${OUTPUT_DIR}/include/ffi.h"
 
 

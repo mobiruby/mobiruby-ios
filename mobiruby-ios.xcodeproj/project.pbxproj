@@ -65,7 +65,7 @@
 			outputFiles = (
 				"${DERIVED_SOURCES_DIR}/${INPUT_FILE_BASE}.c",
 			);
-			script = "${PROJECT_DIR}/tmp/mruby/bin/mrbc -B\"mruby_`ruby -e \"s=['cfunc','cocoa'].find{|a| ENV['INPUT_FILE_DIR'].match(a)};print s+'_' if s\"`data_${INPUT_FILE_BASE}\" -o- \"${INPUT_FILE_DIR}/${INPUT_FILE_NAME}\" > \"${DERIVED_SOURCES_DIR}/${INPUT_FILE_BASE}.c\"\n";
+			script = "${PROJECT_DIR}/bin/mrbc -B\"mruby_`ruby -e \"s=['cfunc','cocoa'].find{|a| ENV['INPUT_FILE_DIR'].match(a)};print s+'_' if s\"`data_${INPUT_FILE_BASE}\" -o- \"${INPUT_FILE_DIR}/${INPUT_FILE_NAME}\" > \"${DERIVED_SOURCES_DIR}/${INPUT_FILE_BASE}.c\"\n";
 		};
 /* End PBXBuildRule section */
 
@@ -518,15 +518,15 @@
 				INFOPLIST_FILE = "mobiruby-ios/mobiruby-ios-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/tmp/mruby/build/libffi\"",
+					"\"$(SRCROOT)/mruby\"",
+					"\"$(SRCROOT)/vendors/libffi\"",
 				);
 				OTHER_CFLAGS = (
-					"-I$(PROJECT_DIR)/tmp/mruby/include",
-					"-I$(PROJECT_DIR)/tmp/mruby/build/libffi",
-					"-I$(PROJECT_DIR)/tmp/mruby/build/mrbgems/mobiruby-common/include",
-					"-I$(PROJECT_DIR)/tmp/mruby/build/mrbgems/mruby-cocoa/include",
-					"-I$(PROJECT_DIR)/tmp/mruby/build/mrbgems/mruby-cfunc/include",
+					"-I$(PROJECT_DIR)/mruby/include",
+					"-I$(PROJECT_DIR)/mruby/build/libffi",
+					"-I$(PROJECT_DIR)/mobiruby-common/include",
+					"-I$(PROJECT_DIR)/mruby-cocoa/include",
+					"-I$(PROJECT_DIR)/mruby-cfunc/include",
 					"-DALLOC_PADDING=8",
 					"-DUSE_MRBC_DATA",
 					"-DMRB_INT64",
@@ -549,18 +549,19 @@
 				INFOPLIST_FILE = "mobiruby-ios/mobiruby-ios-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/tmp/mruby/build/libffi\"",
+					"\"$(SRCROOT)/mruby\"",
+					"\"$(SRCROOT)/vendors/libffi\"",
 				);
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
-					"-I$(PROJECT_DIR)/tmp/mruby/include",
-					"-I$(PROJECT_DIR)/tmp/mruby/build/libffi",
-					"-I$(PROJECT_DIR)/tmp/mruby/build/mrbgems/mobiruby-common/include",
-					"-I$(PROJECT_DIR)/tmp/mruby/build/mrbgems/mruby-cocoa/include",
-					"-I$(PROJECT_DIR)/tmp/mruby/build/mrbgems/mruby-cfunc/include",
+					"-I$(PROJECT_DIR)/mruby/include",
+					"-I$(PROJECT_DIR)/mruby/build/libffi",
+					"-I$(PROJECT_DIR)/mobiruby-common/include",
+					"-I$(PROJECT_DIR)/mruby-cocoa/include",
+					"-I$(PROJECT_DIR)/mruby-cfunc/include",
 					"-DALLOC_PADDING=8",
 					"-DUSE_MRBC_DATA",
+					"-DMRB_INT64",
 				);
 				OTHER_LDFLAGS = "-ldl";
 				PRODUCT_NAME = "$(TARGET_NAME)";

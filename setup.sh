@@ -3,4 +3,4 @@
 git submodule init
 git submodule update
 
-ruby build-libmruby.rb clean libmruby.a
+ruby build-libmruby.rb clean libmruby

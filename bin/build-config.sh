@@ -1,5 +1,5 @@
 # 
-# Build configration for *.sh
+# Build configration for *.sh 
 # 
 
 SDK_IOS_VERSION="6.0"
