@@ -2,14 +2,12 @@
 
 if __FILE__ == $PROGRAM_NAME
   require 'fileutils'
-  FileUtils.mkdir_p 'tmp'
-  unless File.exists?('tmp/mruby')
-    system 'git clone https://github.com/mruby/mruby.git tmp/mruby'
+  unless File.exists?('mruby/build_config.rb')
   end
-  unless File.exists?('tmp/mruby/build/libffi')
+  unless File.exists?('mruby/build/libffi')
     system 'sh ./bin/build-libffi.sh'
   end
-  exit system(%Q[cd tmp/mruby; MRUBY_CONFIG=#{File.expand_path __FILE__} rake #{ARGV.join(' ')}])
+  exit system(%Q[cd mruby; MRUBY_CONFIG="#{File.expand_path __FILE__}" rake #{ARGV.join(' ')}])
 end
 
 MRuby::Build.new do |conf|
@@ -51,9 +49,14 @@ IOS_SIM_SDK = "#{PLATFORM_IOS_SIM}/Developer/SDKs/iPhoneSimulator#{SDK_IOS_VERSI
         cc.flags << %Q[-fmessage-length=0 -std=gnu99 -fpascal-strings -fexceptions -fasm-blocks -gdwarf-2]
         cc.flags << %Q[-fobjc-abi-version=2]
       end
-      conf.gem :github => 'mobiruby/mruby-cfunc'
-      conf.gem :github => 'mobiruby/mruby-cocoa'
-      conf.gem :github => 'mobiruby/mobiruby-common'
+      conf.gem File.join(File.dirname(__FILE__), 'mruby-cfunc')
+      conf.gem File.join(File.dirname(__FILE__), 'mruby-cocoa')
+      conf.gem File.join(File.dirname(__FILE__), 'mobiruby-common')
     end
   end
+end
+
+file 'libmruby.a' => MRuby.targets.values.map { |t| t.libfile("#{t.build_dir}/lib/libmruby") } do |t|
+  sh %Q[cp "build/host/bin/mrbc" "../bin/mrbc" ]
+  sh %Q[lipo -create #{t.prerequisites.map{|s| '"%s"' % s}.join(' ')} -output "#{t.name}"]
 end

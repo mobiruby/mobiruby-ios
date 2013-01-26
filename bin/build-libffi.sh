@@ -1,7 +1,7 @@
 #!/bin/sh
 
 . ./bin/build-config.sh
-OUTPUT_DIR=`pwd`/tmp/mruby/build/libffi/
+OUTPUT_DIR=`pwd`/mruby/build/libffi/
 
 mkdir -p tmp
 cd tmp
