@@ -115,7 +115,7 @@ class Cocoa::StageView < Cocoa::UIView
             end
             
             @stage.fall do |item, x, y, steps|
-p                context = C::call(C::Pointer, "UIGraphicsGetCurrentContext")
+                context = C::call(C::Pointer, "UIGraphicsGetCurrentContext")
                 Cocoa::UIView._beginAnimations nil, :context, context
                 Cocoa::UIView._setAnimationDuration C::Double(0.05*steps)
                 Cocoa::UIView._setAnimationCurve Cocoa::Const::UIViewAnimationCurveEaseIn

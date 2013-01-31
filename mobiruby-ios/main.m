@@ -28,23 +28,18 @@ void mrb_state_init(mrb_state *mrb)
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
-        NSLog(@"main>1");
         mrb_state *mrb = mrb_open();
-        NSLog(@"main>2");
         mrb_state_init(mrb);
-        NSLog(@"main>3");
         
         mrb_load_irep(mrb, mruby_data_app);
         if (mrb->exc) {
             mrb_p(mrb, mrb_obj_value(mrb->exc));
             exit(0);
         }
-        NSLog(@"main>5");
         
         if (mrb->exc) {
             mrb_p(mrb, mrb_obj_value(mrb->exc));
         }
-        NSLog(@"main>6");
         
         return UIApplicationMain(argc, argv, nil, @"AppDelegate");
     }

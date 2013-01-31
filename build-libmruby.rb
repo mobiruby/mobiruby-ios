@@ -7,7 +7,7 @@ if __FILE__ == $PROGRAM_NAME
   unless File.exists?('mruby/build/libffi')
     system 'sh ./bin/build-libffi.sh'
   end
-  exit system(%Q[cd mruby; MRUBY_CONFIG="#{File.expand_path __FILE__}" rake #{ARGV.join(' ')}])
+  exit system(%Q[cd mruby; MRUBY_CONFIG="#{File.expand_path __FILE__}" ./minirake #{ARGV.join(' ')}])
 end
 
 MRuby::Build.new do |conf|
@@ -19,7 +19,7 @@ MRuby::Build.new do |conf|
   end
 end
 
-SDK_IOS_VERSION="6.0"
+SDK_IOS_VERSION="6.1"
 MIN_IOS_VERSION="5.0"
 PLATFORM_IOS=`xcode-select -print-path`.chomp+'/Platforms/iPhoneOS.platform/'
 PLATFORM_IOS_SIM=`xcode-select -print-path`.chomp+'/Platforms/iPhoneSimulator.platform/'
