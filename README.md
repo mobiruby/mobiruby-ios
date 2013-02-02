@@ -23,7 +23,7 @@ open mobiruby-ios.xcodeproj
 
 If you use XCode beta version, you should modify ``bin/build-config.sh`` or set up xcode-select correctly.
 
-It's tested only Mountain Lion and XCode 4.5
+It's tested only Mountain Lion and XCode 4.6.x
 
 ``app.rb`` is MobiRuby starting point. Let's change and hack it.
 
