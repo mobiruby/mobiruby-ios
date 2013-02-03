@@ -25,6 +25,17 @@
 		5921A3A715FDB2E8007FECF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5921A3A615FDB2E8007FECF1 /* CoreGraphics.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		5921A3AD15FDB2E8007FECF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5921A3AB15FDB2E8007FECF1 /* InfoPlist.strings */; };
 		5921A3AF15FDB2E8007FECF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5921A3AE15FDB2E8007FECF1 /* main.m */; };
+		5922F15716BDAD980068E693 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5921A3A215FDB2E8007FECF1 /* UIKit.framework */; };
+		5922F15816BDAD980068E693 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5921A3A415FDB2E8007FECF1 /* Foundation.framework */; };
+		5922F15916BDAD980068E693 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5921A3A615FDB2E8007FECF1 /* CoreGraphics.framework */; };
+		5922F15F16BDAD980068E693 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5922F15D16BDAD980068E693 /* InfoPlist.strings */; };
+		5922F16116BDAD980068E693 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5922F16016BDAD980068E693 /* main.m */; };
+		5922F16716BDAD990068E693 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5922F16616BDAD990068E693 /* Default.png */; };
+		5922F16916BDAD990068E693 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5922F16816BDAD990068E693 /* Default@2x.png */; };
+		5922F16B16BDAD990068E693 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5922F16A16BDAD990068E693 /* Default-568h@2x.png */; };
+		5922F16F16BDAE0B0068E693 /* libmruby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5938330216BA51D70029B953 /* libmruby.a */; };
+		5922F17016BDAE0B0068E693 /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5938330016BA51A80029B953 /* libffi.a */; };
+		5922F17216BE0B080068E693 /* mrbtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5922F17116BE0B080068E693 /* mrbtest.a */; };
 		5938330116BA51A80029B953 /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5938330016BA51A80029B953 /* libffi.a */; };
 		5938330316BA51D70029B953 /* libmruby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5938330216BA51D70029B953 /* libmruby.a */; };
 		598B63F1160B60CB0051D443 /* tableview_menu.rb in Sources */ = {isa = PBXBuildFile; fileRef = 598B63EF160B60BF0051D443 /* tableview_menu.rb */; };
@@ -101,6 +112,17 @@
 		5921A3AC15FDB2E8007FECF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5921A3AE15FDB2E8007FECF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5921A3B015FDB2E8007FECF1 /* mobiruby-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mobiruby-ios-Prefix.pch"; sourceTree = "<group>"; };
+		5922F15616BDAD980068E693 /* mrbtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mrbtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5922F15C16BDAD980068E693 /* mrbtest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mrbtest-Info.plist"; sourceTree = "<group>"; };
+		5922F15E16BDAD980068E693 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5922F16016BDAD980068E693 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5922F16216BDAD980068E693 /* mrbtest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mrbtest-Prefix.pch"; sourceTree = "<group>"; };
+		5922F16316BDAD990068E693 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5922F16416BDAD990068E693 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5922F16616BDAD990068E693 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		5922F16816BDAD990068E693 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		5922F16A16BDAD990068E693 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5922F17116BE0B080068E693 /* mrbtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mrbtest.a; path = mruby/build/i386/test/mrbtest.a; sourceTree = SOURCE_ROOT; };
 		5938330016BA51A80029B953 /* libffi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libffi.a; path = mruby/build/libffi/libffi.a; sourceTree = SOURCE_ROOT; };
 		5938330216BA51D70029B953 /* libmruby.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmruby.a; path = mruby/build/libmruby.a; sourceTree = SOURCE_ROOT; };
 		598B63EF160B60BF0051D443 /* tableview_menu.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = tableview_menu.rb; sourceTree = "<group>"; };
@@ -144,6 +166,19 @@
 				5921A3A715FDB2E8007FECF1 /* CoreGraphics.framework in Frameworks */,
 				5938330116BA51A80029B953 /* libffi.a in Frameworks */,
 				5938330316BA51D70029B953 /* libmruby.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5922F15316BDAD980068E693 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5922F15716BDAD980068E693 /* UIKit.framework in Frameworks */,
+				5922F15816BDAD980068E693 /* Foundation.framework in Frameworks */,
+				5922F15916BDAD980068E693 /* CoreGraphics.framework in Frameworks */,
+				5922F16F16BDAE0B0068E693 /* libmruby.a in Frameworks */,
+				5922F17016BDAE0B0068E693 /* libffi.a in Frameworks */,
+				5922F17216BE0B080068E693 /* mrbtest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +246,7 @@
 			children = (
 				5921A3A815FDB2E8007FECF1 /* mobiruby-ios */,
 				5900877A165E910200F45C24 /* vendors */,
+				5922F15A16BDAD980068E693 /* mrbtest */,
 				5921A3A115FDB2E8007FECF1 /* Frameworks */,
 				5921A39F15FDB2E8007FECF1 /* Products */,
 			);
@@ -220,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				5921A39E15FDB2E8007FECF1 /* mobiruby-ios.app */,
+				5922F15616BDAD980068E693 /* mrbtest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -261,6 +298,31 @@
 				5921A3AB15FDB2E8007FECF1 /* InfoPlist.strings */,
 				5921A3AE15FDB2E8007FECF1 /* main.m */,
 				5921A3B015FDB2E8007FECF1 /* mobiruby-ios-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5922F15A16BDAD980068E693 /* mrbtest */ = {
+			isa = PBXGroup;
+			children = (
+				5922F16316BDAD990068E693 /* AppDelegate.h */,
+				5922F16416BDAD990068E693 /* AppDelegate.m */,
+				5922F15B16BDAD980068E693 /* Supporting Files */,
+			);
+			path = mrbtest;
+			sourceTree = "<group>";
+		};
+		5922F15B16BDAD980068E693 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5922F17116BE0B080068E693 /* mrbtest.a */,
+				5922F15C16BDAD980068E693 /* mrbtest-Info.plist */,
+				5922F15D16BDAD980068E693 /* InfoPlist.strings */,
+				5922F16016BDAD980068E693 /* main.m */,
+				5922F16216BDAD980068E693 /* mrbtest-Prefix.pch */,
+				5922F16616BDAD990068E693 /* Default.png */,
+				5922F16816BDAD990068E693 /* Default@2x.png */,
+				5922F16A16BDAD990068E693 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -336,6 +398,23 @@
 			productReference = 5921A39E15FDB2E8007FECF1 /* mobiruby-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5922F15516BDAD980068E693 /* mrbtest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5922F16E16BDAD990068E693 /* Build configuration list for PBXNativeTarget "mrbtest" */;
+			buildPhases = (
+				5922F15216BDAD980068E693 /* Sources */,
+				5922F15316BDAD980068E693 /* Frameworks */,
+				5922F15416BDAD980068E693 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mrbtest;
+			productName = mrbtest;
+			productReference = 5922F15616BDAD980068E693 /* mrbtest.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -358,6 +437,7 @@
 			projectRoot = "";
 			targets = (
 				5921A39D15FDB2E8007FECF1 /* mobiruby-ios */,
+				5922F15516BDAD980068E693 /* mrbtest */,
 			);
 		};
 /* End PBXProject section */
@@ -385,6 +465,17 @@
 				59FE8101160BEAB6002B24D8 /* Default-568h@2x.png in Resources */,
 				5900879B165E91D100F45C24 /* globalip.rb in Resources */,
 				590087A7165E972800F45C24 /* SVProgressHUD.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5922F15416BDAD980068E693 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5922F15F16BDAD980068E693 /* InfoPlist.strings in Resources */,
+				5922F16716BDAD990068E693 /* Default.png in Resources */,
+				5922F16916BDAD990068E693 /* Default@2x.png in Resources */,
+				5922F16B16BDAD990068E693 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +527,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5922F15216BDAD980068E693 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5922F16116BDAD980068E693 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -443,6 +542,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				5921A3AC15FDB2E8007FECF1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5922F15D16BDAD980068E693 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5922F15E16BDAD980068E693 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -574,6 +681,84 @@
 			};
 			name = Release;
 		};
+		5922F16C16BDAD990068E693 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mrbtest/mrbtest-Prefix.pch";
+				INFOPLIST_FILE = "mrbtest/mrbtest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/mruby/build\"",
+					"\"$(SRCROOT)/mruby/build/libffi\"",
+					"\"$(SRCROOT)/mruby/build/i386/test\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-I$(PROJECT_DIR)/mruby/include",
+					"-I$(PROJECT_DIR)/mruby/build/libffi",
+					"-I$(PROJECT_DIR)/mobiruby-common/include",
+					"-I$(PROJECT_DIR)/mruby-cocoa/include",
+					"-I$(PROJECT_DIR)/mruby-cfunc/include",
+					"-DALLOC_PADDING=8",
+					"-DUSE_MRBC_DATA",
+					"-DMRB_INT64",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ldl",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5922F16D16BDAD990068E693 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mrbtest/mrbtest-Prefix.pch";
+				INFOPLIST_FILE = "mrbtest/mrbtest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/mruby/build\"",
+					"\"$(SRCROOT)/mruby/build/libffi\"",
+					"\"$(SRCROOT)/mruby/build/i386/test\"",
+				);
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"-I$(PROJECT_DIR)/mruby/include",
+					"-I$(PROJECT_DIR)/mruby/build/libffi",
+					"-I$(PROJECT_DIR)/mobiruby-common/include",
+					"-I$(PROJECT_DIR)/mruby-cocoa/include",
+					"-I$(PROJECT_DIR)/mruby-cfunc/include",
+					"-DALLOC_PADDING=8",
+					"-DUSE_MRBC_DATA",
+					"-DMRB_INT64",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ldl",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -591,6 +776,15 @@
 			buildConfigurations = (
 				5921A3B715FDB2E8007FECF1 /* Debug */,
 				5921A3B815FDB2E8007FECF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5922F16E16BDAD990068E693 /* Build configuration list for PBXNativeTarget "mrbtest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5922F16C16BDAD990068E693 /* Debug */,
+				5922F16D16BDAD990068E693 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
