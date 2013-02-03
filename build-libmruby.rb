@@ -47,14 +47,14 @@ IOS_SIM_SDK = "#{PLATFORM_IOS_SIM}/Developer/SDKs/iPhoneSimulator#{SDK_IOS_VERSI
       [conf.cc, conf.cxx, conf.objc].each do |cc|
         cc.command = `xcode-select -print-path`.chomp+'/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang'
         cc.defines << %w(MRB_INT64)
-        cc.include_paths << File.join(File.dirname(__FILE__), 'vendors/libffi/include')
+        cc.include_paths << File.join(File.dirname(__FILE__), 'mruby/build/libffi/include')
         cc.flags << %Q[-miphoneos-version-min=#{MIN_IOS_VERSION}] if target == :dev
         cc.flags << %Q[-mios-simulator-version-min=#{MIN_IOS_VERSION}] if target == :sim
         cc.flags << %Q[-arch #{conf.name} -isysroot "#{sdk}" -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100]
         cc.flags << %Q[-fmessage-length=0 -std=gnu99 -fpascal-strings -fexceptions -fasm-blocks -gdwarf-2]
         cc.flags << %Q[-fobjc-abi-version=2]
       end
-      conf.linker.library_paths << File.join(File.dirname(__FILE__), 'vendors/libffi')
+      conf.linker.library_paths << File.join(File.dirname(__FILE__), 'mruby/build/libffi')
 
       conf.gem File.join(File.dirname(__FILE__), 'mruby-cfunc')
       conf.gem File.join(File.dirname(__FILE__), 'mruby-cocoa')
