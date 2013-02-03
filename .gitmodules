@@ -1,15 +1,3 @@
-[submodule "modules/mruby-cfunc"]
-	path = modules/mruby-cfunc
-	url = https://github.com/mobiruby/mruby-cfunc.git
-[submodule "modules/mruby-cocoa"]
-	path = modules/mruby-cocoa
-	url = https://github.com/mobiruby/mruby-cocoa.git
-[submodule "modules/mobiruby-common"]
-	path = modules/mobiruby-common
-	url = https://github.com/mobiruby/mobiruby-common.git
-[submodule "modules/mruby"]
-	path = modules/mruby
-	url = https://github.com/mruby/mruby.git
 [submodule "mruby"]
 	path = mruby
 	url = https://github.com/mruby/mruby.git
