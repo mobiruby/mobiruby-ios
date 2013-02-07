@@ -4,7 +4,7 @@ all:
 	ruby build-libmruby.rb libmruby test
 
 test: all
-	killall "iPhone Simulator"
+	killall "iPhone Simulator" || true
 	xcodebuild -configuration Debug -sdk iphonesimulator$(SIMULATOR_VERSION) -target mrbtest clean build
 	sleep 5
 	ios-sim launch build/Debug-iphonesimulator/mrbtest.app --sdk $(SIMULATOR_VERSION) 2&>1
