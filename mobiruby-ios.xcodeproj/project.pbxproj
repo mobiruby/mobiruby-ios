@@ -639,7 +639,6 @@
 					"-I$(PROJECT_DIR)/mruby-cfunc/include",
 					"-DALLOC_PADDING=8",
 					"-DUSE_MRBC_DATA",
-					"-DMRB_INT64",
 				);
 				OTHER_LDFLAGS = "-ldl";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -674,7 +673,6 @@
 					"-I$(PROJECT_DIR)/mruby-cfunc/include",
 					"-DALLOC_PADDING=8",
 					"-DUSE_MRBC_DATA",
-					"-DMRB_INT64",
 				);
 				OTHER_LDFLAGS = "-ldl";
 				PRODUCT_NAME = "$(TARGET_NAME)";

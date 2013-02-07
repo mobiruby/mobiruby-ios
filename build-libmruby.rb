@@ -17,7 +17,7 @@ MRuby::Build.new do |conf|
 
   conf.bins = %w(mrbc)
   [conf.cc, conf.cxx, conf.objc].each do |cc|
-    cc.defines << %w(MRB_INT64)
+    cc.defines << %w()
   end
 end
 
