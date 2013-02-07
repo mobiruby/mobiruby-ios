@@ -2,6 +2,8 @@
 
 Notice: It's for mruby and iOS hackers
 
+Current build status: ![status](https://mobiruby-ci.s3.amazonaws.com/mobiruby-ios.png)
+
 
 ## Getting started
 
