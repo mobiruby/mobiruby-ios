@@ -17,7 +17,7 @@ And then, type the commands in terminal:
 ```
 git clone https://github.com/mobiruby/mobiruby-ios.git
 cd mobiruby-ios
-sh setup.sh
+make setup
 open mobiruby-ios.xcodeproj
 ```
 

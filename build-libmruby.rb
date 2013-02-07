@@ -13,12 +13,11 @@ end
 MRuby::Build.new do |conf|
   toolchain :clang
 
-  # conf.build_mrbtest_lib_only
-
+  conf.build_mrbtest_lib_only
   conf.bins = %w(mrbc)
-  [conf.cc, conf.cxx, conf.objc].each do |cc|
-    cc.defines << %w()
-  end
+  # [conf.cc, conf.cxx, conf.objc].each do |cc|
+  #   cc.defines << %w()
+  # end
 end
 
 SDK_IOS_VERSION="6.1"
@@ -41,7 +40,7 @@ IOS_SIM_SDK = "#{PLATFORM_IOS_SIM}/Developer/SDKs/iPhoneSimulator#{SDK_IOS_VERSI
     MRuby::CrossBuild.new(arch) do |conf|
       toolchain :clang
 
-      # conf.build_mrbtest_lib_only
+      conf.build_mrbtest_lib_only
 
       conf.bins = %w()
       [conf.cc, conf.cxx, conf.objc].each do |cc|
