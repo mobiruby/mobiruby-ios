@@ -1,14 +1,3 @@
-//
-//  main.m
-//  mrbtest
-//
-//  Created by Yuichiro MASUI on 2/3/13.
-//  Copyright (c) 2013 MobiRuby Developers. All rights reserved.
-//
-
-#import <UIKit/UIKit.h>
-
-#import "AppDelegate.h"
 /*
  ** mrbtest - Test for Embeddable Ruby
  **
@@ -16,8 +5,9 @@
  ** against the current mruby implementation.
  */
 
-#include <string.h>
+#import <UIKit/UIKit.h>
 
+#include <string.h>
 #include <mruby.h>
 #include <mruby/proc.h>
 #include <mruby/data.h>

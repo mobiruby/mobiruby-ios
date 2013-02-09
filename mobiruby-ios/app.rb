@@ -1,6 +1,6 @@
 require 'mobiruby'
 require 'tableview_menu'
-require 'sameapp'
+#require 'sameapp'
 
 class Cocoa::AppDelegate < Cocoa::UIResponder
     define C::Int, :application, Cocoa::Object, :didFinishLaunchingWithOptions, Cocoa::Object do |application, launchOptions|
@@ -9,8 +9,8 @@ class Cocoa::AppDelegate < Cocoa::UIResponder
         @navi = Cocoa::UINavigationController._alloc._initWithNibName nil, :bundle, nil
         @window._addSubview @navi._view
         @window._makeKeyAndVisible
-        # show_tableview_menu(@navi)
-        show_samegame(@navi)
+        show_tableview_menu(@navi)
+        # show_samegame(@navi)
     end
     
     define C::Void, :applicationWillResignActive, Cocoa::Object do |application|
