@@ -64,6 +64,7 @@ int main(int argc, char *argv[])
     else if (!check_error(mrb)) {
         ret = EXIT_FAILURE;
     }
+    sleep(1);
     mrb_close(mrb);
     
     return ret;
