@@ -16,7 +16,6 @@
 		59008796165E911700F45C24 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5900878B165E911700F45C24 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		59008797165E911700F45C24 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5900878D165E911700F45C24 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		59008798165E911700F45C24 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5900878F165E911700F45C24 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		5900879B165E91D100F45C24 /* globalip.rb in Resources */ = {isa = PBXBuildFile; fileRef = 5900879A165E91D100F45C24 /* globalip.rb */; };
 		5900879C165E927500F45C24 /* globalip.rb in Sources */ = {isa = PBXBuildFile; fileRef = 5900879A165E91D100F45C24 /* globalip.rb */; };
 		590087A7165E972800F45C24 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 590087A4165E972800F45C24 /* SVProgressHUD.bundle */; };
 		590087A8165E972800F45C24 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 590087A6165E972800F45C24 /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -117,8 +116,6 @@
 		5922F15E16BDAD980068E693 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5922F16016BDAD980068E693 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5922F16216BDAD980068E693 /* mrbtest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mrbtest-Prefix.pch"; sourceTree = "<group>"; };
-		5922F16316BDAD990068E693 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5922F16416BDAD990068E693 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5922F16616BDAD990068E693 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5922F16816BDAD990068E693 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5922F16A16BDAD990068E693 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -305,8 +302,6 @@
 		5922F15A16BDAD980068E693 /* mrbtest */ = {
 			isa = PBXGroup;
 			children = (
-				5922F16316BDAD990068E693 /* AppDelegate.h */,
-				5922F16416BDAD990068E693 /* AppDelegate.m */,
 				5922F15B16BDAD980068E693 /* Supporting Files */,
 			);
 			path = mrbtest;
@@ -463,7 +458,6 @@
 				59E87EDD15FF9B1500E2F09F /* square-yellow-24-ns.png in Resources */,
 				59E87EDE15FF9B1500E2F09F /* tap_se_00.wav in Resources */,
 				59FE8101160BEAB6002B24D8 /* Default-568h@2x.png in Resources */,
-				5900879B165E91D100F45C24 /* globalip.rb in Resources */,
 				590087A7165E972800F45C24 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,6 +613,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEAD_CODE_STRIPPING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mobiruby-ios/mobiruby-ios-Prefix.pch";
@@ -630,6 +625,7 @@
 					"\"$(SRCROOT)/vendors/libffi\"",
 					"\"$(SRCROOT)/mruby/build/libffi\"",
 					"\"$(SRCROOT)/mruby/build\"",
+					"\"$(SRCROOT)/mruby/build/i386/test\"",
 				);
 				OTHER_CFLAGS = (
 					"-I$(PROJECT_DIR)/mruby/include",
@@ -640,8 +636,12 @@
 					"-DALLOC_PADDING=8",
 					"-DUSE_MRBC_DATA",
 				);
-				OTHER_LDFLAGS = "-ldl";
+				OTHER_LDFLAGS = (
+					"-ldl",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALID_ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -651,6 +651,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEAD_CODE_STRIPPING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mobiruby-ios/mobiruby-ios-Prefix.pch";
@@ -663,6 +665,7 @@
 					"\"$(SRCROOT)/vendors/libffi\"",
 					"\"$(SRCROOT)/mruby/build/libffi\"",
 					"\"$(SRCROOT)/mruby/build\"",
+					"\"$(SRCROOT)/mruby/build/i386/test\"",
 				);
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
@@ -674,8 +677,13 @@
 					"-DALLOC_PADDING=8",
 					"-DUSE_MRBC_DATA",
 				);
-				OTHER_LDFLAGS = "-ldl";
+				OTHER_LDFLAGS = (
+					"-ldl",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALID_ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				WRAPPER_EXTENSION = app;
 			};

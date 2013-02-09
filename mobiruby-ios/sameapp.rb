@@ -1,14 +1,14 @@
 require 'samegame'
 require 'ext'
 
-#bgm = AudioPlayer.new("bgm_00", "aif")
-#bgm.loops = -1
-#bgm.volume = 0.25
+$bgm = AudioPlayer.new("bgm_00", "aif")
+$bgm.loops = -1
+$bgm.volume = 0.25
 
-#soundPath = Cocoa::NSBundle._mainBundle._pathForResource _S("tap_se_00"), :ofType, _S("wav")
-#soundURL = Cocoa::NSURL._fileURLWithPath soundPath
-#$tap_se = C::Int(0)
-#C::call C::Void, "AudioServicesCreateSystemSoundID", soundURL, $tap_se.addr
+soundPath = Cocoa::NSBundle._mainBundle._pathForResource _S("tap_se_00"), :ofType, _S("wav")
+soundURL = Cocoa::NSURL._fileURLWithPath soundPath
+$tap_se = C::Int(0)
+C::call C::Void, "AudioServicesCreateSystemSoundID", soundURL, $tap_se.addr
 
 class Cocoa::StageView < Cocoa::UIView
     attr_accessor :score
@@ -109,6 +109,8 @@ class Cocoa::StageView < Cocoa::UIView
         if @cursor
             x, y = @cursor
             
+            C::call C::Void, "AudioServicesPlaySystemSound", $tap_se
+
             removed = @stage.remove(x, y) do |item, x, y|
                 item[:view]._removeFromSuperview if item[:view]
                 item[:view] = item[:color] = nil
@@ -166,7 +168,8 @@ class Cocoa::SameGameViewController < Cocoa::UIViewController
         
         stage_size = Cocoa::StageView::size
         corner = (screen_rect[:size][:width] - stage_size[:width]) / 2
-        stage_frame = CGRectMake(corner, corner, stage_size[:width], stage_size[:height])
+        vspace = (screen_height - 32 - stage_size[:height] - corner * 2 ) / 2
+        stage_frame = CGRectMake(corner, corner + vspace, stage_size[:width], stage_size[:height])
         @stage_view = Cocoa::StageView._alloc._initWithFrame stage_frame
         @view._addSubview @stage_view
         
@@ -211,7 +214,12 @@ Cocoa::SameGameViewController.register
 
 # bgm.play
 def show_samegame(navi)
+
+    $bgm.play
+
     viewController = Cocoa::SameGameViewController._alloc._init
     viewController[:title] = "SameGame"
     navi._pushViewController viewController, :animated, C::SInt8(1)
+rescue => e
+    p e
 end

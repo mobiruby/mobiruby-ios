@@ -1,5 +1,5 @@
 def show_globalip(navi)
-    url = Cocoa::NSURL._URLWithString "http://httpbin.org/ip"
+  url = Cocoa::NSURL._URLWithString "http://httpbin.org/ip"
 	request = Cocoa::NSURLRequest._requestWithURL url
 
 	Cocoa::SVProgressHUD._showWithStatus "Loading..."

@@ -37,15 +37,15 @@ class BridgeMetadata
 
     doc.xpath('//enum').each do |e|
       tt = 'u'
-      val = e['value'].to_i
+      val = [e['value'].to_i].pack('q')
       if /[e\.]+/.match(e['value'])
         tt = 'd'
-        val = '0x' + [e['value'].to_f].pack('G').unpack('H*').first
+        val = [e['value'].to_f].pack('d')
       elsif e['value'].to_i < 2^63
         tt = 's'
-        val = '0x' + [e['value'].to_i].pack('q').unpack('H*').first
+        val = [e['value'].to_i].pack('q')
       end
-      @enums[e['name']] = %Q[    {.name="%s", .value={%s}, .type='%s'}] % [e['name'].gsub(/^\w/) { |s| s.upcase }, val, tt]
+      @enums[e['name']] = %Q[    {.name="%s", .value={%s}, .type='%s'}] % [e['name'].gsub(/^\w/) { |s| s.upcase }, val.inspect, tt]
     end
   end
 
