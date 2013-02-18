@@ -20,8 +20,10 @@ MRuby::Build.new do |conf|
   # end
 end
 
-SDK_IOS_VERSION="6.1"
-MIN_IOS_VERSION="5.0"
+
+
+SDK_IOS_VERSION=`awk -F '=' '$1 ~/^SDK_IOS_VERSION/{  print $2   }' #{File.dirname __FILE__}/bin/build-config.sh|sed 's/\"//g'`.chomp
+MIN_IOS_VERSION=`awk -F '=' '$1 ~/^MIN_IOS_VERSION/{  print $2   }' #{File.dirname __FILE__}/bin/build-config.sh|sed 's/\"//g'`.chomp
 PLATFORM_IOS=`xcode-select -print-path`.chomp+'/Platforms/iPhoneOS.platform/'
 PLATFORM_IOS_SIM=`xcode-select -print-path`.chomp+'/Platforms/iPhoneSimulator.platform/'
 IOS_SDK = "#{PLATFORM_IOS}/Developer/SDKs/iPhoneOS#{SDK_IOS_VERSION}.sdk/"
