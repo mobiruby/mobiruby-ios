@@ -1,6 +1,6 @@
 MRUBY_CONFIG = File.join(File.dirname(__FILE__), '..', 'build-libmruby.rb')
 ENV['MRUBY_CONFIG'] = MRUBY_CONFIG
-unless File.exists?(MRUBY_CONFIG)
+unless File.exists?('mruby/Rakefile')
   sh %Q{git submodule init}
   sh %Q{git submodule update}
 end
@@ -36,7 +36,3 @@ def clear_task(name)
   task.instance_variable_set('@full_comment', nil)
 end
 clear_task :all
-
-desc 'Download depends files'
-task :setup do
-end

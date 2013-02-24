@@ -58,20 +58,6 @@
 		59FE8101160BEAB6002B24D8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FE8100160BEAB6002B24D8 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildRule section */
-		59ACFC6515FDB949004BE69E /* PBXBuildRule */ = {
-			isa = PBXBuildRule;
-			compilerSpec = com.apple.compilers.proxy.script;
-			filePatterns = "*.rb";
-			fileType = pattern.proxy;
-			isEditable = 1;
-			outputFiles = (
-				"${DERIVED_SOURCES_DIR}/${INPUT_FILE_BASE}.c",
-			);
-			script = "${PROJECT_DIR}/bin/mrbc -B\"mruby_`ruby -e \"s=['cfunc','cocoa'].find{|a| ENV['INPUT_FILE_DIR'].match(a)};print s+'_' if s\"`data_${INPUT_FILE_BASE}\" -o- \"${INPUT_FILE_DIR}/${INPUT_FILE_NAME}\" > \"${DERIVED_SOURCES_DIR}/${INPUT_FILE_BASE}.c\"\n";
-		};
-/* End PBXBuildRule section */
-
 /* Begin PBXFileReference section */
 		5900877D165E911700F45C24 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		5900877E165E911700F45C24 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
@@ -339,7 +325,6 @@
 				5921A39C15FDB2E8007FECF1 /* Resources */,
 			);
 			buildRules = (
-				59ACFC6515FDB949004BE69E /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -444,7 +429,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$PROJECT_DIR/bin/build-exports.rb $PROJECT_DIR/tmp/export_headers.m\n";
+			shellScript = "GEM_HOME= GEM_PATH= RUBY_VERSION= $PROJECT_DIR/bin/build-exports.rb $PROJECT_DIR/tmp/export_headers.m\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

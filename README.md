@@ -10,8 +10,8 @@ Current build status: ![status](https://mobiruby-ci.s3.amazonaws.com/mobiruby-io
 At first time, you might need to install the below gems:
 
 ```
-sudo /usr/bin/gem install xcodeproj -v=0.3.5
-sudo /usr/bin/gem install nokogiri
+sudo gem install xcodeproj -v=0.3.5
+sudo gem install nokogiri rake
 ```
 
 And then, type the commands in terminal:
