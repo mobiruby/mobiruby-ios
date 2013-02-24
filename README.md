@@ -26,10 +26,13 @@ If you use XCode beta version, you should modify ``bin/build-config.sh`` or set 
 
 It's tested only Mountain Lion and XCode 4.6.x
 
-When you got 'ar' or something error, please check "command line tools" version in Xcode preference.
+``src/app.rb`` is MobiRuby starting point. 
+
+run ``rake`` is build and run on iOS simulator.
+
+Let's change and hack it.
 
 
-``src/app.rb`` is MobiRuby starting point. Let's change and hack it.
 
 
 
