@@ -10,3 +10,6 @@
 [submodule "mobiruby-common"]
 	path = mobiruby-common
 	url = https://github.com/mobiruby/mobiruby-common.git
+[submodule "ios-sim"]
+	path = ios-sim
+	url = https://github.com/phonegap/ios-sim.git

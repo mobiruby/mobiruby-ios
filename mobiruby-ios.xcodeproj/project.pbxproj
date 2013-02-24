@@ -16,9 +16,10 @@
 		59008796165E911700F45C24 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5900878B165E911700F45C24 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		59008797165E911700F45C24 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5900878D165E911700F45C24 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		59008798165E911700F45C24 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5900878F165E911700F45C24 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		5900879C165E927500F45C24 /* globalip.rb in Sources */ = {isa = PBXBuildFile; fileRef = 5900879A165E91D100F45C24 /* globalip.rb */; };
 		590087A7165E972800F45C24 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 590087A4165E972800F45C24 /* SVProgressHUD.bundle */; };
 		590087A8165E972800F45C24 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 590087A6165E972800F45C24 /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		591181A016DA0E2B0084BD68 /* src.c in Sources */ = {isa = PBXBuildFile; fileRef = 5911819F16DA0E2B0084BD68 /* src.c */; };
+		591181A216DA147A0084BD68 /* export_headers.m in Sources */ = {isa = PBXBuildFile; fileRef = 591181A116DA147A0084BD68 /* export_headers.m */; };
 		5921A3A315FDB2E8007FECF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5921A3A215FDB2E8007FECF1 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		5921A3A515FDB2E8007FECF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5921A3A415FDB2E8007FECF1 /* Foundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		5921A3A715FDB2E8007FECF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5921A3A615FDB2E8007FECF1 /* CoreGraphics.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -39,17 +40,9 @@
 		5925817416C6B8E00019DF8B /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5925817316C6B8E00019DF8B /* icon@2x.png */; };
 		5938330116BA51A80029B953 /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5938330016BA51A80029B953 /* libffi.a */; };
 		5938330316BA51D70029B953 /* libmruby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5938330216BA51D70029B953 /* libmruby.a */; };
-		598B63F1160B60CB0051D443 /* tableview_menu.rb in Sources */ = {isa = PBXBuildFile; fileRef = 598B63EF160B60BF0051D443 /* tableview_menu.rb */; };
 		59ACFC6915FDBA11004BE69E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACFC6815FDBA11004BE69E /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		59ACFC6B15FDBA15004BE69E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACFC6A15FDBA15004BE69E /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		59ACFC6D15FDBA22004BE69E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACFC6C15FDBA22004BE69E /* QuartzCore.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		59ACFC7015FDBA84004BE69E /* export_headers.m in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC6F15FDBA84004BE69E /* export_headers.m */; };
-		59ACFC7D15FDBAE5004BE69E /* sameapp.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7315FDBAC8004BE69E /* sameapp.rb */; };
-		59ACFC7E15FDBAE6004BE69E /* samegame.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7415FDBAC8004BE69E /* samegame.rb */; };
-		59ACFC7F15FDBAEC004BE69E /* ext.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7915FDBAD9004BE69E /* ext.rb */; };
-		59ACFC8015FDBAEF004BE69E /* hello.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7715FDBAD1004BE69E /* hello.rb */; };
-		59ACFC8115FDBAF1004BE69E /* app.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7115FDBAB9004BE69E /* app.rb */; };
-		59ACFC8215FDBB49004BE69E /* mobiruby.rb in Sources */ = {isa = PBXBuildFile; fileRef = 59ACFC7A15FDBAD9004BE69E /* mobiruby.rb */; };
 		59E87ED115FF9B1500E2F09F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E87EC315FF9B1500E2F09F /* Default.png */; };
 		59E87ED215FF9B1500E2F09F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E87EC415FF9B1500E2F09F /* Default@2x.png */; };
 		59E87ED515FF9B1500E2F09F /* bgm_00.aif in Resources */ = {isa = PBXBuildFile; fileRef = 59E87EC715FF9B1500E2F09F /* bgm_00.aif */; };
@@ -99,10 +92,11 @@
 		5900878D165E911700F45C24 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		5900878E165E911700F45C24 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		5900878F165E911700F45C24 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		5900879A165E91D100F45C24 /* globalip.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = globalip.rb; sourceTree = "<group>"; };
 		590087A4165E972800F45C24 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		590087A5165E972800F45C24 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		590087A6165E972800F45C24 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		5911819F16DA0E2B0084BD68 /* src.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = src.c; path = tmp/src.c; sourceTree = SOURCE_ROOT; };
+		591181A116DA147A0084BD68 /* export_headers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = export_headers.m; path = tmp/export_headers.m; sourceTree = SOURCE_ROOT; };
 		5921A39E15FDB2E8007FECF1 /* mobiruby-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobiruby-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5921A3A215FDB2E8007FECF1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5921A3A415FDB2E8007FECF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -124,17 +118,9 @@
 		5925817316C6B8E00019DF8B /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
 		5938330016BA51A80029B953 /* libffi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libffi.a; path = mruby/build/libffi/libffi.a; sourceTree = SOURCE_ROOT; };
 		5938330216BA51D70029B953 /* libmruby.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmruby.a; path = mruby/build/libmruby.a; sourceTree = SOURCE_ROOT; };
-		598B63EF160B60BF0051D443 /* tableview_menu.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = tableview_menu.rb; sourceTree = "<group>"; };
 		59ACFC6815FDBA11004BE69E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		59ACFC6A15FDBA15004BE69E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		59ACFC6C15FDBA22004BE69E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		59ACFC6F15FDBA84004BE69E /* export_headers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = export_headers.m; sourceTree = SOURCE_ROOT; };
-		59ACFC7115FDBAB9004BE69E /* app.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = app.rb; sourceTree = "<group>"; };
-		59ACFC7315FDBAC8004BE69E /* sameapp.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = sameapp.rb; sourceTree = "<group>"; };
-		59ACFC7415FDBAC8004BE69E /* samegame.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = samegame.rb; sourceTree = "<group>"; };
-		59ACFC7715FDBAD1004BE69E /* hello.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = hello.rb; sourceTree = "<group>"; };
-		59ACFC7915FDBAD9004BE69E /* ext.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ext.rb; sourceTree = "<group>"; };
-		59ACFC7A15FDBAD9004BE69E /* mobiruby.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = mobiruby.rb; sourceTree = "<group>"; };
 		59E87EC315FF9B1500E2F09F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		59E87EC415FF9B1500E2F09F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		59E87EC715FF9B1500E2F09F /* bgm_00.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = bgm_00.aif; sourceTree = "<group>"; };
@@ -219,14 +205,6 @@
 			path = vendors/AFNetworking;
 			sourceTree = SOURCE_ROOT;
 		};
-		59008799165E91A000F45C24 /* globalip */ = {
-			isa = PBXGroup;
-			children = (
-				5900879A165E91D100F45C24 /* globalip.rb */,
-			);
-			name = globalip;
-			sourceTree = "<group>";
-		};
 		590087A3165E972800F45C24 /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,12 +253,6 @@
 			isa = PBXGroup;
 			children = (
 				59E87EC215FF93BC00E2F09F /* Resources */,
-				59ACFC6715FDB98C004BE69E /* samegame */,
-				59ACFC6615FDB980004BE69E /* hello */,
-				59008799165E91A000F45C24 /* globalip */,
-				59ACFC7115FDBAB9004BE69E /* app.rb */,
-				59ACFC7A15FDBAD9004BE69E /* mobiruby.rb */,
-				598B63EF160B60BF0051D443 /* tableview_menu.rb */,
 				5921A3A915FDB2E8007FECF1 /* Supporting Files */,
 			);
 			path = "mobiruby-ios";
@@ -290,7 +262,8 @@
 			isa = PBXGroup;
 			children = (
 				595096D416AEF56100DB40C8 /* core */,
-				59ACFC6F15FDBA84004BE69E /* export_headers.m */,
+				5911819F16DA0E2B0084BD68 /* src.c */,
+				591181A116DA147A0084BD68 /* export_headers.m */,
 				5921A3AA15FDB2E8007FECF1 /* mobiruby-ios-Info.plist */,
 				5921A3AB15FDB2E8007FECF1 /* InfoPlist.strings */,
 				5921A3AE15FDB2E8007FECF1 /* main.m */,
@@ -329,24 +302,6 @@
 				5938330016BA51A80029B953 /* libffi.a */,
 			);
 			name = core;
-			sourceTree = "<group>";
-		};
-		59ACFC6615FDB980004BE69E /* hello */ = {
-			isa = PBXGroup;
-			children = (
-				59ACFC7715FDBAD1004BE69E /* hello.rb */,
-			);
-			name = hello;
-			sourceTree = "<group>";
-		};
-		59ACFC6715FDB98C004BE69E /* samegame */ = {
-			isa = PBXGroup;
-			children = (
-				59ACFC7315FDBAC8004BE69E /* sameapp.rb */,
-				59ACFC7415FDBAC8004BE69E /* samegame.rb */,
-				59ACFC7915FDBAD9004BE69E /* ext.rb */,
-			);
-			name = samegame;
 			sourceTree = "<group>";
 		};
 		59E87EC215FF93BC00E2F09F /* Resources */ = {
@@ -489,7 +444,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$PROJECT_DIR/bin/build-exports.rb $PROJECT_DIR/export_headers.m\n";
+			shellScript = "$PROJECT_DIR/bin/build-exports.rb $PROJECT_DIR/tmp/export_headers.m\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -498,16 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				598B63F1160B60CB0051D443 /* tableview_menu.rb in Sources */,
-				59ACFC8115FDBAF1004BE69E /* app.rb in Sources */,
-				5900879C165E927500F45C24 /* globalip.rb in Sources */,
-				59ACFC8015FDBAEF004BE69E /* hello.rb in Sources */,
-				59ACFC7F15FDBAEC004BE69E /* ext.rb in Sources */,
-				59ACFC7D15FDBAE5004BE69E /* sameapp.rb in Sources */,
-				59ACFC7E15FDBAE6004BE69E /* samegame.rb in Sources */,
-				59ACFC8215FDBB49004BE69E /* mobiruby.rb in Sources */,
 				5921A3AF15FDB2E8007FECF1 /* main.m in Sources */,
-				59ACFC7015FDBA84004BE69E /* export_headers.m in Sources */,
 				59008790165E911700F45C24 /* AFHTTPClient.m in Sources */,
 				59008791165E911700F45C24 /* AFHTTPRequestOperation.m in Sources */,
 				59008792165E911700F45C24 /* AFImageRequestOperation.m in Sources */,
@@ -518,6 +464,8 @@
 				59008797165E911700F45C24 /* AFXMLRequestOperation.m in Sources */,
 				59008798165E911700F45C24 /* UIImageView+AFNetworking.m in Sources */,
 				590087A8165E972800F45C24 /* SVProgressHUD.m in Sources */,
+				591181A016DA0E2B0084BD68 /* src.c in Sources */,
+				591181A216DA147A0084BD68 /* export_headers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

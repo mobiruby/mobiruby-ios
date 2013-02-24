@@ -19,8 +19,7 @@ And then, type the commands in terminal:
 ```
 git clone https://github.com/mobiruby/mobiruby-ios.git
 cd mobiruby-ios
-make setup
-open mobiruby-ios.xcodeproj
+rake
 ```
 
 If you use XCode beta version, you should modify ``bin/build-config.sh`` or set up xcode-select correctly.
@@ -30,7 +29,7 @@ It's tested only Mountain Lion and XCode 4.6.x
 When you got 'ar' or something error, please check "command line tools" version in Xcode preference.
 
 
-``app.rb`` is MobiRuby starting point. Let's change and hack it.
+``src/app.rb`` is MobiRuby starting point. Let's change and hack it.
 
 
 

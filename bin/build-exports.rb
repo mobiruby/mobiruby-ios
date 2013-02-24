@@ -95,23 +95,6 @@ frameworks.each do |fw|
 end
 
 
-
-=begin
-# Todo:
-# source files does not support yet.
-# I don't know how to get headers from xcodeproj
-
-Dir.glob(File.join(File.dirname(PROJECT_FILE_PATH), "/**/*.h")) do |f|
-  xml = open("|/usr/bin/gen_bridge_metadata -c\"-I#{File.dirname(f)} #{CFLAGS.gsub('"', "\\\"")}\" \"#{f}\"").read
-  parse_bridgesupport(xml)
-end
-
-
-
-#{metadata.c_consts(:consts_table, :static)}
-
-=end
-
 open(OUTPUT_FILE, 'w').puts <<__STR__
 /*
  Do not change this file.

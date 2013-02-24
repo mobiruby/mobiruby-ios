@@ -1,13 +1,8 @@
 #!/usr/bin/env ruby
 
-if __FILE__ == $PROGRAM_NAME
-  require 'fileutils'
-  unless File.exists?('mruby/build_config.rb')
-  end
-  unless File.exists?('mruby/build/libffi')
-    system 'sh ./bin/build-libffi.sh'
-  end
-  exit system(%Q[cd mruby; MRUBY_CONFIG="#{File.expand_path __FILE__}" ./minirake #{ARGV.join(' ')}])
+require 'fileutils'
+unless File.exists?('mruby/build/libffi')
+  system 'sh ./bin/build-libffi.sh'
 end
 
 MRuby::Build.new do |conf|
@@ -62,9 +57,10 @@ IOS_SIM_SDK = "#{PLATFORM_IOS_SIM}/Developer/SDKs/iPhoneSimulator#{SDK_IOS_VERSI
   end
 end
 
-task 'libmruby' => 'build/libmruby.a'
+LIBMRUBY = 'mruby/build/libmruby.a'
+task 'libmruby' => LIBMRUBY
 
-file 'build/libmruby.a' => MRuby.targets.values.map { |t| t.libfile("#{t.build_dir}/lib/libmruby") } do |t|
-  sh %Q[cp "build/host/bin/mrbc" "../bin/mrbc" ]
+file LIBMRUBY => MRuby.targets.values.map { |t| t.libfile("#{t.build_dir}/lib/libmruby") } do |t|
+  sh %Q[cp "#{MRUBY_ROOT}/bin/mrbc" "bin/mrbc" ]
   sh %Q[lipo -create #{t.prerequisites.map{|s| '"%s"' % s}.join(' ')} -output "#{t.name}"]
 end
