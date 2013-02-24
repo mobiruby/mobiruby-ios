@@ -1,5 +1,6 @@
-#!/usr/bin/env ruby
+#!/usr/bin/ruby
 
+ENV['GEM_HOME'] = ENV['GEM_PATH'] = "/Library/Ruby/Gems/1.8"
 require 'rubygems'
 require 'nokogiri'
 
