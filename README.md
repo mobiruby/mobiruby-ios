@@ -2,6 +2,9 @@
 
 Notice: It's for mruby and iOS hackers
 
+Current job status:
+- @masuidrive: I'm working hard on [mruby](https://github.com/mruby/mruby) what support debugging feagture now - Mar 3rd, 2013
+ 
 Current build status: ![status](https://mobiruby-ci.s3.amazonaws.com/mobiruby-ios.png)
 
 
