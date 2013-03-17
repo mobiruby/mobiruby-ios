@@ -1,5 +1,4 @@
-MRUBY_CONFIG = File.join(File.dirname(__FILE__), '..', 'build-libmruby.rb')
-ENV['MRUBY_CONFIG'] = MRUBY_CONFIG
+ENV['MRUBY_CONFIG'] = File.join(File.dirname(__FILE__), '..', 'build-libmruby.rb')
 unless File.exists?('mruby/Rakefile')
   sh %Q{git submodule init}
   sh %Q{git submodule update}
