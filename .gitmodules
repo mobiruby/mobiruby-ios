@@ -13,3 +13,6 @@
 [submodule "ios-sim"]
 	path = ios-sim
 	url = https://github.com/phonegap/ios-sim.git
+[submodule "libffi"]
+	path = libffi
+	url = https://github.com/mobiruby/libffi.git
