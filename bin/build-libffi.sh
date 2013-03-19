@@ -1,14 +1,7 @@
 #!/bin/sh
 
 . ./bin/build-config.sh
-OUTPUT_DIR=`pwd`/submodules/mruby/build/libffi/
-
-mkdir -p tmp
-cd tmp
-git clone https://github.com/atgreen/libffi.git
-cd libffi
-git checkout d330f19292da8f39a78a9e2b0ba08df8094e3bc5
-sed -i -e "s/align 0/align 4/g" src/arm/sysv.S
+OUTPUT_DIR=`pwd`/submodules/libffi/build
 
 build_target () {
     local arch=$1
@@ -30,6 +23,7 @@ build_target () {
     ../configure --host=${triple} && make
     popd
 }
+cd submodules/libffi
 build_target armv7 arm-apple-darwin10 armv7-ios "${PLATFORM_IOS}" "${PLATFORM_IOS}/Developer/SDKs/iPhoneOS${SDK_IOS_VERSION}.sdk/"
 build_target armv7s arm-apple-darwin10 armv7s-ios "${PLATFORM_IOS}" "${PLATFORM_IOS}/Developer/SDKs/iPhoneOS${SDK_IOS_VERSION}.sdk/"
 build_target i386 i386-apple-darwin10 i386-ios-sim "${PLATFORM_IOS_SIM}" "${PLATFORM_IOS_SIM}/Developer/SDKs/iPhoneSimulator${SDK_IOS_VERSION}.sdk/"

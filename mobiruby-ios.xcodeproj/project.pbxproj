@@ -36,8 +36,8 @@
 		5922F17216BE0B080068E693 /* mrbtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5922F17116BE0B080068E693 /* mrbtest.a */; };
 		5925817216C6B8DD0019DF8B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5925817116C6B8DD0019DF8B /* icon.png */; };
 		5925817416C6B8E00019DF8B /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5925817316C6B8E00019DF8B /* icon@2x.png */; };
+		5935449216F7F8300058DDB8 /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5935449116F7F8300058DDB8 /* libffi.a */; };
 		595570C516F7EA2600DBFFCC /* libmruby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 595570C416F7EA2600DBFFCC /* libmruby.a */; };
-		595570C716F7EA4100DBFFCC /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 595570C616F7EA4100DBFFCC /* libffi.a */; };
 		59ACFC6915FDBA11004BE69E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACFC6815FDBA11004BE69E /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		59ACFC6B15FDBA15004BE69E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACFC6A15FDBA15004BE69E /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		59ACFC6D15FDBA22004BE69E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACFC6C15FDBA22004BE69E /* QuartzCore.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -100,8 +100,8 @@
 		5922F17116BE0B080068E693 /* mrbtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mrbtest.a; path = mruby/build/i386/test/mrbtest.a; sourceTree = SOURCE_ROOT; };
 		5925817116C6B8DD0019DF8B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
 		5925817316C6B8E00019DF8B /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
+		5935449116F7F8300058DDB8 /* libffi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libffi.a; sourceTree = "<group>"; };
 		595570C416F7EA2600DBFFCC /* libmruby.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmruby.a; sourceTree = "<group>"; };
-		595570C616F7EA4100DBFFCC /* libffi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libffi.a; sourceTree = "<group>"; };
 		59ACFC6815FDBA11004BE69E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		59ACFC6A15FDBA15004BE69E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		59ACFC6C15FDBA22004BE69E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -132,7 +132,7 @@
 				5921A3A515FDB2E8007FECF1 /* Foundation.framework in Frameworks */,
 				5921A3A715FDB2E8007FECF1 /* CoreGraphics.framework in Frameworks */,
 				595570C516F7EA2600DBFFCC /* libmruby.a in Frameworks */,
-				595570C716F7EA4100DBFFCC /* libffi.a in Frameworks */,
+				5935449216F7F8300058DDB8 /* libffi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +280,7 @@
 		595096D416AEF56100DB40C8 /* core */ = {
 			isa = PBXGroup;
 			children = (
-				595570C616F7EA4100DBFFCC /* libffi.a */,
+				5935449116F7F8300058DDB8 /* libffi.a */,
 				595570C416F7EA2600DBFFCC /* libmruby.a */,
 			);
 			name = core;
@@ -565,7 +565,7 @@
 				);
 				OTHER_CFLAGS = (
 					"-I$(PROJECT_DIR)/submodules/mruby/include",
-					"-I$(PROJECT_DIR)/submodules/mruby/build/libffi",
+					"-I$(PROJECT_DIR)/submodules/libffi/build/include",
 					"-I$(PROJECT_DIR)/submodules/mobiruby-common/include",
 					"-I$(PROJECT_DIR)/submodules/mruby-cocoa/include",
 					"-I$(PROJECT_DIR)/submodules/mruby-cfunc/include",
