@@ -1,18 +1,18 @@
-[submodule "mruby"]
-	path = mruby
+[submodule "submodules/mruby"]
+	path = submodules/mruby
 	url = https://github.com/mruby/mruby.git
-[submodule "mruby-cocoa"]
-	path = mruby-cocoa
+[submodule "submodules/mruby-cocoa"]
+	path = submodules/mruby-cocoa
 	url = https://github.com/mobiruby/mruby-cocoa.git
-[submodule "mruby-cfunc"]
-	path = mruby-cfunc
+[submodule "submodules/mruby-cfunc"]
+	path = submodules/mruby-cfunc
 	url = https://github.com/mobiruby/mruby-cfunc.git
-[submodule "mobiruby-common"]
-	path = mobiruby-common
+[submodule "submodules/mobiruby-common"]
+	path = submodules/mobiruby-common
 	url = https://github.com/mobiruby/mobiruby-common.git
-[submodule "ios-sim"]
-	path = ios-sim
+[submodule "submodules/ios-sim"]
+	path = submodules/ios-sim
 	url = https://github.com/phonegap/ios-sim.git
-[submodule "libffi"]
-	path = libffi
+[submodule "submodules/libffi"]
+	path = submodules/libffi
 	url = https://github.com/mobiruby/libffi.git
