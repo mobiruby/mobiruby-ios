@@ -1,11 +1,11 @@
 ENV['MRUBY_CONFIG'] = File.join(File.dirname(__FILE__), '..', 'build-libmruby.rb')
-unless File.exists?('mruby/Rakefile')
+unless File.exists?('submodules/mruby/Rakefile')
   sh %Q{git submodule init}
   sh %Q{git submodule update}
 end
-load 'mruby/Rakefile'
+load 'submodules/mruby/Rakefile'
 
-MRBC = File.expand_path('mruby/bin/mrbc')
+MRBC = File.expand_path('submodules/mruby/bin/mrbc')
 DEBUG_APP_DIR = 'build/Debug-iphonesimulator/mobiruby-ios.app'
 
 source_files = Dir.glob('src/**/*.rb')

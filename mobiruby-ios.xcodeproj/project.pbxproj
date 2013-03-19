@@ -33,13 +33,11 @@
 		5922F16716BDAD990068E693 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5922F16616BDAD990068E693 /* Default.png */; };
 		5922F16916BDAD990068E693 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5922F16816BDAD990068E693 /* Default@2x.png */; };
 		5922F16B16BDAD990068E693 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5922F16A16BDAD990068E693 /* Default-568h@2x.png */; };
-		5922F16F16BDAE0B0068E693 /* libmruby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5938330216BA51D70029B953 /* libmruby.a */; };
-		5922F17016BDAE0B0068E693 /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5938330016BA51A80029B953 /* libffi.a */; };
 		5922F17216BE0B080068E693 /* mrbtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5922F17116BE0B080068E693 /* mrbtest.a */; };
 		5925817216C6B8DD0019DF8B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5925817116C6B8DD0019DF8B /* icon.png */; };
 		5925817416C6B8E00019DF8B /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5925817316C6B8E00019DF8B /* icon@2x.png */; };
-		5938330116BA51A80029B953 /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5938330016BA51A80029B953 /* libffi.a */; };
-		5938330316BA51D70029B953 /* libmruby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5938330216BA51D70029B953 /* libmruby.a */; };
+		595570C516F7EA2600DBFFCC /* libmruby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 595570C416F7EA2600DBFFCC /* libmruby.a */; };
+		595570C716F7EA4100DBFFCC /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 595570C616F7EA4100DBFFCC /* libffi.a */; };
 		59ACFC6915FDBA11004BE69E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACFC6815FDBA11004BE69E /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		59ACFC6B15FDBA15004BE69E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACFC6A15FDBA15004BE69E /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		59ACFC6D15FDBA22004BE69E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACFC6C15FDBA22004BE69E /* QuartzCore.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -102,8 +100,8 @@
 		5922F17116BE0B080068E693 /* mrbtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mrbtest.a; path = mruby/build/i386/test/mrbtest.a; sourceTree = SOURCE_ROOT; };
 		5925817116C6B8DD0019DF8B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
 		5925817316C6B8E00019DF8B /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
-		5938330016BA51A80029B953 /* libffi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libffi.a; path = mruby/build/libffi/libffi.a; sourceTree = SOURCE_ROOT; };
-		5938330216BA51D70029B953 /* libmruby.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmruby.a; path = mruby/build/libmruby.a; sourceTree = SOURCE_ROOT; };
+		595570C416F7EA2600DBFFCC /* libmruby.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmruby.a; sourceTree = "<group>"; };
+		595570C616F7EA4100DBFFCC /* libffi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libffi.a; sourceTree = "<group>"; };
 		59ACFC6815FDBA11004BE69E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		59ACFC6A15FDBA15004BE69E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		59ACFC6C15FDBA22004BE69E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -133,8 +131,8 @@
 				5921A3A315FDB2E8007FECF1 /* UIKit.framework in Frameworks */,
 				5921A3A515FDB2E8007FECF1 /* Foundation.framework in Frameworks */,
 				5921A3A715FDB2E8007FECF1 /* CoreGraphics.framework in Frameworks */,
-				5938330116BA51A80029B953 /* libffi.a in Frameworks */,
-				5938330316BA51D70029B953 /* libmruby.a in Frameworks */,
+				595570C516F7EA2600DBFFCC /* libmruby.a in Frameworks */,
+				595570C716F7EA4100DBFFCC /* libffi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,8 +143,6 @@
 				5922F15716BDAD980068E693 /* UIKit.framework in Frameworks */,
 				5922F15816BDAD980068E693 /* Foundation.framework in Frameworks */,
 				5922F15916BDAD980068E693 /* CoreGraphics.framework in Frameworks */,
-				5922F16F16BDAE0B0068E693 /* libmruby.a in Frameworks */,
-				5922F17016BDAE0B0068E693 /* libffi.a in Frameworks */,
 				5922F17216BE0B080068E693 /* mrbtest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,8 +280,8 @@
 		595096D416AEF56100DB40C8 /* core */ = {
 			isa = PBXGroup;
 			children = (
-				5938330216BA51D70029B953 /* libmruby.a */,
-				5938330016BA51A80029B953 /* libffi.a */,
+				595570C616F7EA4100DBFFCC /* libffi.a */,
+				595570C416F7EA2600DBFFCC /* libmruby.a */,
 			);
 			name = core;
 			sourceTree = "<group>";
@@ -565,13 +561,14 @@
 					"\"$(SRCROOT)/mruby/build/libffi\"",
 					"\"$(SRCROOT)/mruby/build\"",
 					"\"$(SRCROOT)/mruby/build/i386/test\"",
+					"\"$(SRCROOT)/mobiruby-ios\"",
 				);
 				OTHER_CFLAGS = (
-					"-I$(PROJECT_DIR)/mruby/include",
-					"-I$(PROJECT_DIR)/mruby/build/libffi",
-					"-I$(PROJECT_DIR)/mobiruby-common/include",
-					"-I$(PROJECT_DIR)/mruby-cocoa/include",
-					"-I$(PROJECT_DIR)/mruby-cfunc/include",
+					"-I$(PROJECT_DIR)/submodules/mruby/include",
+					"-I$(PROJECT_DIR)/submodules/mruby/build/libffi",
+					"-I$(PROJECT_DIR)/submodules/mobiruby-common/include",
+					"-I$(PROJECT_DIR)/submodules/mruby-cocoa/include",
+					"-I$(PROJECT_DIR)/submodules/mruby-cfunc/include",
 					"-DALLOC_PADDING=8",
 					"-DUSE_MRBC_DATA",
 				);
@@ -606,6 +603,7 @@
 					"\"$(SRCROOT)/mruby/build/libffi\"",
 					"\"$(SRCROOT)/mruby/build\"",
 					"\"$(SRCROOT)/mruby/build/i386/test\"",
+					"\"$(SRCROOT)/mobiruby-ios\"",
 				);
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
