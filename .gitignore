@@ -4,6 +4,7 @@
 ##################
 vendors/libffi
 export_headers.m
+pkg
 
 # Xcode #
 #########

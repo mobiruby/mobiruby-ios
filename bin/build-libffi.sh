@@ -1,7 +1,9 @@
 #!/bin/sh
 
 . ./bin/build-config.sh
-OUTPUT_DIR=`pwd`/submodules/libffi/build
+INCLUDE_DIR=`pwd`/include
+LIB_DIR=`pwd`/lib
+
 
 build_target () {
     local arch=$1
@@ -30,14 +32,11 @@ build_target i386 i386-apple-darwin10 i386-ios-sim "${PLATFORM_IOS_SIM}" "${PLAT
 
 
 # Create universal output directories
-mkdir -p "${OUTPUT_DIR}"
-mkdir -p "${OUTPUT_DIR}/include"
-mkdir -p "${OUTPUT_DIR}/include/armv7s"
-mkdir -p "${OUTPUT_DIR}/include/armv7"
-mkdir -p "${OUTPUT_DIR}/include/i386"
+mkdir -p "${INCLUDE_DIR}"
+mkdir -p "${LIB_DIR}"
 
 # Create the universal binary
-lipo -create armv7s-ios/.libs/libffi.a armv7-ios/.libs/libffi.a i386-ios-sim/.libs/libffi.a -output "${OUTPUT_DIR}/libffi.a"
+lipo -create armv7s-ios/.libs/libffi.a armv7-ios/.libs/libffi.a i386-ios-sim/.libs/libffi.a -output "${LIB_DIR}/libffi.a"
 
 # Copy in the headers
 copy_headers () {
@@ -49,9 +48,9 @@ copy_headers () {
     cp "${src}/include/ffitarget.h" "${dest}"
 }
 
-copy_headers armv7s-ios "${OUTPUT_DIR}/include/armv7s"
-copy_headers armv7-ios "${OUTPUT_DIR}/include/armv7"
-copy_headers i386-ios-sim "${OUTPUT_DIR}/include/i386"
+copy_headers armv7s-ios "${INCLUDE_DIR}/armv7s"
+copy_headers armv7-ios "${INCLUDE_DIR}/armv7"
+copy_headers i386-ios-sim "${INCLUDE_DIR}/i386"
 
 # Create top-level header
 (
@@ -67,6 +66,6 @@ cat << EOF
   #include "i386/ffi.h"
 #endif
 EOF
-) > "${OUTPUT_DIR}/include/ffi.h"
+) > "${INCLUDE_DIR}/ffi.h"
 
 

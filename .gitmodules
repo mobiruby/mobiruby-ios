@@ -16,3 +16,24 @@
 [submodule "submodules/libffi"]
 	path = submodules/libffi
 	url = https://github.com/mobiruby/libffi.git
+[submodule "submodules/mruby-uv"]
+	path = submodules/mruby-uv
+	url = https://github.com/mattn/mruby-uv.git
+[submodule "submodules/mruby-sqlite3"]
+	path = submodules/mruby-sqlite3
+	url = https://github.com/mattn/mruby-sqlite3.git
+[submodule "submodules/mruby-json"]
+	path = submodules/mruby-json
+	url = https://github.com/mattn/mruby-json.git
+[submodule "submodules/mruby-digest"]
+	path = submodules/mruby-digest
+	url = https://github.com/iij/mruby-digest.git
+[submodule "submodules/mruby-pack"]
+	path = submodules/mruby-pack
+	url = https://github.com/iij/mruby-pack.git
+[submodule "submodules/libuv"]
+	path = submodules/libuv
+	url = https://github.com/joyent/libuv.git
+[submodule "submodules/gyp"]
+	path = submodules/gyp
+	url = https://git.chromium.org/external/gyp.git
