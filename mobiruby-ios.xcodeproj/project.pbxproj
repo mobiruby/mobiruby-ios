@@ -562,6 +562,8 @@
 					"\"$(SRCROOT)/mruby/build\"",
 					"\"$(SRCROOT)/mruby/build/i386/test\"",
 					"\"$(SRCROOT)/mobiruby-ios\"",
+					"\"$(SRCROOT)/submodules/mruby/build\"",
+					"\"$(SRCROOT)/submodules/libffi/build\"",
 				);
 				OTHER_CFLAGS = (
 					"-I$(PROJECT_DIR)/submodules/mruby/include",
@@ -604,6 +606,8 @@
 					"\"$(SRCROOT)/mruby/build\"",
 					"\"$(SRCROOT)/mruby/build/i386/test\"",
 					"\"$(SRCROOT)/mobiruby-ios\"",
+					"\"$(SRCROOT)/submodules/mruby/build\"",
+                                        "\"$(SRCROOT)/submodules/libffi/build\"",
 				);
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
@@ -646,6 +650,8 @@
 					"\"$(SRCROOT)/mruby/build\"",
 					"\"$(SRCROOT)/mruby/build/libffi\"",
 					"\"$(SRCROOT)/mruby/build/i386/test\"",
+					"\"$(SRCROOT)/submodules/mruby/build\"",
+                                        "\"$(SRCROOT)/submodules/libffi/build\"",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
@@ -685,6 +691,8 @@
 					"\"$(SRCROOT)/mruby/build\"",
 					"\"$(SRCROOT)/mruby/build/libffi\"",
 					"\"$(SRCROOT)/mruby/build/i386/test\"",
+					"\"$(SRCROOT)/submodules/mruby/build\"",
+                                        "\"$(SRCROOT)/submodules/libffi/build\"",
 				);
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",

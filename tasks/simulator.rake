@@ -1,7 +1,7 @@
 IOS_SIM = './bin/ios-sim'
 
 file IOS_SIM do
-  sh %Q{cd ios-sim; rake install prefix=../}
+  sh %Q{cd ./submodules/ios-sim; rake install prefix=../../}
 end
 
 desc 'Run your app on iOS simulator'
