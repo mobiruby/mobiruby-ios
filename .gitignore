@@ -2,6 +2,8 @@
 
 # Specific files #
 ##################
+include/
+lib/
 vendors/libffi
 export_headers.m
 pkg

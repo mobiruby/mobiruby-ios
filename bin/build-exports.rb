@@ -120,7 +120,9 @@ init_cocoa_bridgesupport(mrb_state *mrb)
     void *dlh = dlopen(NULL, RTLD_LAZY);
     struct BridgeSupportConstTable *ccur = consts_table;
     while(ccur->name) {
-        ccur->value = dlsym(dlh, (const char*)ccur->value);
+        if(ccur->name == ccur->value) {
+            ccur->value = dlsym(dlh, (const char*)ccur->value);
+        }
         ++ccur;
     }
     dlclose(dlh);

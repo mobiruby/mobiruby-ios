@@ -36,8 +36,10 @@
 		5922F17216BE0B080068E693 /* mrbtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5922F17116BE0B080068E693 /* mrbtest.a */; };
 		5925817216C6B8DD0019DF8B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5925817116C6B8DD0019DF8B /* icon.png */; };
 		5925817416C6B8E00019DF8B /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5925817316C6B8E00019DF8B /* icon@2x.png */; };
-		5935449216F7F8300058DDB8 /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5935449116F7F8300058DDB8 /* libffi.a */; };
-		595570C516F7EA2600DBFFCC /* libmruby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 595570C416F7EA2600DBFFCC /* libmruby.a */; };
+		59ACC3A416FD9E3C006BC4AF /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACC3A216FD9E3C006BC4AF /* libffi.a */; };
+		59ACC3A516FD9E3C006BC4AF /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACC3A216FD9E3C006BC4AF /* libffi.a */; };
+		59ACC3A616FD9E3C006BC4AF /* libmruby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACC3A316FD9E3C006BC4AF /* libmruby.a */; };
+		59ACC3A716FD9E3C006BC4AF /* libmruby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACC3A316FD9E3C006BC4AF /* libmruby.a */; };
 		59ACFC6915FDBA11004BE69E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACFC6815FDBA11004BE69E /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		59ACFC6B15FDBA15004BE69E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACFC6A15FDBA15004BE69E /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		59ACFC6D15FDBA22004BE69E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACFC6C15FDBA22004BE69E /* QuartzCore.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -100,8 +102,8 @@
 		5922F17116BE0B080068E693 /* mrbtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mrbtest.a; path = mruby/build/i386/test/mrbtest.a; sourceTree = SOURCE_ROOT; };
 		5925817116C6B8DD0019DF8B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
 		5925817316C6B8E00019DF8B /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
-		5935449116F7F8300058DDB8 /* libffi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libffi.a; sourceTree = "<group>"; };
-		595570C416F7EA2600DBFFCC /* libmruby.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmruby.a; sourceTree = "<group>"; };
+		59ACC3A216FD9E3C006BC4AF /* libffi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libffi.a; path = lib/libffi.a; sourceTree = SOURCE_ROOT; };
+		59ACC3A316FD9E3C006BC4AF /* libmruby.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmruby.a; path = lib/libmruby.a; sourceTree = SOURCE_ROOT; };
 		59ACFC6815FDBA11004BE69E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		59ACFC6A15FDBA15004BE69E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		59ACFC6C15FDBA22004BE69E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -131,8 +133,8 @@
 				5921A3A315FDB2E8007FECF1 /* UIKit.framework in Frameworks */,
 				5921A3A515FDB2E8007FECF1 /* Foundation.framework in Frameworks */,
 				5921A3A715FDB2E8007FECF1 /* CoreGraphics.framework in Frameworks */,
-				595570C516F7EA2600DBFFCC /* libmruby.a in Frameworks */,
-				5935449216F7F8300058DDB8 /* libffi.a in Frameworks */,
+				59ACC3A416FD9E3C006BC4AF /* libffi.a in Frameworks */,
+				59ACC3A616FD9E3C006BC4AF /* libmruby.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +146,8 @@
 				5922F15816BDAD980068E693 /* Foundation.framework in Frameworks */,
 				5922F15916BDAD980068E693 /* CoreGraphics.framework in Frameworks */,
 				5922F17216BE0B080068E693 /* mrbtest.a in Frameworks */,
+				59ACC3A516FD9E3C006BC4AF /* libffi.a in Frameworks */,
+				59ACC3A716FD9E3C006BC4AF /* libmruby.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +284,8 @@
 		595096D416AEF56100DB40C8 /* core */ = {
 			isa = PBXGroup;
 			children = (
-				5935449116F7F8300058DDB8 /* libffi.a */,
-				595570C416F7EA2600DBFFCC /* libmruby.a */,
+				59ACC3A216FD9E3C006BC4AF /* libffi.a */,
+				59ACC3A316FD9E3C006BC4AF /* libmruby.a */,
 			);
 			name = core;
 			sourceTree = "<group>";
@@ -562,6 +566,7 @@
 					"\"$(SRCROOT)/mruby/build\"",
 					"\"$(SRCROOT)/mruby/build/i386/test\"",
 					"\"$(SRCROOT)/mobiruby-ios\"",
+					"\"$(SRCROOT)/lib\"",
 				);
 				OTHER_CFLAGS = (
 					"-I$(PROJECT_DIR)/submodules/mruby/include",
@@ -604,6 +609,7 @@
 					"\"$(SRCROOT)/mruby/build\"",
 					"\"$(SRCROOT)/mruby/build/i386/test\"",
 					"\"$(SRCROOT)/mobiruby-ios\"",
+					"\"$(SRCROOT)/lib\"",
 				);
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
@@ -646,6 +652,7 @@
 					"\"$(SRCROOT)/mruby/build\"",
 					"\"$(SRCROOT)/mruby/build/libffi\"",
 					"\"$(SRCROOT)/mruby/build/i386/test\"",
+					"\"$(SRCROOT)/lib\"",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
@@ -685,6 +692,7 @@
 					"\"$(SRCROOT)/mruby/build\"",
 					"\"$(SRCROOT)/mruby/build/libffi\"",
 					"\"$(SRCROOT)/mruby/build/i386/test\"",
+					"\"$(SRCROOT)/lib\"",
 				);
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",

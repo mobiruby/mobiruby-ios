@@ -42,6 +42,7 @@ lipo -create armv7s-ios/.libs/libffi.a armv7-ios/.libs/libffi.a i386-ios-sim/.li
 copy_headers () {
     local src=$1
     local dest=$2
+    mkdir -p "${dest}"
 
     # Fix non-relative header reference
     sed 's/<ffitarget.h>/"ffitarget.h"/' < "${src}/include/ffi.h" > "${dest}/ffi.h"
@@ -67,5 +68,3 @@ cat << EOF
 #endif
 EOF
 ) > "${INCLUDE_DIR}/ffi.h"
-
-

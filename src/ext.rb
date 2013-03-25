@@ -41,3 +41,7 @@ end
 def srand(s)
     C::call(C::Void, "srand", C::Int(s))
 end
+
+def Kernel.__printstr__(str)
+  CFunc::call CFunc::Void, "NSLog", _S("%s"), str.to_s
+end

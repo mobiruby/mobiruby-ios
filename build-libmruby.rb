@@ -49,9 +49,12 @@ IOS_SIM_SDK = "#{PLATFORM_IOS_SIM}/Developer/SDKs/iPhoneSimulator#{SDK_IOS_VERSI
       conf.gem "#{root}/mrbgems/mruby-time"
       conf.gem "#{root}/mrbgems/mruby-struct"
       conf.gem "#{root}/mrbgems/mruby-sprintf"
+      conf.gem "#{root}/mrbgems/mruby-eval"
       conf.gem "#{root}/mrbgems/mruby-string-ext"
       conf.gem "#{root}/mrbgems/mruby-numeric-ext"
       conf.gem "#{root}/mrbgems/mruby-array-ext"
+      conf.gem "#{root}/mrbgems/mruby-enum-ext"
+      conf.gem "#{root}/mrbgems/mruby-hash-ext"
 
       conf.gem "#{BASEDIR}/submodules/mruby-cfunc"
       conf.gem "#{BASEDIR}/submodules/mruby-cocoa"

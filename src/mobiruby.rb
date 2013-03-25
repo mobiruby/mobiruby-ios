@@ -1,5 +1,6 @@
 module MobiRuby
 end
+require 'ext'
 
 C = CFunc
 
