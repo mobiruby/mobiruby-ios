@@ -10,6 +10,7 @@ DEBUG_APP_DIR = 'build/Debug-iphonesimulator/mobiruby-ios.app'
 
 source_files = Dir.glob('src/**/*.rb')
 file 'tmp/src.c' => source_files + [MRBC] do |t|
+  FileUtils.mkdir_p 'tmp'
   FileUtils.rm_f t.name
   source_files.each do |filename|
     funcname = filename.relative_path_from('src').gsub('/','_').gsub(/\..*/, '')
