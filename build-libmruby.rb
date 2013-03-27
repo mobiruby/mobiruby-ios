@@ -43,15 +43,18 @@ IOS_SIM_SDK = "#{PLATFORM_IOS_SIM}/Developer/SDKs/iPhoneSimulator#{SDK_IOS_VERSI
         cc.flags << %Q[-fmessage-length=0 -std=gnu99 -fpascal-strings -fexceptions -fasm-blocks -gdwarf-2]
         cc.flags << %Q[-fobjc-abi-version=2]
       end
-      conf.linker.library_paths << "#{BASEDIR}/lib"
+      conf.linker.library_paths << %W(#{BASEDIR}/lib #{sdk}/usr/lib)
 
       conf.gem "#{root}/mrbgems/mruby-math"
       conf.gem "#{root}/mrbgems/mruby-time"
       conf.gem "#{root}/mrbgems/mruby-struct"
       conf.gem "#{root}/mrbgems/mruby-sprintf"
+      conf.gem "#{root}/mrbgems/mruby-eval"
       conf.gem "#{root}/mrbgems/mruby-string-ext"
       conf.gem "#{root}/mrbgems/mruby-numeric-ext"
       conf.gem "#{root}/mrbgems/mruby-array-ext"
+      conf.gem "#{root}/mrbgems/mruby-enum-ext"
+      conf.gem "#{root}/mrbgems/mruby-hash-ext"
 
       conf.gem "#{BASEDIR}/submodules/mruby-cfunc"
       conf.gem "#{BASEDIR}/submodules/mruby-cocoa"
@@ -60,8 +63,8 @@ IOS_SIM_SDK = "#{PLATFORM_IOS_SIM}/Developer/SDKs/iPhoneSimulator#{SDK_IOS_VERSI
       conf.gem "#{BASEDIR}/submodules/mruby-json"
       conf.gem "#{BASEDIR}/submodules/mruby-digest"
       conf.gem "#{BASEDIR}/submodules/mruby-pack"
+      conf.gem "#{BASEDIR}/submodules/mruby-sqlite3"
       # conf.gem "#{BASEDIR}/submodules/mruby-uv"
-      # conf.gem "#{BASEDIR}/submodules/mruby-sqlite3"
     end
   end
 end
