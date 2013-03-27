@@ -18,6 +18,8 @@
 		59008798165E911700F45C24 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5900878F165E911700F45C24 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		590087A7165E972800F45C24 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 590087A4165E972800F45C24 /* SVProgressHUD.bundle */; };
 		590087A8165E972800F45C24 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 590087A6165E972800F45C24 /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		59088517170321A60058F1FA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 59088516170321A60058F1FA /* libsqlite3.dylib */; };
+		59088518170321B00058F1FA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 59088516170321A60058F1FA /* libsqlite3.dylib */; };
 		591181A016DA0E2B0084BD68 /* src.c in Sources */ = {isa = PBXBuildFile; fileRef = 5911819F16DA0E2B0084BD68 /* src.c */; };
 		591181A216DA147A0084BD68 /* export_headers.m in Sources */ = {isa = PBXBuildFile; fileRef = 591181A116DA147A0084BD68 /* export_headers.m */; };
 		5921A3A315FDB2E8007FECF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5921A3A215FDB2E8007FECF1 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -81,6 +83,7 @@
 		590087A4165E972800F45C24 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		590087A5165E972800F45C24 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		590087A6165E972800F45C24 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		59088516170321A60058F1FA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		5911819F16DA0E2B0084BD68 /* src.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = src.c; path = tmp/src.c; sourceTree = SOURCE_ROOT; };
 		591181A116DA147A0084BD68 /* export_headers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = export_headers.m; path = tmp/export_headers.m; sourceTree = SOURCE_ROOT; };
 		5921A39E15FDB2E8007FECF1 /* mobiruby-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobiruby-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59088517170321A60058F1FA /* libsqlite3.dylib in Frameworks */,
 				59ACFC6D15FDBA22004BE69E /* QuartzCore.framework in Frameworks */,
 				59ACFC6B15FDBA15004BE69E /* AVFoundation.framework in Frameworks */,
 				59ACFC6915FDBA11004BE69E /* SystemConfiguration.framework in Frameworks */,
@@ -142,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59088518170321B00058F1FA /* libsqlite3.dylib in Frameworks */,
 				5922F15716BDAD980068E693 /* UIKit.framework in Frameworks */,
 				5922F15816BDAD980068E693 /* Foundation.framework in Frameworks */,
 				5922F15916BDAD980068E693 /* CoreGraphics.framework in Frameworks */,
@@ -205,6 +210,7 @@
 		5921A39315FDB2E8007FECF1 = {
 			isa = PBXGroup;
 			children = (
+				59088516170321A60058F1FA /* libsqlite3.dylib */,
 				5921A3A815FDB2E8007FECF1 /* mobiruby-ios */,
 				5900877A165E910200F45C24 /* vendors */,
 				5922F15A16BDAD980068E693 /* mrbtest */,
