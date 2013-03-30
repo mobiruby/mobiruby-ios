@@ -64,7 +64,9 @@ IOS_SIM_SDK = "#{PLATFORM_IOS_SIM}/Developer/SDKs/iPhoneSimulator#{SDK_IOS_VERSI
       conf.gem "#{BASEDIR}/submodules/mruby-digest"
       conf.gem "#{BASEDIR}/submodules/mruby-pack"
       conf.gem "#{BASEDIR}/submodules/mruby-sqlite3"
-      # conf.gem "#{BASEDIR}/submodules/mruby-uv"
+
+      conf.gem "#{BASEDIR}/submodules/mruby-uv"
+      conf.gem "#{BASEDIR}/submodules/mruby-http"
     end
   end
 end
@@ -106,3 +108,4 @@ file 'bin/mrbc' => "#{BASEDIR}/submodules/mruby/bin/mrbc" do |t|
 end
 
 system %Q[./bin/build-libffi.sh] unless File.exists?('lib/libffi.a')
+system %Q[./bin/build-libuv.sh] unless File.exists?('lib/libuv.a')

@@ -34,6 +34,6 @@
 [submodule "submodules/libuv"]
 	path = submodules/libuv
 	url = https://github.com/joyent/libuv.git
-[submodule "submodules/gyp"]
-	path = submodules/gyp
-	url = https://git.chromium.org/external/gyp.git
+[submodule "submodules/mruby-http"]
+	path = submodules/mruby-http
+	url = https://github.com/mattn/mruby-http.git

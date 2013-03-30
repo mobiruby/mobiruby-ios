@@ -3,7 +3,7 @@ module Kernel
     if $console_view
       $console_view[:text] = _S($console_view._text._UTF8String.to_s + str)
     else
-      CFunc::call CFunc::Void, "NSLog", _S("%s"), str
+      CFunc::call CFunc::Void, "NSLog", _S("%s"), str.chomp
     end
   end
 end

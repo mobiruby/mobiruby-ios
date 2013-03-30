@@ -57,6 +57,7 @@
 		59E87EDC15FF9B1500E2F09F /* square-red-24-ns.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E87ECE15FF9B1500E2F09F /* square-red-24-ns.png */; };
 		59E87EDD15FF9B1500E2F09F /* square-yellow-24-ns.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E87ECF15FF9B1500E2F09F /* square-yellow-24-ns.png */; };
 		59E87EDE15FF9B1500E2F09F /* tap_se_00.wav in Resources */ = {isa = PBXBuildFile; fileRef = 59E87ED015FF9B1500E2F09F /* tap_se_00.wav */; };
+		59E8DF5B1707373A009CBF1F /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E8DF5A1707373A009CBF1F /* libuv.a */; };
 		59FE8101160BEAB6002B24D8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FE8100160BEAB6002B24D8 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +123,7 @@
 		59E87ECE15FF9B1500E2F09F /* square-red-24-ns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square-red-24-ns.png"; sourceTree = "<group>"; };
 		59E87ECF15FF9B1500E2F09F /* square-yellow-24-ns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square-yellow-24-ns.png"; sourceTree = "<group>"; };
 		59E87ED015FF9B1500E2F09F /* tap_se_00.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tap_se_00.wav; sourceTree = "<group>"; };
+		59E8DF5A1707373A009CBF1F /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libuv.a; path = lib/libuv.a; sourceTree = "<group>"; };
 		59FE8100160BEAB6002B24D8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +141,7 @@
 				5921A3A715FDB2E8007FECF1 /* CoreGraphics.framework in Frameworks */,
 				59ACC3A416FD9E3C006BC4AF /* libffi.a in Frameworks */,
 				59ACC3A616FD9E3C006BC4AF /* libmruby.a in Frameworks */,
+				59E8DF5B1707373A009CBF1F /* libuv.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +217,6 @@
 				5900877A165E910200F45C24 /* vendors */,
 				5922F15A16BDAD980068E693 /* mrbtest */,
 				5921A3A115FDB2E8007FECF1 /* Frameworks */,
-				59088516170321A60058F1FA /* libsqlite3.dylib */,
 				5921A39F15FDB2E8007FECF1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -237,6 +239,10 @@
 				5921A3A215FDB2E8007FECF1 /* UIKit.framework */,
 				5921A3A415FDB2E8007FECF1 /* Foundation.framework */,
 				5921A3A615FDB2E8007FECF1 /* CoreGraphics.framework */,
+				59088516170321A60058F1FA /* libsqlite3.dylib */,
+				59E8DF5A1707373A009CBF1F /* libuv.a */,
+				59ACC3A216FD9E3C006BC4AF /* libffi.a */,
+				59ACC3A316FD9E3C006BC4AF /* libmruby.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -253,7 +259,6 @@
 		5921A3A915FDB2E8007FECF1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				595096D416AEF56100DB40C8 /* core */,
 				5911819F16DA0E2B0084BD68 /* src.c */,
 				591181A116DA147A0084BD68 /* export_headers.m */,
 				5921A3AA15FDB2E8007FECF1 /* mobiruby-ios-Info.plist */,
@@ -285,15 +290,6 @@
 				5922F16A16BDAD990068E693 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		595096D416AEF56100DB40C8 /* core */ = {
-			isa = PBXGroup;
-			children = (
-				59ACC3A216FD9E3C006BC4AF /* libffi.a */,
-				59ACC3A316FD9E3C006BC4AF /* libmruby.a */,
-			);
-			name = core;
 			sourceTree = "<group>";
 		};
 		59E87EC215FF93BC00E2F09F /* Resources */ = {

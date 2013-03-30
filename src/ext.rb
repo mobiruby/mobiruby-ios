@@ -43,5 +43,5 @@ def srand(s)
 end
 
 def Kernel.__printstr__(str)
-  CFunc::call CFunc::Void, "NSLog", _S("%s"), str.to_s
+  CFunc::call CFunc::Void, "NSLog", _S("%s"), str.chomp
 end

@@ -14,7 +14,7 @@ file 'tmp/src.c' => source_files + [MRBC] do |t|
   FileUtils.rm_f t.name
   source_files.each do |filename|
     funcname = filename.relative_path_from('src').gsub('/','_').gsub(/\..*/, '')
-    sh %Q{#{MRBC} -B"mruby_data_#{funcname}" -o- "#{filename}" >> #{t.name}}
+    sh %Q{#{MRBC} -g -B"mruby_data_#{funcname}" -o- "#{filename}" >> #{t.name}}
   end
 end
 

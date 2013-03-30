@@ -20,7 +20,7 @@ class Cocoa::HelloViewController < Cocoa::UIViewController
           :message, "I am MobiRuby",
           :delegate, nil,
           :cancelButtonTitle, "I know!",
-          :otherButtonTitles, "What's?", nil
+          :otherButtonTitles, _S("What's?"), nil
         alert._setDelegate alert
         alert._show
     end
