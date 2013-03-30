@@ -34,7 +34,7 @@ def show_tableview_menu(navi)
   viewController.data = [
     {:title => 'SameGame', :func => 'show_samegame'},
     {:title => 'Hello world', :func => 'show_hello'},
-    {:title => 'Global IP', :func => 'show_globalip'},
+#    {:title => 'Global IP', :func => 'show_globalip'},
     {:title => 'Editor', :func => 'show_editor'}
   ]
   navi._pushViewController viewController, :animated, C::SInt8(0)
