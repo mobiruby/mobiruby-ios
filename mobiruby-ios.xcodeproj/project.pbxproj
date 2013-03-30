@@ -210,11 +210,11 @@
 		5921A39315FDB2E8007FECF1 = {
 			isa = PBXGroup;
 			children = (
-				59088516170321A60058F1FA /* libsqlite3.dylib */,
 				5921A3A815FDB2E8007FECF1 /* mobiruby-ios */,
 				5900877A165E910200F45C24 /* vendors */,
 				5922F15A16BDAD980068E693 /* mrbtest */,
 				5921A3A115FDB2E8007FECF1 /* Frameworks */,
+				59088516170321A60058F1FA /* libsqlite3.dylib */,
 				5921A39F15FDB2E8007FECF1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -570,11 +570,7 @@
 					"\"$(SRCROOT)/lib\"",
 				);
 				OTHER_CFLAGS = (
-					"-I$(PROJECT_DIR)/submodules/mruby/include",
-					"-I$(PROJECT_DIR)/submodules/libffi/build/include",
-					"-I$(PROJECT_DIR)/submodules/mobiruby-common/include",
-					"-I$(PROJECT_DIR)/submodules/mruby-cocoa/include",
-					"-I$(PROJECT_DIR)/submodules/mruby-cfunc/include",
+					"-I$(PROJECT_DIR)/include",
 					"-DALLOC_PADDING=8",
 					"-DUSE_MRBC_DATA",
 				);
@@ -609,11 +605,7 @@
 				);
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
-					"-I$(PROJECT_DIR)/mruby/include",
-					"-I$(PROJECT_DIR)/mruby/build/libffi",
-					"-I$(PROJECT_DIR)/mobiruby-common/include",
-					"-I$(PROJECT_DIR)/mruby-cocoa/include",
-					"-I$(PROJECT_DIR)/mruby-cfunc/include",
+					"-I$(PROJECT_DIR)/include/include",
 					"-DALLOC_PADDING=8",
 					"-DUSE_MRBC_DATA",
 				);
