@@ -2,7 +2,7 @@ require 'script_runner'
 
 class Cocoa::ScriptRunnerViewController < Cocoa::UIViewController
   define C::Void, :loadView do
-    _super :_loadView
+#    _super :_loadView
 
     self._setTitle "Running"
 
@@ -37,7 +37,6 @@ Cocoa::ScriptRunnerViewController.register
 class Cocoa::EditorViewController < Cocoa::UIViewController
   define C::Void, :loadView do
     _super :_loadView
-
     self._setTitle "Editor"
 
     @keyboardFrame = CGRectMake(0, 0, 0, 0)
@@ -56,8 +55,8 @@ class Cocoa::EditorViewController < Cocoa::UIViewController
     @editor_frame = CGRectMake(0, 0, @view_frame[:size][:width], @view_frame[:size][:height])
     @editor_view = Cocoa::UITextView._alloc._initWithFrame @editor_frame
     # TODO: need to support prop
-    # @editor_view._setAutocorrectionType Cocoa::Const::UITextAutocorrectionTypeNo
-    # @editor_view._setAutoCapitalizationType Cocoa::Const::UITextAutocapitalizationTypeNone
+    @editor_view._setAutocorrectionType Cocoa::Const::UITextAutocorrectionTypeNo
+    @editor_view._setAutocapitalizationType Cocoa::Const::UITextAutocapitalizationTypeNone
     @view._addSubview @editor_view
     @editor_view[:text] = "puts 2 * 16\n"
   end
