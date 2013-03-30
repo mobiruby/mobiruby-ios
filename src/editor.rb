@@ -2,8 +2,7 @@ require 'script_runner'
 
 class Cocoa::ScriptRunnerViewController < Cocoa::UIViewController
   define C::Void, :loadView do
-#    _super :_loadView
-
+    _super :_loadView
     self._setTitle "Running"
 
     navbar = self[:navigationController][:navigationBar] 
@@ -16,6 +15,7 @@ class Cocoa::ScriptRunnerViewController < Cocoa::UIViewController
     
     @console_frame = CGRectMake(0, 0, @view_frame[:size][:width], @view_frame[:size][:height])
     @console_view = Cocoa::UITextView._alloc._initWithFrame @console_frame
+    @console_view._setEditable false
     @view._addSubview @console_view
   end
 
@@ -57,8 +57,10 @@ class Cocoa::EditorViewController < Cocoa::UIViewController
     # TODO: need to support prop
     @editor_view._setAutocorrectionType Cocoa::Const::UITextAutocorrectionTypeNo
     @editor_view._setAutocapitalizationType Cocoa::Const::UITextAutocapitalizationTypeNone
+    @editor_view._setFont Cocoa::UIFont._fontWithName _S("Courier"), :size, Cocoa::UIFont._systemFontSize
+
     @view._addSubview @editor_view
-    @editor_view[:text] = "puts 2 * 16\n"
+    @editor_view[:text] = "puts 2 * 16\n\n10.times do |i|\n  puts i / 2\nend\n"
   end
 
   define C::Void, :viewDidAppear, C::Int do |animated|
@@ -94,7 +96,6 @@ class Cocoa::EditorViewController < Cocoa::UIViewController
   define C::Void, :runScript, Cocoa::Object do |sender|
     body = @editor_view._text._UTF8String.to_s
     show_script_runner self[:navigationController], body
-    # CFunc::call CFunc::Pointer, "eval_mobiruby", body
   end
 
   def update_layout
@@ -108,7 +109,7 @@ Cocoa::EditorViewController.register
 def show_script_runner(navi, script)
   viewController = Cocoa::ScriptRunnerViewController._alloc._init
   navi._pushViewController viewController, :animated, C::SInt8(1)
-  CFunc::call CFunc::Pointer, "eval_mobiruby", script, viewController
+  viewController._runScript _S(script)
 end
 
 def show_editor(navi)
