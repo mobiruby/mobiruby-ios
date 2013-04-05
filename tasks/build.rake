@@ -12,6 +12,9 @@ source_files = Dir.glob('src/**/*.rb')
 file 'tmp/src.c' => source_files + [MRBC] do |t|
   FileUtils.mkdir_p 'tmp'
   FileUtils.rm_f t.name
+  open(t.name, 'w') do |f|
+    f.puts '#include <stdint.h>'
+  end
   source_files.each do |filename|
     funcname = filename.relative_path_from('src').gsub('/','_').gsub(/\..*/, '')
     sh %Q{#{MRBC} -g -B"mruby_data_#{funcname}" -o- "#{filename}" >> #{t.name}}

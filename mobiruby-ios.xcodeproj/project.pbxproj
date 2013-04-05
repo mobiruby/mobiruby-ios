@@ -239,7 +239,6 @@
 				5921A3A215FDB2E8007FECF1 /* UIKit.framework */,
 				5921A3A415FDB2E8007FECF1 /* Foundation.framework */,
 				5921A3A615FDB2E8007FECF1 /* CoreGraphics.framework */,
-				59088516170321A60058F1FA /* libsqlite3.dylib */,
 				59E8DF5A1707373A009CBF1F /* libuv.a */,
 				59ACC3A216FD9E3C006BC4AF /* libffi.a */,
 				59ACC3A316FD9E3C006BC4AF /* libmruby.a */,
@@ -259,6 +258,7 @@
 		5921A3A915FDB2E8007FECF1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				59088516170321A60058F1FA /* libsqlite3.dylib */,
 				5911819F16DA0E2B0084BD68 /* src.c */,
 				591181A116DA147A0084BD68 /* export_headers.m */,
 				5921A3AA15FDB2E8007FECF1 /* mobiruby-ios-Info.plist */,
