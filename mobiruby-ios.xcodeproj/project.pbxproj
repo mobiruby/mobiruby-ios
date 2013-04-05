@@ -38,6 +38,7 @@
 		5922F17216BE0B080068E693 /* mrbtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5922F17116BE0B080068E693 /* mrbtest.a */; };
 		5925817216C6B8DD0019DF8B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5925817116C6B8DD0019DF8B /* icon.png */; };
 		5925817416C6B8E00019DF8B /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5925817316C6B8E00019DF8B /* icon@2x.png */; };
+		5981BE5A170EB5240029A891 /* tap_se_00.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5981BE59170EB5240029A891 /* tap_se_00.caf */; };
 		59ACC3A416FD9E3C006BC4AF /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACC3A216FD9E3C006BC4AF /* libffi.a */; };
 		59ACC3A516FD9E3C006BC4AF /* libffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACC3A216FD9E3C006BC4AF /* libffi.a */; };
 		59ACC3A616FD9E3C006BC4AF /* libmruby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ACC3A316FD9E3C006BC4AF /* libmruby.a */; };
@@ -56,7 +57,6 @@
 		59E87EDB15FF9B1500E2F09F /* square-green-24-ns.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E87ECD15FF9B1500E2F09F /* square-green-24-ns.png */; };
 		59E87EDC15FF9B1500E2F09F /* square-red-24-ns.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E87ECE15FF9B1500E2F09F /* square-red-24-ns.png */; };
 		59E87EDD15FF9B1500E2F09F /* square-yellow-24-ns.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E87ECF15FF9B1500E2F09F /* square-yellow-24-ns.png */; };
-		59E87EDE15FF9B1500E2F09F /* tap_se_00.wav in Resources */ = {isa = PBXBuildFile; fileRef = 59E87ED015FF9B1500E2F09F /* tap_se_00.wav */; };
 		59E8DF5B1707373A009CBF1F /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E8DF5A1707373A009CBF1F /* libuv.a */; };
 		59FE8101160BEAB6002B24D8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59FE8100160BEAB6002B24D8 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
@@ -106,6 +106,7 @@
 		5922F17116BE0B080068E693 /* mrbtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mrbtest.a; path = mruby/build/i386/test/mrbtest.a; sourceTree = SOURCE_ROOT; };
 		5925817116C6B8DD0019DF8B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
 		5925817316C6B8E00019DF8B /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
+		5981BE59170EB5240029A891 /* tap_se_00.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tap_se_00.caf; sourceTree = "<group>"; };
 		59ACC3A216FD9E3C006BC4AF /* libffi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libffi.a; path = lib/libffi.a; sourceTree = SOURCE_ROOT; };
 		59ACC3A316FD9E3C006BC4AF /* libmruby.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmruby.a; path = lib/libmruby.a; sourceTree = SOURCE_ROOT; };
 		59ACFC6815FDBA11004BE69E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -122,7 +123,6 @@
 		59E87ECD15FF9B1500E2F09F /* square-green-24-ns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square-green-24-ns.png"; sourceTree = "<group>"; };
 		59E87ECE15FF9B1500E2F09F /* square-red-24-ns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square-red-24-ns.png"; sourceTree = "<group>"; };
 		59E87ECF15FF9B1500E2F09F /* square-yellow-24-ns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square-yellow-24-ns.png"; sourceTree = "<group>"; };
-		59E87ED015FF9B1500E2F09F /* tap_se_00.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tap_se_00.wav; sourceTree = "<group>"; };
 		59E8DF5A1707373A009CBF1F /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libuv.a; path = lib/libuv.a; sourceTree = "<group>"; };
 		59FE8100160BEAB6002B24D8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -295,6 +295,7 @@
 		59E87EC215FF93BC00E2F09F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5981BE59170EB5240029A891 /* tap_se_00.caf */,
 				59FE8100160BEAB6002B24D8 /* Default-568h@2x.png */,
 				59E87EC315FF9B1500E2F09F /* Default.png */,
 				59E87EC415FF9B1500E2F09F /* Default@2x.png */,
@@ -309,7 +310,6 @@
 				59E87ECD15FF9B1500E2F09F /* square-green-24-ns.png */,
 				59E87ECE15FF9B1500E2F09F /* square-red-24-ns.png */,
 				59E87ECF15FF9B1500E2F09F /* square-yellow-24-ns.png */,
-				59E87ED015FF9B1500E2F09F /* tap_se_00.wav */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -396,11 +396,11 @@
 				59E87EDB15FF9B1500E2F09F /* square-green-24-ns.png in Resources */,
 				59E87EDC15FF9B1500E2F09F /* square-red-24-ns.png in Resources */,
 				59E87EDD15FF9B1500E2F09F /* square-yellow-24-ns.png in Resources */,
-				59E87EDE15FF9B1500E2F09F /* tap_se_00.wav in Resources */,
 				59FE8101160BEAB6002B24D8 /* Default-568h@2x.png in Resources */,
 				590087A7165E972800F45C24 /* SVProgressHUD.bundle in Resources */,
 				5925817216C6B8DD0019DF8B /* icon.png in Resources */,
 				5925817416C6B8E00019DF8B /* icon@2x.png in Resources */,
+				5981BE5A170EB5240029A891 /* tap_se_00.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

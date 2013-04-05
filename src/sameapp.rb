@@ -5,7 +5,7 @@ $bgm = AudioPlayer.new("bgm_00", "aif")
 $bgm.loops = -1
 $bgm.volume = 0.25
 
-soundPath = Cocoa::NSBundle._mainBundle._pathForResource _S("tap_se_00"), :ofType, _S("wav")
+soundPath = Cocoa::NSBundle._mainBundle._pathForResource _S("tap_se_00"), :ofType, _S("caf")
 soundURL = Cocoa::NSURL._fileURLWithPath soundPath
 $tap_se = C::Int(0)
 C::call C::Void, "AudioServicesCreateSystemSoundID", soundURL, $tap_se.addr
