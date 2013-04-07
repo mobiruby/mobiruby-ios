@@ -61,18 +61,20 @@ class Cocoa::EditorViewController < Cocoa::UIViewController
 
     @view._addSubview @editor_view
     @editor_view[:text] = "puts 2 * 16\n\n10.times do |i|\n  puts i / 2\nend\n"
-  end
 
-  define C::Void, :viewDidAppear, C::Int do |animated|
-    _super :_viewWillAppear, animated
- 
     Cocoa::NSNotificationCenter._defaultCenter._addObserver self, :selector, selector("keyboardWillShow:"), :name, Cocoa::Const::UIKeyboardWillShowNotification, :object, nil
     Cocoa::NSNotificationCenter._defaultCenter._addObserver self, :selector, selector("keyboardWillHide:"), :name, Cocoa::Const::UIKeyboardWillHideNotification, :object, nil
   end
 
+  define C::Void, :viewDidAppear, C::Int do |animated|
+    _super :_viewWillAppear, animated
+  end
+
   define C::Void, :viewDidDisappear, C::Int do |animated|
     _super :_viewDidDisappear, animated
- 
+  end
+
+  define C::Void, :dealloc do
     Cocoa::NSNotificationCenter._defaultCenter._removeObserver self, :name, Cocoa::Const::UIKeyboardWillShowNotification, :object, nil
     Cocoa::NSNotificationCenter._defaultCenter._removeObserver self, :name, Cocoa::Const::UIKeyboardWillHideNotification, :object, nil
   end
