@@ -2,6 +2,8 @@ require 'mobiruby'
 require 'tableview_menu'
 #require 'sameapp'
 
+Debug.server
+
 class Cocoa::AppDelegate < Cocoa::UIResponder
     define C::Int, :application, Cocoa::Object, :didFinishLaunchingWithOptions, Cocoa::Object do |application, launchOptions|
         screen_rect = Cocoa::UIScreen._mainScreen._bounds

@@ -70,6 +70,8 @@ IOS_SIM_SDK = "#{PLATFORM_IOS_SIM}/Developer/SDKs/iPhoneSimulator#{SDK_IOS_VERSI
 
       conf.gem "#{BASEDIR}/submodules/mruby-uv"
       conf.gem "#{BASEDIR}/submodules/mruby-http"
+
+      conf.gem "#{BASEDIR}/mruby-debug"
     end
   end
 end
