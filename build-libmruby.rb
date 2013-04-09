@@ -78,7 +78,7 @@ LIBMRUBY = File.expand_path('lib/libmruby.a')
 #task 'libmruby' => LIBMRUBY
 
 file LIBMRUBY => MRuby.targets.values.map { |t| t.libfile("#{t.build_dir}/lib/libmruby") } do |t|
-  sh %Q[cp "#{MRUBY_ROOT}/bin/mrbc" "bin/mrbc" ]
+  sh %Q[cp "#{MRUBY_ROOT}/build/host/bin/mrbc" "bin/mrbc" ]
   t.prerequisites.map do |lib|
     sh %Q[ar d "#{lib}" LEGAL]
   end

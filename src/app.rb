@@ -1,6 +1,5 @@
 require 'mobiruby'
 require 'tableview_menu'
-#require 'sameapp'
 
 class Cocoa::AppDelegate < Cocoa::UIResponder
     define C::Int, :application, Cocoa::Object, :didFinishLaunchingWithOptions, Cocoa::Object do |application, launchOptions|

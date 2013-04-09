@@ -18,6 +18,8 @@
 		59008798165E911700F45C24 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5900878F165E911700F45C24 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		590087A7165E972800F45C24 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 590087A4165E972800F45C24 /* SVProgressHUD.bundle */; };
 		590087A8165E972800F45C24 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 590087A6165E972800F45C24 /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		59069B7617142D7100E448F9 /* mrbtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59069B7517142D7100E448F9 /* mrbtest.a */; };
+		59069B7717142D8300E448F9 /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E8DF5A1707373A009CBF1F /* libuv.a */; };
 		59088517170321A60058F1FA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 59088516170321A60058F1FA /* libsqlite3.dylib */; };
 		59088518170321B00058F1FA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 59088516170321A60058F1FA /* libsqlite3.dylib */; };
 		591181A016DA0E2B0084BD68 /* src.c in Sources */ = {isa = PBXBuildFile; fileRef = 5911819F16DA0E2B0084BD68 /* src.c */; };
@@ -35,7 +37,6 @@
 		5922F16716BDAD990068E693 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5922F16616BDAD990068E693 /* Default.png */; };
 		5922F16916BDAD990068E693 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5922F16816BDAD990068E693 /* Default@2x.png */; };
 		5922F16B16BDAD990068E693 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5922F16A16BDAD990068E693 /* Default-568h@2x.png */; };
-		5922F17216BE0B080068E693 /* mrbtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5922F17116BE0B080068E693 /* mrbtest.a */; };
 		5925817216C6B8DD0019DF8B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5925817116C6B8DD0019DF8B /* icon.png */; };
 		5925817416C6B8E00019DF8B /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5925817316C6B8E00019DF8B /* icon@2x.png */; };
 		5981BE5A170EB5240029A891 /* tap_se_00.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5981BE59170EB5240029A891 /* tap_se_00.caf */; };
@@ -84,6 +85,7 @@
 		590087A4165E972800F45C24 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		590087A5165E972800F45C24 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		590087A6165E972800F45C24 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		59069B7517142D7100E448F9 /* mrbtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mrbtest.a; path = submodules/mruby/build/i386/test/mrbtest.a; sourceTree = SOURCE_ROOT; };
 		59088516170321A60058F1FA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		5911819F16DA0E2B0084BD68 /* src.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = src.c; path = tmp/src.c; sourceTree = SOURCE_ROOT; };
 		591181A116DA147A0084BD68 /* export_headers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = export_headers.m; path = tmp/export_headers.m; sourceTree = SOURCE_ROOT; };
@@ -103,7 +105,6 @@
 		5922F16616BDAD990068E693 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5922F16816BDAD990068E693 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5922F16A16BDAD990068E693 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		5922F17116BE0B080068E693 /* mrbtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mrbtest.a; path = mruby/build/i386/test/mrbtest.a; sourceTree = SOURCE_ROOT; };
 		5925817116C6B8DD0019DF8B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
 		5925817316C6B8E00019DF8B /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
 		5981BE59170EB5240029A891 /* tap_se_00.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tap_se_00.caf; sourceTree = "<group>"; };
@@ -153,9 +154,10 @@
 				5922F15716BDAD980068E693 /* UIKit.framework in Frameworks */,
 				5922F15816BDAD980068E693 /* Foundation.framework in Frameworks */,
 				5922F15916BDAD980068E693 /* CoreGraphics.framework in Frameworks */,
-				5922F17216BE0B080068E693 /* mrbtest.a in Frameworks */,
 				59ACC3A516FD9E3C006BC4AF /* libffi.a in Frameworks */,
 				59ACC3A716FD9E3C006BC4AF /* libmruby.a in Frameworks */,
+				59069B7617142D7100E448F9 /* mrbtest.a in Frameworks */,
+				59069B7717142D8300E448F9 /* libuv.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +282,7 @@
 		5922F15B16BDAD980068E693 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5922F17116BE0B080068E693 /* mrbtest.a */,
+				59069B7517142D7100E448F9 /* mrbtest.a */,
 				5922F15C16BDAD980068E693 /* mrbtest-Info.plist */,
 				5922F15D16BDAD980068E693 /* InfoPlist.strings */,
 				5922F16016BDAD980068E693 /* main.m */,
@@ -588,8 +590,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yuichiro MASUI";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yuichiro MASUI";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -613,8 +615,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "D1BE6622-CFD4-40D4-9780-3D6DDB56EEE8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D1BE6622-CFD4-40D4-9780-3D6DDB56EEE8";
 				STRIP_STYLE = debugging;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "$(ARCHS_STANDARD_32_BIT)";
@@ -638,14 +640,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
+					"\"$(SRCROOT)/submodules/mruby/build/i386/test\"",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
-					"-I$(PROJECT_DIR)/mruby/include",
-					"-I$(PROJECT_DIR)/mruby/build/libffi",
-					"-I$(PROJECT_DIR)/mobiruby-common/include",
-					"-I$(PROJECT_DIR)/mruby-cocoa/include",
-					"-I$(PROJECT_DIR)/mruby-cfunc/include",
+					"-I$(PROJECT_DIR)/include",
 					"-DALLOC_PADDING=8",
 					"-DUSE_MRBC_DATA",
 					"-DMRB_INT64",
@@ -655,6 +654,7 @@
 					"-ldl",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_STYLE = debugging;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -667,7 +667,9 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mrbtest/mrbtest-Prefix.pch";
 				INFOPLIST_FILE = "mrbtest/mrbtest-Info.plist";
@@ -675,14 +677,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
+					"\"$(SRCROOT)/submodules/mruby/build/i386/test\"",
 				);
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
-					"-I$(PROJECT_DIR)/mruby/include",
-					"-I$(PROJECT_DIR)/mruby/build/libffi",
-					"-I$(PROJECT_DIR)/mobiruby-common/include",
-					"-I$(PROJECT_DIR)/mruby-cocoa/include",
-					"-I$(PROJECT_DIR)/mruby-cfunc/include",
+					"-I$(PROJECT_DIR)/include",
 					"-DALLOC_PADDING=8",
 					"-DUSE_MRBC_DATA",
 					"-DMRB_INT64",
@@ -692,6 +691,9 @@
 					"-ldl",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				STRIP_STYLE = debugging;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
