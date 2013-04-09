@@ -2,10 +2,11 @@
 
 Notice: It's for mruby and iOS hackers
 
-Current job status:
+## Current status
+
 - @masuidrive: I'm working hard on [mruby](https://github.com/mruby/mruby) what support debugging feagture now - Mar 3rd, 2013
  
-Current build status: ![status](https://mobiruby-ci.s3.amazonaws.com/mobiruby-ios.png)
+[![Build Status](https://secure.travis-ci.org/mobiruby/mobiruby-ios.png)](http://travis-ci.org/mobiruby/mobiruby-ios)
 
 
 ## Getting started
