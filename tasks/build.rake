@@ -1,7 +1,25 @@
 ENV['MRUBY_CONFIG'] = File.join(File.dirname(__FILE__), '..', 'build-libmruby.rb')
+
+# https://gist.github.com/nayutaya/293358
+module Enumerable
+  def retry_if(*klasses)
+    e = nil
+    self.each { |arg|
+      begin
+        return yield(arg)
+      rescue *klasses => e
+        next
+      end
+    }
+    raise(e)
+  end
+end
+
 unless File.exists?('submodules/mruby/Rakefile')
   sh %Q{git submodule init}
-  sh %Q{git submodule update}
+  5.times.retry_if(RuntimeError) do
+    raise unless system %Q{git submodule update}
+  end
 end
 load 'submodules/mruby/Rakefile'
 
