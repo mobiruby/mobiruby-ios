@@ -1,4 +1,4 @@
-TEST_SIMULATOR_VERSION = '5.0' unless defined?(TEST_SIMULATOR_VERSION)
+TEST_SIMULATOR_VERSION = ENV['TEST_SIMULATOR_VERSION'] || '6.1' unless defined?(TEST_SIMULATOR_VERSION)
 
 desc 'Run test on iOS simulator'
 task :sim_test => [IOS_SIM, File.expand_path('lib/libmruby.a'), File.expand_path('submodules/mruby/build/i386/test/mrbtest.a')] do
