@@ -79,9 +79,9 @@ LIBMRUBY = File.expand_path('lib/libmruby.a')
 
 file LIBMRUBY => MRuby.targets.values.map { |t| t.libfile("#{t.build_dir}/lib/libmruby") } do |t|
   sh %Q[cp "#{MRUBY_ROOT}/build/host/bin/mrbc" "bin/mrbc" ]
-  t.prerequisites.map do |lib|
-    sh %Q[ar d "#{lib}" LEGAL]
-  end
+  #t.prerequisites.map do |lib|
+  #  sh %Q[ar d "#{lib}" LEGAL]
+  #end
   sh %Q[lipo -create #{t.prerequisites.map{|s| '"%s"' % s}.join(' ')} -output "#{t.name}"]
 
   # copy include files
