@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require 'fileutils'
+require 'tmpdir'
 
 MRuby::Build.new do |conf|
   toolchain :clang
@@ -66,7 +67,9 @@ IOS_SIM_SDK = "#{PLATFORM_IOS_SIM}/Developer/SDKs/iPhoneSimulator#{SDK_IOS_VERSI
       conf.gem "#{BASEDIR}/submodules/mruby-json"
       conf.gem "#{BASEDIR}/submodules/mruby-digest"
       conf.gem "#{BASEDIR}/submodules/mruby-pack"
-      conf.gem "#{BASEDIR}/submodules/mruby-sqlite3"
+      conf.gem "#{BASEDIR}/submodules/mruby-sqlite3" do |spec|
+        spec.test_args = {'db_dir' => Dir::tmpdir}
+      end
 
       conf.gem "#{BASEDIR}/submodules/mruby-uv"
       conf.gem "#{BASEDIR}/submodules/mruby-http"

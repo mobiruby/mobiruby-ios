@@ -64,7 +64,9 @@ int main(int argc, char *argv[])
     else if (!check_error(mrb)) {
         ret = EXIT_FAILURE;
     }
-    sleep(1);
+    fflush(stdout);
+    fflush(stderr);
+    sleep(2); // DON'T REMOVE IT. It's waiting for ios-sim
     mrb_close(mrb);
     
     return ret;

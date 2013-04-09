@@ -21,7 +21,7 @@
 	url = https://github.com/mattn/mruby-uv.git
 [submodule "submodules/mruby-sqlite3"]
 	path = submodules/mruby-sqlite3
-	url = https://github.com/mattn/mruby-sqlite3.git
+	url = https://github.com/mobiruby/mruby-sqlite3.git
 [submodule "submodules/mruby-json"]
 	path = submodules/mruby-json
 	url = https://github.com/mattn/mruby-json.git
