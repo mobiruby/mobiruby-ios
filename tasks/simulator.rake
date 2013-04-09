@@ -1,7 +1,15 @@
-IOS_SIM = './bin/ios-sim'
+if ENV['TRAVIS']
+  IOS_SIM = '/usr/local/bin/ios-sim'
+else
+  IOS_SIM = './bin/ios-sim'
+end
 
 file IOS_SIM do
-  sh %Q{cd ./submodules/ios-sim; rake install prefix=../../}
+  if ENV['TRAVIS']
+    sh %Q{brew install ios-sim}
+  else
+    sh %Q{cd ./submodules/ios-sim; rake install prefix=../../}
+  end
 end
 
 desc 'Run your app on iOS simulator'

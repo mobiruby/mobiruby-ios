@@ -5,6 +5,5 @@ task :sim_test => [IOS_SIM, File.expand_path('lib/libmruby.a'), File.expand_path
   sh %Q{killall "iOS Simulator" || true}
   sh %Q{killall "iPhone Simulator" || true}
   sh %Q{xcodebuild -configuration Debug -sdk iphonesimulator -target mrbtest clean build}
-  sleep 5
   sh %Q{#{IOS_SIM} launch build/Debug-iphonesimulator/mrbtest.app #{TEST_SIMULATOR_VERSION ? "--sdk #{TEST_SIMULATOR_VERSION}" : ''} 2>&1}
 end
