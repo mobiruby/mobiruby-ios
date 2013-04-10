@@ -66,8 +66,17 @@ int main(int argc, char *argv[])
     }
     fflush(stdout);
     fflush(stderr);
-    sleep(2); // DON'T REMOVE IT. It's waiting for ios-sim
     mrb_close(mrb);
+    
+    if(ret == EXIT_SUCCESS) {
+        puts("PASSED");
+    }
+    else {
+        puts("FAILED");
+    }
+    fflush(stdout);
+
+    sleep(2); // DON'T REMOVE IT. It's waiting for ios-sim
     
     return ret;
 }
