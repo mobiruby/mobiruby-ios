@@ -8,13 +8,16 @@ MRuby::Build.new do |conf|
   conf.bins = %w(mrbc)
 end
 
+def env_config(env)
+  IO.popen('sh -c ". ./bin/build-config.sh;echo \$%s"' % [env]).read.chomp
+end
+
 GEMS = %w(mruby-cfunc mruby-cocoa mobiruby-common mruby-json mruby-digest mruby-pack)
-# GEMS += %w(mruby-uv mruby-sqlite3)
 BASEDIR = File.dirname(__FILE__)
-SDK_IOS_VERSION=`awk -F '=' '$1 ~/^SDK_IOS_VERSION/{  print $2   }' #{BASEDIR}/bin/build-config.sh|sed 's/\"//g'`.chomp
-MIN_IOS_VERSION=`awk -F '=' '$1 ~/^MIN_IOS_VERSION/{  print $2   }' #{BASEDIR}/bin/build-config.sh|sed 's/\"//g'`.chomp
-PLATFORM_IOS=`xcode-select -print-path`.chomp+'/Platforms/iPhoneOS.platform/'
-PLATFORM_IOS_SIM=`xcode-select -print-path`.chomp+'/Platforms/iPhoneSimulator.platform/'
+SDK_IOS_VERSION = env_config('SDK_IOS_VERSION')
+MIN_IOS_VERSION = env_config('MIN_IOS_VERSION')
+PLATFORM_IOS = env_config('PLATFORM_IOS')
+PLATFORM_IOS_SIM = env_config('PLATFORM_IOS_SIM')
 IOS_SDK = "#{PLATFORM_IOS}/Developer/SDKs/iPhoneOS#{SDK_IOS_VERSION}.sdk/"
 IOS_SIM_SDK = "#{PLATFORM_IOS_SIM}/Developer/SDKs/iPhoneSimulator#{SDK_IOS_VERSION}.sdk/"
 

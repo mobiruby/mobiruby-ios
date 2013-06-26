@@ -5,6 +5,7 @@ load 'tasks/test.rake'
 
 task :default => :run
 
+desc 'clean all'
 task :clean_all => :clean do
   sh "rm -f lib/libmruby.a"
 end
