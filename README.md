@@ -28,7 +28,7 @@ rake
 
 If you use XCode beta version, you should modify ``bin/build-config.sh`` or set up xcode-select correctly.
 
-It's tested only Mountain Lion and XCode 4.6.x
+It's tested only Mavericks and XCode 5.0.x
 
 ``src/app.rb`` is MobiRuby starting point. 
 
