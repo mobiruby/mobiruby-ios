@@ -4,19 +4,19 @@ Notice: It's for mruby and iOS hackers
 
 ## Current status
 
-- @masuidrive: I'm working hard on [mruby](https://github.com/mruby/mruby) what support debugging feagture now - Mar 3rd, 2013
- 
-[![Build Status](https://secure.travis-ci.org/mobiruby/mobiruby-ios.png)](http://travis-ci.org/mobiruby/mobiruby-ios)
+- Supporting iOS7, 64bit and Mavericks.
 
 
 ## Getting started
 
-At first time, you might need to install the below gems:
+At first time, you might need to install the below system gems:
 
 ```
-GEM_HOME=/Library/Ruby/Gems/1.8 GEM_PATH=/Library/Ruby/Gems/1.8 sudo /usr/bin/gem install xcodeproj -v=0.3.5
-GEM_HOME=/Library/Ruby/Gems/1.8 GEM_PATH=/Library/Ruby/Gems/1.8 sudo /usr/bin/gem install nokogiri rake
+gem install xcodeproj -v=0.3.5
+gem install nokogiri
 ```
+If you used rbenv, please run 'rbenv local system' before.
+
 
 And then, type the commands in terminal:
 
@@ -28,7 +28,7 @@ rake
 
 If you use XCode beta version, you should modify ``bin/build-config.sh`` or set up xcode-select correctly.
 
-It's tested only Mountain Lion and XCode 4.6.x
+It's tested only Mavericks and XCode 5.0.x
 
 ``src/app.rb`` is MobiRuby starting point. 
 
