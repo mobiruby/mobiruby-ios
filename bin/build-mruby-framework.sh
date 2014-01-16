@@ -28,7 +28,7 @@ build_target () {
     pushd modules/mruby
     mkdir -p "${builddir}"
     make clean
-    export CC="${platform}"/Developer/usr/bin/gcc
+    export CC="${platform}"/usr/bin/gcc
     export CFLAGS="-arch ${arch} -isysroot ${sdk} -D ALLOC_PADDING=8 -miphoneos-version-min=${MIN_IOS_VERSION} -g -O3"
     make CC="${CC}" CFLAGS="${CFLAGS}" -C src
     make CC="${CC}" CFLAGS="${CFLAGS}" MRBC="${MRBC}" CAT="/bin/cat" CP="/bin/cp" AR="/usr/bin/ar" -C mrblib
@@ -36,9 +36,9 @@ build_target () {
     popd
 }
 
-build_target armv6 arm-apple-darwin10 armv6-ios "${PLATFORM_IOS}" "${PLATFORM_IOS}/Developer/SDKs/iPhoneOS${SDK_IOS_VERSION}.sdk/"
-build_target armv7 arm-apple-darwin10 armv7-ios "${PLATFORM_IOS}" "${PLATFORM_IOS}/Developer/SDKs/iPhoneOS${SDK_IOS_VERSION}.sdk/"
-build_target i386 i386-apple-darwin10 i386-ios-sim "${PLATFORM_IOS_SIM}" "${PLATFORM_IOS_SIM}/Developer/SDKs/iPhoneSimulator${SDK_IOS_VERSION}.sdk/"
+build_target armv6 arm-apple-darwin10 armv6-ios "${GCC_PLATFORM_IOS}" "${PLATFORM_IOS}/Developer/SDKs/iPhoneOS${SDK_IOS_VERSION}.sdk/"
+build_target armv7 arm-apple-darwin10 armv7-ios "${GCC_PLATFORM_IOS}" "${PLATFORM_IOS}/Developer/SDKs/iPhoneOS${SDK_IOS_VERSION}.sdk/"
+build_target i386 i386-apple-darwin10 i386-ios-sim "${GCC_PLATFORM_IOS_SIM}" "${PLATFORM_IOS_SIM}/Developer/SDKs/iPhoneSimulator${SDK_IOS_VERSION}.sdk/"
 
 
 # Where we'll put the build framework.
