@@ -1,6 +1,8 @@
 require 'script_runner'
 
 class Cocoa::ScriptRunnerViewController < Cocoa::UIViewController
+  attr_accessor(:script)
+
   define C::Void, :loadView do
     _super :_loadView
     self._setTitle "Running"
@@ -19,11 +21,13 @@ class Cocoa::ScriptRunnerViewController < Cocoa::UIViewController
     @view._addSubview @console_view
   end
 
-  define C::Void, :runScript, Cocoa::Object do |script|
+  define C::Void, :viewDidAppear, C::Int do |animated|
+    _super :_viewDidAppear, animated
+
     $console_view = @console_view
     $console_view[:text] = ''
     begin
-      eval script._UTF8String.to_s
+      eval self.script.to_s
     rescue => e
       p e
     ensure
@@ -110,8 +114,8 @@ Cocoa::EditorViewController.register
 
 def show_script_runner(navi, script)
   viewController = Cocoa::ScriptRunnerViewController._alloc._init
+  viewController.script = script
   navi._pushViewController viewController, :animated, C::SInt8(1)
-  viewController._runScript _S(script)
 end
 
 def show_editor(navi)
