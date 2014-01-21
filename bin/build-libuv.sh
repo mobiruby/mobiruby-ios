@@ -8,7 +8,7 @@ build_target () {
     local platform=$2
     local sdk=$3
 
-    export CC="${platform}"/Developer/usr/bin/gcc
+    export CC="${platform}"/usr/bin/gcc
     export CFLAGS="-g -Os \
     -arch ${arch} \
     -isysroot ${sdk} \
@@ -24,9 +24,9 @@ cd submodules/libuv
 # remove process title property
 echo "int uv__set_process_title(const char* title) { return -1; }" > "src/unix/darwin-proctitle.m"
 
-build_target armv7 "${PLATFORM_IOS}" "${PLATFORM_IOS}/Developer/SDKs/iPhoneOS${SDK_IOS_VERSION}.sdk/"
-build_target armv7s "${PLATFORM_IOS}" "${PLATFORM_IOS}/Developer/SDKs/iPhoneOS${SDK_IOS_VERSION}.sdk/"
-build_target i386 "${PLATFORM_IOS_SIM}" "${PLATFORM_IOS_SIM}/Developer/SDKs/iPhoneSimulator${SDK_IOS_VERSION}.sdk/"
+build_target armv7 "${GCC_PLATFORM_IOS}" "${PLATFORM_IOS}/Developer/SDKs/iPhoneOS${SDK_IOS_VERSION}.sdk/"
+build_target armv7s "${GCC_PLATFORM_IOS}" "${PLATFORM_IOS}/Developer/SDKs/iPhoneOS${SDK_IOS_VERSION}.sdk/"
+build_target i386 "${GCC_PLATFORM_IOS_SIM}" "${PLATFORM_IOS_SIM}/Developer/SDKs/iPhoneSimulator${SDK_IOS_VERSION}.sdk/"
 
 
 # Create universal output directories

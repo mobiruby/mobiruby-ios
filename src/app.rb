@@ -6,8 +6,8 @@ class Cocoa::AppDelegate < Cocoa::UIResponder
         screen_rect = Cocoa::UIScreen._mainScreen._bounds
         @window = Cocoa::UIWindow._alloc._initWithFrame screen_rect
         @navi = Cocoa::UINavigationController._alloc._initWithNibName nil, :bundle, nil
-        @window._addSubview @navi._view
         @window._makeKeyAndVisible
+        @window._setRootViewController(@navi)
         show_tableview_menu(@navi)
         # show_samegame(@navi)
     end

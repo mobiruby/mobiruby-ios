@@ -42,7 +42,7 @@ class BridgeMetadata
       if /[e\.]+/.match(e['value'])
         tt = 'd'
         val = [e['value'].to_f].pack('d')
-      elsif e['value'].to_i < 2^63
+      elsif e['value'].to_i < 2**63
         tt = 's'
         val = [e['value'].to_i].pack('q')
       end

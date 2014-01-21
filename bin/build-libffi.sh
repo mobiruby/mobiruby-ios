@@ -14,21 +14,22 @@ build_target () {
 
     mkdir -p "${builddir}"
     pushd "${builddir}"
-    export CC="${platform}"/Developer/usr/bin/gcc
+    export CC="${platform}"/usr/bin/gcc
     export CFLAGS="-g -Os \
     -arch ${arch} \
     -isysroot ${sdk} \
     -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 \
     -gdwarf-2  \
+    -no-integrated-as \
     -miphoneos-version-min=${MIN_IOS_VERSION}"
     autoreconf
     ../configure --host=${triple} && make
     popd
 }
 cd submodules/libffi
-build_target armv7 arm-apple-darwin10 armv7-ios "${PLATFORM_IOS}" "${PLATFORM_IOS}/Developer/SDKs/iPhoneOS${SDK_IOS_VERSION}.sdk/"
-build_target armv7s arm-apple-darwin10 armv7s-ios "${PLATFORM_IOS}" "${PLATFORM_IOS}/Developer/SDKs/iPhoneOS${SDK_IOS_VERSION}.sdk/"
-build_target i386 i386-apple-darwin10 i386-ios-sim "${PLATFORM_IOS_SIM}" "${PLATFORM_IOS_SIM}/Developer/SDKs/iPhoneSimulator${SDK_IOS_VERSION}.sdk/"
+build_target armv7 arm-apple-darwin10 armv7-ios "${GCC_PLATFORM_IOS}" "${PLATFORM_IOS}/Developer/SDKs/iPhoneOS${SDK_IOS_VERSION}.sdk/"
+build_target armv7s arm-apple-darwin10 armv7s-ios "${GCC_PLATFORM_IOS}" "${PLATFORM_IOS}/Developer/SDKs/iPhoneOS${SDK_IOS_VERSION}.sdk/"
+build_target i386 i386-apple-darwin10 i386-ios-sim "${GCC_PLATFORM_IOS_SIM}" "${PLATFORM_IOS_SIM}/Developer/SDKs/iPhoneSimulator${SDK_IOS_VERSION}.sdk/"
 
 
 # Create universal output directories

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F3D667E18897FD8008893B8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F3D667D18897FD8008893B8 /* MobileCoreServices.framework */; };
 		59008790165E911700F45C24 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5900877E165E911700F45C24 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		59008791165E911700F45C24 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 59008780165E911700F45C24 /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		59008792165E911700F45C24 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 59008782165E911700F45C24 /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -63,6 +64,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F3D667D18897FD8008893B8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		5900877D165E911700F45C24 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		5900877E165E911700F45C24 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		5900877F165E911700F45C24 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F3D667E18897FD8008893B8 /* MobileCoreServices.framework in Frameworks */,
 				59088517170321A60058F1FA /* libsqlite3.dylib in Frameworks */,
 				59ACFC6D15FDBA22004BE69E /* QuartzCore.framework in Frameworks */,
 				59ACFC6B15FDBA15004BE69E /* AVFoundation.framework in Frameworks */,
@@ -235,6 +238,7 @@
 		5921A3A115FDB2E8007FECF1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2F3D667D18897FD8008893B8 /* MobileCoreServices.framework */,
 				59ACFC6C15FDBA22004BE69E /* QuartzCore.framework */,
 				59ACFC6A15FDBA15004BE69E /* AVFoundation.framework */,
 				59ACFC6815FDBA11004BE69E /* SystemConfiguration.framework */,
@@ -323,8 +327,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5921A3B615FDB2E8007FECF1 /* Build configuration list for PBXNativeTarget "mobiruby-ios" */;
 			buildPhases = (
-				5921A39A15FDB2E8007FECF1 /* Sources */,
 				59ACFC6E15FDBA41004BE69E /* Generate export_headers.m */,
+				5921A39A15FDB2E8007FECF1 /* Sources */,
 				5921A39B15FDB2E8007FECF1 /* Frameworks */,
 				5921A39C15FDB2E8007FECF1 /* Resources */,
 			);

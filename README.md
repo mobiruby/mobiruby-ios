@@ -23,6 +23,7 @@ And then, type the commands in terminal:
 ```
 git clone https://github.com/mobiruby/mobiruby-ios.git
 cd mobiruby-ios
+git checkout develop
 rake
 ```
 
