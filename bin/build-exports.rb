@@ -36,6 +36,10 @@ class BridgeMetadata
       @consts[c['name']] = '    {.name="%s", .type="%s", .value=(void*)"%s"}' % [c['name'], c['type'], c['name']]
     end
 
+    def escape_pack(pstr)
+      pstr.gsub(/(\\x[0-9A-F][0-9A-F])([0-9A-F])/i, '\1" "\2')
+    end
+
     doc.xpath('//enum').each do |e|
       tt = 'u'
       val = [e['value'].to_i].pack('q')
@@ -46,7 +50,7 @@ class BridgeMetadata
         tt = 's'
         val = [e['value'].to_i].pack('q')
       end
-      @enums[e['name']] = %Q[    {.name="%s", .value={%s}, .type='%s'}] % [e['name'].gsub(/^\w/) { |s| s.upcase }, val.inspect, tt]
+      @enums[e['name']] = %Q[    {.name="%s", .value={%s}, .type='%s'}] % [e['name'].gsub(/^\w/) { |s| s.upcase }, escape_pack(val.inspect), tt]
     end
   end
 
