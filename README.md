@@ -29,6 +29,8 @@ rake
 
 If you use XCode beta version, you should modify ``bin/build-config.sh`` or set up xcode-select correctly.
 
+Download iOS 7.0 Simulator in Xcode.app, if you use Xcode beta version.
+
 It's tested only Mavericks and XCode 5.0.x
 
 ``src/app.rb`` is MobiRuby starting point. 

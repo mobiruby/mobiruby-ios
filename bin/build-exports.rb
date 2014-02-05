@@ -1,5 +1,8 @@
 #!/usr/bin/ruby
 
+MIN_IOS_VERSION_AVAILABILITY_H_FORMAT = 60000
+SDKROOT_IOS_SIM = `xcode-select -print-path`.chomp + "/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk"
+
 ENV['GEM_HOME'] = ENV['GEM_PATH'] = "/Library/Ruby/Gems/2.0.0"
 require 'rubygems'
 require 'nokogiri'
@@ -9,9 +12,9 @@ require 'xcodeproj'
 
 OUTPUT_FILE = ARGV[0]
 PROJECT_FILE_PATH = ARGV[1] || ENV['PROJECT_FILE_PATH']
-SDKROOT = ARGV[2] || ENV["SDKROOT"]
+SDKROOT = ARGV[2] || SDKROOT_IOS_SIM
 CFLAGS = ARGV[3] || ENV["OTHER_CFLAGS"] +
-  " -D__IPHONE_OS_VERSION_MIN_REQUIRED=#{ENV['PLATFORM_VERSION_AVAILABILITY_H_FORMAT']}"
+  " -D__IPHONE_OS_VERSION_MIN_REQUIRED=#{MIN_IOS_VERSION_AVAILABILITY_H_FORMAT}"
 
 class BridgeMetadata
   attr_reader :consts, :enums, :structs
@@ -36,6 +39,10 @@ class BridgeMetadata
       @consts[c['name']] = '    {.name="%s", .type="%s", .value=(void*)"%s"}' % [c['name'], c['type'], c['name']]
     end
 
+    def escape_pack(pstr)
+      pstr.gsub(/(\\x[0-9A-F][0-9A-F])([0-9A-F])/i, '\1" "\2')
+    end
+
     doc.xpath('//enum').each do |e|
       tt = 'u'
       val = [e['value'].to_i].pack('q')
@@ -46,7 +53,7 @@ class BridgeMetadata
         tt = 's'
         val = [e['value'].to_i].pack('q')
       end
-      @enums[e['name']] = %Q[    {.name="%s", .value={%s}, .type='%s'}] % [e['name'].gsub(/^\w/) { |s| s.upcase }, val.inspect, tt]
+      @enums[e['name']] = %Q[    {.name="%s", .value={%s}, .type='%s'}] % [e['name'].gsub(/^\w/) { |s| s.upcase }, escape_pack(val.inspect), tt]
     end
   end
 
